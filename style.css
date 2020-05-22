@@ -106,29 +106,31 @@ body {
   display: grid;
   margin: auto 0;
   gap: 2rem 0;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
     "header"
     "current-job"
     "susu"
     "side-projects"
     "best-of"
-    "previously";
+    "hello";
 }
 
 @media (min-width: 750px) {
   .layout-homepage {
     gap: 2rem;
+    grid-template-columns: max-content 1fr;
     grid-template-areas:
       "header      header"
       "current-job side-projects"
       "susu        best-of"
-      "previously  previously";
+      "hello  hello";
   }
 }
 
 .layout-homepage__item {
   background-color: #fff;
+  display: grid;
   gap: 1rem;
 }
 
@@ -149,23 +151,21 @@ body {
 
 .item-side-projects {
   grid-area: side-projects;
-  display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .item-susu {
   grid-area: susu;
-  display: grid;
 }
 
 .item-best-of {
-  display: grid;
   grid-area: best-of;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.item-previously {
-  grid-area: previously;
+.item-hello {
+  grid-area: hello;
+  grid-template-columns: min-content min-content;
 }
 
 .heading {
