@@ -31,6 +31,10 @@ body {
   display: flex;
 }
 
+.block {
+  display: block;
+}
+
 .font-monospace {
   font-family: monospace;
 }
@@ -39,8 +43,20 @@ body {
   font-weight: normal;
 }
 
+.weight-bold {
+  font-weight: bold;
+}
+
 .fz1 {
   font-size: 1rem;
+}
+
+.fz1\.25 {
+  font-size: 1.25rem;
+}
+
+.fz1\.5 {
+  font-size: 1.5rem;
 }
 
 .fz2 {
@@ -49,10 +65,6 @@ body {
 
 .fz3 {
   font-size: 3rem;
-}
-
-.fz1\.5 {
-  font-size: 1.5rem;
 }
 
 .lh1 {
@@ -99,6 +111,13 @@ body {
   padding: 3rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 5rem;
+}
+
+.layout-best-of-2020 {
+  padding: 3rem 0;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); */
   gap: 5rem;
 }
 
@@ -192,4 +211,29 @@ body {
   .container {
     padding: 10vw;
   }
+}
+
+/* MUSIC 2020 */
+
+@media (min-width: 750px) {
+  .items--album,
+  .items--song {
+    columns: 2;
+  }
+}
+
+.item--album,
+.item--song {
+  margin-bottom: 1rem;
+}
+
+.item--album .item__title,
+.item--album .item__artist {
+  display: block;
+}
+
+.item--album .item__title,
+.item--song .item__title {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
