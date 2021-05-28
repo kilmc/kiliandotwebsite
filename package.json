@@ -1,0 +1,19 @@
+{
+  "name": "kiliandotwebsite",
+  "version": "0.1.0",
+  "description": "The personal website of Kilian McMahon (me)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kilmc/kiliandotwebsite.git"
+  },
+  "author": "Kilian McMahon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kilmc/kiliandotwebsite/issues"
+  },
+  "homepage": "https://github.com/kilmc/kiliandotwebsite#readme"
+}
