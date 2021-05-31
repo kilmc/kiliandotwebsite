@@ -1,0 +1,31 @@
+{
+  "type": "annual",
+  "year": 2020,
+  "category": "music",
+  "subcategory": "albums",
+  "list": [
+    { "title": "The Neon Skyline", "artist": "Andy Shauf" },
+    { "title": "Jump Rope Gazer", "artist": "The Beths" },
+    { "title": "After Hours", "artist": "The Weeknd" },
+    { "title": "Cathy & Places EP", "artist": "Callum Orr" },
+    { "title": "And It’s Still Alright", "artist": "Nathaniel Rateliff" },
+    { "title": "Candid", "artist": "Whitney" },
+    { "title": "EPHEMERA", "artist": "Jim-E Stack" },
+    { "title": "Punisher", "artist": "Phoebe Bridgers" },
+    { "title": "Solitude", "artist": "Cloudkicker" },
+    { "title": "Sátt", "artist": "Ásgeir" },
+    { "title": "how i’m feeling now", "artist": "Charli XCX" },
+    {
+      "title": "how will i rest in peace if i'm buried by a highway ",
+      "artist": "KennyHoopla"
+    },
+    { "title": "Marigold", "artist": "Pinegrove" },
+    { "title": "Free Love", "artist": "Sylvan Esso" },
+    { "title": "Spirit World Field Guide", "artist": "Aesop Rock" },
+    { "title": "My Agenda", "artist": "Dorian Electra" },
+    { "title": "Floral Prince", "artist": "Field Medic" },
+    { "title": "Alfredo", "artist": "Freddie Gibbs & The Alchemist" },
+    { "title": "Every Which Way", "artist": "Dan Reeder" },
+    { "title": "Soft Storm", "artist": "Sunset Rollecoaster" }
+  ]
+}

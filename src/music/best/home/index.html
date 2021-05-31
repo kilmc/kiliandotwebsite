@@ -1,0 +1,41 @@
+---
+title: Kilian McMahon
+permalink: "/"
+---
+
+<div class="container">
+  <main class="layout-homepage">
+    <h1 class="heading layout-homepage__item item-header">Kilian McMahon</h1>
+    <div class="item-current-job layout-homepage__item fz2">
+      <h2 class="section-title">Work</h2>
+      <a href="https://kickstarter.com/">
+        Frontend Designer
+        <br />@ Kickstarter
+      </a>
+    </div>
+    <div class="item-susu layout-homepage__item fz2">
+      <h2 class="section-title">Happy place</h2>
+      <a href="https://susu.computer/"> Half of SuSu </a>
+    </div>
+    <div class="item-side-projects layout-homepage__item">
+      <h2 class="section-title column-full">Projects</h2>
+      <a class="fz2" href="https://acnh.kilian.website/">
+        New Horizons
+        <br />Toolkit
+      </a>
+    </div>
+
+    <div class="item-best-of layout-homepage__item">
+      <h2 class="section-title column-full">Year-end Music Lists</h2>
+
+      {% for list in endOfYearLists %}
+      <a class="fz2" href="{{list.href}}">{{list.year}}</a>
+      {% endfor %}
+    </div>
+    <div class="item-hello layout-homepage__item">
+      <h2 class="section-title column-full">Say hello</h2>
+      <a class="fz2" href="https://twitter.com/kilmc">Twitter</a>
+      <a class="fz2" href="mailto:mail@kilian.website">Email</a>
+    </div>
+  </main>
+</div>

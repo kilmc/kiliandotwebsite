@@ -1,0 +1,10 @@
+---
+layout: base.njk
+title: Blog post title
+permalink: "posts/{{ title | slug }}/index.html"
+---
+
+<main>
+  <h2>{{title}}</h2>
+  {{ content | safe }}
+</main>

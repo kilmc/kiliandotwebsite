@@ -1,5 +1,5 @@
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setTemplateFormats(["md", "css", "html"]);
+  eleventyConfig.setTemplateFormats(["md", "css", "html", "njk"]);
 
   return {
     dir: {

@@ -1,0 +1,30 @@
+{
+  "film": [
+    {
+      "title": "Favourite films",
+      "type": "running",
+      "list": []
+    }
+  ],
+  "games": [
+    {
+      "title": "Favourite games",
+      "type": "running",
+      "list": []
+    }
+  ],
+  "music": [
+    {
+      "title": "Best albums of 2019",
+      "type": "annual",
+      "year": "2019",
+      "list": []
+    },
+    {
+      "title": "Best songs of 2019",
+      "type": "annual",
+      "year": "2019",
+      "list": []
+    }
+  ]
+}

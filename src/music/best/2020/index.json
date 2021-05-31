@@ -1,0 +1,117 @@
+{
+  "albums": {
+    "title": "Best Albums of 2020",
+    "list": [
+      { "title": "The Neon Skyline", "artist": "Andy Shauf" },
+      { "title": "Jump Rope Gazer", "artist": "The Beths" },
+      { "title": "After Hours", "artist": "The Weeknd" },
+      { "title": "Cathy & Places EP", "artist": "Callum Orr" },
+      { "title": "And It’s Still Alright", "artist": "Nathaniel Rateliff" },
+      { "title": "Candid", "artist": "Whitney" },
+      { "title": "EPHEMERA", "artist": "Jim-E Stack" },
+      { "title": "Punisher", "artist": "Phoebe Bridgers" },
+      { "title": "Solitude", "artist": "Cloudkicker" },
+      { "title": "Sátt", "artist": "Ásgeir" },
+      { "title": "how i’m feeling now", "artist": "Charli XCX" },
+      {
+        "title": "how will i rest in peace if i'm buried by a highway ",
+        "artist": "KennyHoopla"
+      },
+      { "title": "Marigold", "artist": "Pinegrove" },
+      { "title": "Free Love", "artist": "Sylvan Esso" },
+      { "title": "Spirit World Field Guide", "artist": "Aesop Rock" },
+      { "title": "My Agenda", "artist": "Dorian Electra" },
+      { "title": "Floral Prince", "artist": "Field Medic" },
+      { "title": "Alfredo", "artist": "Freddie Gibbs & The Alchemist" },
+      { "title": "Every Which Way", "artist": "Dan Reeder" },
+      { "title": "Soft Storm", "artist": "Sunset Rollecoaster" }
+    ]
+  },
+  "songs": {
+    "title": "Best Songs of 2020",
+    "list": [
+      { "title": "Run", "artist": "Joji", "release": "Single" },
+      { "title": "Suddenly", "artist": "M. T. Hadley", "release": "Single" },
+      {
+        "title": "RASCAL",
+        "artist": "RMR",
+        "release": "DRUG DEALING IS A LOST ART"
+      },
+      {
+        "title": "Tiny Indoor Fireworks",
+        "artist": "Biffy Clyro",
+        "release": "A Celebration of Endings"
+      },
+      {
+        "title": "Cinnamon",
+        "artist": "Hayley Williams",
+        "release": "Petals For Armor"
+      },
+      { "title": "Gold Leaf", "artist": "A. G. Cook", "release": "7G" },
+      { "title": "Screentime", "artist": "John Farrell", "release": "2020" },
+      {
+        "title": "Time",
+        "artist": "Jack Garratt",
+        "release": "Love, Death & Dancing"
+      },
+      { "title": "my future", "artist": "Billie Eilish", "release": "Single" },
+      {
+        "title": "Video Game",
+        "artist": "Sufjan Stevens",
+        "release": "The Ascension"
+      },
+      { "title": "PDLIF", "artist": "Bon Iver", "release": "Single" },
+      { "title": "Circles", "artist": "Mac Miller", "release": "Circles" },
+
+      {
+        "title": "Audacious (feat. KAZU)",
+        "artist": "Ian Chang",
+        "release": "属 Belonging"
+      },
+      {
+        "title": "ringtone (Remix) [feat. Charli XCX, Rico Nasty, Kero Kero Bonito]",
+        "artist": "100 gecs",
+        "release": "1000 gecs and The Tree of Clues"
+      },
+      {
+        "title": "God's Own Children",
+        "artist": "Obongjayar",
+        "release": "Single"
+      },
+      { "title": "War", "artist": "IDLES", "release": "Ultra Mono" },
+      {
+        "title": "Rodeo",
+        "artist": "Lil Nas X & Nas Rodeo",
+        "release": "Single"
+      },
+      {
+        "title": "ooh la la (feat. Greg Nice & DJ Premier)",
+        "artist": "Run The Jewels",
+        "release": "RTJ4"
+      },
+      {
+        "title": "when the party’s over",
+        "artist": "James Blake",
+        "release": "Covers EP"
+      },
+      { "title": "Emma-O", "artist": "Glowbug", "release": "Vampire Empire" },
+      {
+        "title": "Solstice Izo",
+        "artist": "Hudson Mohawke",
+        "release": "Poom Gems"
+      },
+      { "title": "rubyinsides", "artist": "Purity Ring", "release": "WOMB" },
+      {
+        "title": "Lipstick Song",
+        "artist": "Porches",
+        "release": "Ricky Music"
+      },
+      {
+        "title": "Get Your Wish",
+        "artist": "Porter Robinson",
+        "release": "Single"
+      },
+      { "title": "Ohms", "artist": "Deftones", "release": "Ohms" }
+    ]
+  }
+}

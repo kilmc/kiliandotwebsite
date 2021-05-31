@@ -4,7 +4,8 @@
   "description": "The personal website of Kilian McMahon (me)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watch",
+    "debug": "DEBUG=Eleventy* eleventy"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kilmc/kiliandotwebsite/issues"
   },
-  "homepage": "https://github.com/kilmc/kiliandotwebsite#readme"
+  "homepage": "https://github.com/kilmc/kiliandotwebsite#readme",
+  "devDependencies": {
+    "jest": "^27.0.3"
+  }
 }
