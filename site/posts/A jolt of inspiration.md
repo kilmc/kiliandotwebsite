@@ -1,5 +1,7 @@
 ---
 title: A Jolt of Inspiration
+tags:
+  - something
 ---
 
 It’s not often I see something in web design that makes me want to rip up everything I was doing and start again. I felt that urge today though.

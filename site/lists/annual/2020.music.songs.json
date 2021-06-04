@@ -1,8 +1,5 @@
 {
-  "type": "annual",
-  "year": 2020,
-  "category": "music",
-  "subcategory": "songs",
+  "tags": ["type:annual", "cat:music", "year:2020", "subCat:songs"],
   "list": [
     { "title": "Run", "artist": "Joji", "release": "Single" },
     { "title": "Suddenly", "artist": "M. T. Hadley", "release": "Single" },

@@ -1,8 +1,5 @@
 {
-  "type": "annual",
-  "year": 2019,
-  "category": "music",
-  "subcategory": "songs",
+  "tags": ["type:annual", "cat:music", "year:2019", "subCat:songs"],
   "list": [
     { "title": "Milionària", "artist": "ROSALÍA" },
     { "title": "First Floor", "artist": "M. T. Hadley" },

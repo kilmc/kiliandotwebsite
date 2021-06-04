@@ -1,8 +1,5 @@
 {
-  "type": "annual",
-  "year": 2020,
-  "category": "music",
-  "subcategory": "albums",
+  "tags": ["type:annual", "cat:music", "year:2020", "subCat:albums"],
   "list": [
     { "title": "The Neon Skyline", "artist": "Andy Shauf" },
     { "title": "Jump Rope Gazer", "artist": "The Beths" },

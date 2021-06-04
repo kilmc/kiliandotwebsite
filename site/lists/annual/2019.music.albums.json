@@ -1,8 +1,5 @@
 {
-  "type": "annual",
-  "year": 2019,
-  "category": "music",
-  "subcategory": "albums",
+  "tags": ["type:annual", "cat:music", "year:2019", "subCat:albums"],
   "list": [
     { "title": "Be on Fire EP", "artist": "Chrome Sparks" },
     { "title": "Empty", "artist": "M. T. Hadley" },
