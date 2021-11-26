@@ -1,5 +1,6 @@
 ---
 title: To all of my people
+date: 2013-12-30
 ---
 
 For the couches you let me sleep on  
@@ -22,5 +23,3 @@ For the dose of reality
 For the best year to date
 
 Thank you
-
-#blogpost

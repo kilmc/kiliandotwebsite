@@ -1,5 +1,6 @@
 ---
 title: A really weird walk home
+date: 2014-10-16
 ---
 
 I have a pretty vivid memory of being ten or eleven and sitting on my stairs in a cold sweat just turning my head back and forth. It felt like I was moving in slow motion. When I talked aloud, my speech seemed lethargic. My Mom asked me what was wrong. I presume I told her about whatever was going on in my life—oh the stresses of being a ten year old. Being the helpful, caretaking type Mom is, she calmed me down and said that I was anxious. That was the first time I heard about anxiety.
@@ -17,5 +18,3 @@ As I repeated the phrase over and over different things were popping into my hea
 The cause of this attack, or episode, whatever it was, isn’t much of a mystery to me. I’ve just moved to a new country to start a new job and I had been fighting as hard as I could to only talk about how great everything is. I’ve not allowed myself to think about the negatives. At all. Every time an idea would creep into my head like: _You’re going to miss people_, _You have no idea what you’re doing_, or the classic _What if you get fired_, I just forced them down. Which, surprise surprise, isn’t healthy. My head needs these things to be addressed and it was naive of me to think that pretending they weren’t there was going to solve anything. So to that end, I’m sitting on my bed after a great night’s sleep and getting this off my chest.
 
 This is as much for me as it is for other folks who feel the same way. Maybe you, dear anxious reader, always push the feelings away, convince yourself that your levels of anxiety are way less than the other peoples, that you should “just get over it”. That’s not helpful. It does make things worse. The sooner you give it a name, stop being dismissive and start talking about it, the easier it will be to overcome.
-
-#blogpost

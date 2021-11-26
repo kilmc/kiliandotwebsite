@@ -1,7 +1,3 @@
----
-title: Kilian McMahon
----
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,13 +8,18 @@ title: Kilian McMahon
   </head>
   <body>
     <header>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/posts/">Posts</a>
+      <nav class="nav-main">
+        <a href="/">kilian.website</a>
+        <a href="/posts/">posts</a>
+        <a href="/lists/">lists</a>
+        <a href="/projects/">projects</a>
+        <a href="/music/">music</a>
+        <button id="toggleTheme" class="ml-auto">Theme</button>
       </nav>
     </header>
-    <div class="container">
+    <main>
       {{ content | safe }}
-    </div>
+    </main>
+    <script src="/assets/scripts/base.js"></script>
   </body>
 </html>

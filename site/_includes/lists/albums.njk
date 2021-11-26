@@ -1,0 +1,23 @@
+---
+layout: base.njk
+---
+
+<div class="music-list-layout music-list-layout--albums">
+  <h2>{{title}}</h2>
+  <ol class="music-list">
+    {% for item in list %}
+    <li class="music-list-item">
+      <div class="music-list-item__artwork">
+        <span class="music-list-item__rank" data-rank="{{ loop.index }}">{{ loop.index }}</span>
+        <img src="/assets/img/{{title | slug}}/{{item.title | slug}}.jpg" alt="Album artwork for {{ item.title }} by {{ item.artist }}" />
+      </div>
+      <h3 class="music-list-item__title-artist">
+        <span class="music-list-item__title">{{ item.title }}</span>
+        <span class="music-list-item__artist">{{ item.artist }}</span>
+      </h3>
+    </li>
+    {% endfor %}
+  </ol>
+</div>
+
+

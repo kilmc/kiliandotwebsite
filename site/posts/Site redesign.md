@@ -1,5 +1,6 @@
 ---
 title: Site redesign
+date: 2013-10-28
 ---
 
 “Looks like I need to start again…”
@@ -23,5 +24,3 @@ What Siteleaf has given me over all is a confidence that I can be flexible witho
 Similarly, the theme and functionality of the site can be easily updated, refined and re-jigged at whatever pace I want—I can leave it alone for a year and know that the syntax of liquid is simple enough for me to have forgotten completely, yet pick it back up in a day.
 
 Thanks to [the team at Oak](http://oak.is/about/) for making an incredible product. I’m a very proud customer and would recommend you sign up today and try it out.
-
-#blogpost

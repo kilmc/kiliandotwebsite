@@ -1,5 +1,6 @@
 ---
 title: The Great North American Adventure – Part 1
+date: 2012-09-07
 ---
 
 The plane touches down in Toronto, on time and in the dark. I’m calm now but there was a time earlier in the day that I wasn’t.

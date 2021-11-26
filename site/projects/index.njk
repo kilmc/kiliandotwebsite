@@ -1,0 +1,17 @@
+---
+title: Projects
+permalink: projects/
+layout: base.njk
+eleventyExcludeFromCollections: true
+---
+
+<h2>{{title}}</h2>
+<ul>
+  {%- for post in collections.project %}
+  <div class="mb1">
+    <a href="{{post.url}}">{{post.data.title}}</a>
+  </div>
+
+  {% endfor %}
+</ul>
+

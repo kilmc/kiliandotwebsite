@@ -1,0 +1,14 @@
+---
+title: Lists
+permalink: lists/
+eleventyExcludeFromCollections: true
+---
+
+{% for listGroup, lists in collections.listIndex %}
+  <h2>{{ listGroup }}</h2>
+  <ul class="indented-list">
+    {% for list in lists %}
+    <li class="list-index-item"><a href="{{ list.url }}">{{ list.data.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endfor %}

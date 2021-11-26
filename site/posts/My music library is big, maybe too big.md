@@ -1,5 +1,6 @@
 ---
 title: My music library is big, maybe too big
+date: 2011-10-18
 ---
 
 After coming back from Canada and restarting my freelancing I’ve ended up having a little money again. It’s not much, but enough to start back doing something I’ve neglected for a long while and that is buying music.
@@ -25,5 +26,3 @@ After thinking this all through a spring clean of my digital library might do me
 While thinking about all this I’ve realised that music has a changing value over time. Some albums are just golden from the day you first hear them; Morning View by Incubus, From Under The Cork Tree by Fall Out Boy, Way to Normal by Ben Folds, Strange We Should Meet Here by Idiot Pilot etc. There are other albums which I truly struggled with at first. I remember feeling almost guilty that I had spent €20 on the Gorillaz first album, but over time it grew on me and it was completely worth it. And then I have albums by bands like Good Charlotte, Nickelback or P.O.D. (yeah, I know) and these albums seem embarrassing to own now, but what’s interesting is that I don’t feel like they were a waste of money. Their value has dropped to pretty much zero as far as any discernable listening pleasure but they had their place. I’m guessing that even with the new music I’ll be buying that I’ll end up with a few duds, but that’s all part of the experience.
 
 There’s something nice about seeing how you’ve changed or grown up over time and I think music is a really wonderful archive to read back through every now and then.
-
-#blogpost

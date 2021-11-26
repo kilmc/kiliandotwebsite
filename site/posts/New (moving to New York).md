@@ -1,5 +1,6 @@
 ---
 title: New
+date: 2014-08-28
 ---
 
 March began with quite an interesting affirmation.
@@ -29,5 +30,3 @@ I’m going to work at Kickstarter—which is insane! I’ve been perpetually da
 Thanks to Paul, Doc, Dermo, Sasha, Cillian, Paddy and Eoin—my coworkers and friends over the past three years. I would not be in this position without your mentorship, help and patience. I hope to do you all proud.
 
 New job. New life. New York.
-
-#blogpost

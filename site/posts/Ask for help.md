@@ -1,5 +1,6 @@
 ---
 title: Ask for help
+date: 2014-01-05
 ---
 
 As a child, when we decided to have a night in and rent a video from our local Dublin spot—RIP, Xtra-vision—I used to wonder why my family would spend time searching through the shelves for the film we wanted. At some point I decided to stop searching and began asking the employee behind the counter if they had what we were looking for. It was great. They could immediately tell me whether the video was in stock; if it wasn’t, they’d usually give me a good recommendation for something else. And no matter what, we were always finished a lot more quickly than if we’d kept looking ourselves.
@@ -21,5 +22,3 @@ So for those of you who are struggling with a project idea, stuck on a particula
 Ask for help.
 
 I promise you, people love helping each other out. It’s one of our good qualities.
-
-#blogpost

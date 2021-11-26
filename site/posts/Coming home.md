@@ -1,5 +1,6 @@
 ---
 title: Coming Home
+date: 2012-10-31
 ---
 
 I have been travelling around North America for a little over three months. To say it has been fun is an understatement. My experiences during this time have genuinely changed my perspective on the world and how I can have an effect on it.
@@ -23,5 +24,3 @@ Create a co-working space in Dublin that will serve as a hub for this community�
 Make something that puts these ideals into practice. If I’m not trying to make an impact myself, why should I expect anyone else to.
 
 —Kilian
-
-#blogpost

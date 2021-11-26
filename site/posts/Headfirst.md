@@ -1,5 +1,6 @@
 ---
 title: Headfirst
+date: 2011-12-08
 ---
 
 I wrote this about 3 months ago but had no where to put it. Now that it has a home, it’s great to re-read it and feel just as confident in my ability to learn new things and improve as a designer.
@@ -15,5 +16,3 @@ We’re out of the bustling after-party now and in a coffee shop in Dublin five 
 As each day and week passed I got more and more bogged down. There was just so much new-ness. I knew basic html and css but really was still grappling with some of the key concepts like positioning and correctly marking things up. I now had to know all that as well as figuring out semantics, responsive design, web-fonts, styling rails apps, SASS, GIT, RUBY, HAML, how to use textmate, using soft tabs, Pull, push, commit, error, error, error. I felt overwhelmed. Almost everything was new. I was asking so many questions of Paddy, Cillian and Dave—my new colleagues. They were all incredibly helpful but every answer lead to more and more chapters started and none finished.
 
 I think I need to bring us to today. I don’t need to take you through my bad practices, my struggles or triumphs with this or that. I want to tell you about my realisation. I’ve gotten so much better at this. I had to do some work on an old project from about three months ago. I was laughing and crying. I couldn’t believe how badly written the code was, and I now had to pick apart my own mess and refactor the damn thing. However, it did make me realise that all those things I had been overwhelmed by were starting to make sense. I love SASS now, and I’m getting ever closer to understanding floats! I’ve read about the troubles other people are having with designing for so many devices, screen resolutions and sizes and I know now that I’m far from alone here and that makes it less of a burden. Plus far better people than me are working out ways to make it easier for us all. I’ve also accepted that things take more time than you’d like, but less time than you’d expect. If you had said to me, it’ll take you four months before you’ll feel like you’ve made an real progress I probably would have been up in arms. But when I think about it. That’s one third of a year. Imagine what I can learn in the next 2.
-
-#blogpost

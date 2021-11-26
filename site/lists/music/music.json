@@ -1,0 +1,5 @@
+{
+  "permalink": "/lists/music/{{ year + '/' if year}}{{title | slug}}/",
+  "layout": "lists/music",
+  "tags": ["list"]
+}

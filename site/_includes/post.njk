@@ -4,7 +4,12 @@ title: Blog post title
 permalink: "posts/{{ title | slug }}/index.html"
 ---
 
-<main class="theme--editorial">
-  <h2>{{title}}</h2>
+<div>
+  <div class="post-header">
+    <h2 class="post-title">{{title}}</h2>
+    <date class="post-date">{{date.toLocaleDateString(undefined,{ year: 'numeric', month: 'long', day: 'numeric' })}}</date>
+  </div>
+  <div class="theme--editorial">
   {{ content | safe }}
-</main>
+  </div>
+</div>
