@@ -1,3 +1,5 @@
+import type { TChordQuality } from './types';
+
 export const intervalsMap = {
 	d2: 0,
 	P1: 0,
@@ -96,7 +98,7 @@ export const majors: Record<string, string[]> = {
 };
 
 export const modes = ['ionian', 'dorian', 'phrygian', 'lydian', 'myxolydian', 'aeolian', 'locrian'];
-export const majorScaleQualities = [
+export const majorScaleQualities: TChordQuality[] = [
 	'major',
 	'minor',
 	'minor',

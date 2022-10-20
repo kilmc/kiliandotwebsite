@@ -16,7 +16,7 @@ describe('getChord', () => {
 		expect(getChord('Caug').notes).toEqual(['C', 'E', 'G#']);
 		expect(getChord('C#aug').notes).toEqual(['C#', 'F', 'A']);
 		expect(getChord('Bbaug').notes).toEqual(['Bb', 'D', 'F#']);
-		expect(getChord('Aaug7').notes).toEqual(['Bb', 'D', 'F#']);
+		expect(getChord('Aaug7').notes).toEqual(['A', 'Db', 'F', 'G']);
 	});
 
 	it('supports diminished chords', () => {

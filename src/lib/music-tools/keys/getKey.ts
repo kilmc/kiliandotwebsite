@@ -22,8 +22,14 @@ export const getKey = (key: string) => {
 	return {
 		name: `${pitch} ${keyQuality}`,
 		notes: scale,
-		major: majorScale,
-		minor: getRelativeMinorName(pitch),
+		major: {
+			name: `${majorPitch} major`,
+			notes: majorScale
+		},
+		minor: {
+			name: getRelativeMinorName(pitch),
+			notes: offsetArr(majorScale, 5)
+		},
 		modes(name: TMode) {
 			return offsetArr(majorScale, modes.indexOf(name));
 		},

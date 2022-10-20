@@ -38,7 +38,7 @@ export function isSusType(value: string): value is TSusType {
 	return susTypes.includes(value as TSusType);
 }
 
-interface IChord {
+interface IChordInfo {
 	name: string;
 	note: string;
 	quality: TChordQuality;
@@ -113,7 +113,7 @@ const determineSlashChord = (slashNote?: string) => {
 	return slashNote?.replace('/', '');
 };
 
-const determineChord = (name: string): IChord => {
+const determineChord = (name: string): IChordInfo => {
 	const [note, quality, type, altered, add, sus, slashNote] =
 		name.match(chordRegexp)?.slice(1) || [];
 
@@ -136,7 +136,7 @@ const chordInfoToIntervalMap = ({
 	type,
 	quality,
 	susType
-}: IChord): TIntervalShorthand[] => {
+}: IChordInfo): TIntervalShorthand[] => {
 	let intervals: TIntervalShorthand[] = chordQualityIntervalsMap[quality];
 
 	if (type === 'fifth') {
@@ -203,7 +203,12 @@ const chordInfoToIntervalMap = ({
 	return intervals;
 };
 
-export const getChord = (name: string) => {
+interface IChord {
+	name: string;
+	notes: string[];
+}
+
+export const getChord = (name: string): IChord => {
 	if (name === '') {
 		return {
 			name: `Type a chord`,
