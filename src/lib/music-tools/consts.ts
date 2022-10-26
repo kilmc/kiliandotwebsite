@@ -1,4 +1,4 @@
-import type { TChordQuality } from './types';
+import type { TChordQuality, TChordType, TIntervalShorthand } from './types';
 
 export const intervalsMap = {
 	d2: 0,
@@ -55,8 +55,6 @@ export const intervalsMap = {
 	A15: 25
 };
 
-export type TIntervalShorthand = keyof typeof intervalsMap;
-
 export const chordQualityIntervalsMap: Record<string, TIntervalShorthand[]> = {
 	major: ['P1', 'M3', 'P5'],
 	augmented: ['P1', 'M3', 'A5'],
@@ -107,3 +105,17 @@ export const majorScaleQualities: TChordQuality[] = [
 	'minor',
 	'diminished'
 ];
+
+export const addTypes = ['add2', 'add4', 'add9', 'add11', 'add13'];
+export const susTypes = ['sus2', 'sus4'];
+
+export const numberTypeChordMap: Record<string, TChordType> = {
+	2: 'second',
+	4: 'fourth',
+	5: 'fifth',
+	6: 'sixth',
+	7: 'seventh',
+	9: 'ninth',
+	11: 'eleventh',
+	13: 'thirteenth'
+};

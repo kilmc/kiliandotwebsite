@@ -1,133 +1,8 @@
-import { chordQualityIntervalsMap, type TIntervalShorthand } from '../consts';
+import { chordQualityIntervalsMap } from '../consts';
 import { offsetArr } from '../helper';
 import { transposeNote } from '../notes/transpose';
-import type { TChordQuality } from '../types';
-
-// const isMajor = (str: string) => /[A-G](?:#|b)?(?:M)?/.test(str);
-// const isMinor = (str: string) => /[A-G](?:#|b)?(?:m)$/.test(str);
-
-// const noteRegex = new RegExp(/(?:^[A-G])(?:#|b)/);
-// const qualityRegex = new RegExp(/aug|dim|maj|m|M|o|\+/);
-
-const chordRegexp = new RegExp(
-	/((?:^[A-G])(?:#|b)?)(aug|dim|maj|m|M|o|\+)?(2|4|5|6|7|9|11|13)?((?:(?:#|b)(?:5|7|9|11|13))+)?(add(?:2|4|9|11|13)?)?(sus(?:2|4|9)?)?(\/[A-G](?:#|b)?)?/
-);
-
-type TChordType =
-	| 'second'
-	| 'triad'
-	| 'fourth'
-	| 'fifth'
-	| 'sixth'
-	| 'seventh'
-	| 'ninth'
-	| 'eleventh'
-	| 'thirteenth';
-
-const addTypes = ['add2', 'add4', 'add9', 'add11', 'add13'];
-type TAddType = 'add2' | 'add4' | 'add9' | 'add11' | 'add13';
-
-export function isAddType(value: string): value is TAddType {
-	return addTypes.includes(value as TAddType);
-}
-
-const susTypes = ['sus2', 'sus4'];
-type TSusType = 'sus2' | 'sus4';
-
-export function isSusType(value: string): value is TSusType {
-	return susTypes.includes(value as TSusType);
-}
-
-interface IChordInfo {
-	name: string;
-	note: string;
-	quality: TChordQuality;
-	type?: TChordType;
-	alteredNotes?: string[];
-	addType?: TAddType;
-	susType?: TSusType;
-	slashNote?: string;
-}
-
-const determineChordQuality = (quality?: string): TChordQuality => {
-	if (quality === undefined || ['Δ', 'M', 'maj'].includes(quality)) {
-		return 'major';
-	}
-
-	if (quality === 'm') {
-		return 'minor';
-	}
-
-	if (['dim', 'o'].includes(quality)) {
-		return 'diminished';
-	}
-
-	if (['ø'].includes(quality)) {
-		return 'half-diminished';
-	}
-
-	if (['aug', '+'].includes(quality)) {
-		return 'augmented';
-	}
-
-	return 'major';
-};
-
-const numberTypeChordMap: Record<string, TChordType> = {
-	2: 'second',
-	4: 'fourth',
-	5: 'fifth',
-	6: 'sixth',
-	7: 'seventh',
-	9: 'ninth',
-	11: 'eleventh',
-	13: 'thirteenth'
-};
-
-const isNumberType = (type: string) => {
-	return numberTypeChordMap[type] !== undefined;
-};
-
-const determindChordType = (type?: string): TChordType => {
-	return type === undefined ? 'triad' : numberTypeChordMap[type];
-};
-
-const determineAlteredNotes = (alteredNotes?: string) => {
-	return alteredNotes === undefined
-		? undefined
-		: (alteredNotes.match(/(#|b)(?:5|7|9|11|13)/g) as string[]);
-};
-
-const determineAdd = (add?: string) => {
-	return add && isAddType(add) ? add : undefined;
-};
-
-const determineSus = (sus?: string): TSusType | undefined => {
-	if (sus === undefined) return undefined;
-	if (['sus', 'sus4', 'sus9'].includes(sus)) return 'sus4';
-	if (sus === 'sus2') return 'sus2';
-	return undefined;
-};
-
-const determineSlashChord = (slashNote?: string) => {
-	return slashNote?.replace('/', '');
-};
-
-const determineChord = (name: string): IChordInfo => {
-	const [note, quality, type, altered, add, sus, slashNote] =
-		name.match(chordRegexp)?.slice(1) || [];
-
-	return {
-		name,
-		note,
-		quality: determineChordQuality(quality),
-		type: determindChordType(type),
-		alteredNotes: determineAlteredNotes(altered),
-		addType: determineAdd(add),
-		susType: determineSus(sus),
-		slashNote: determineSlashChord(slashNote)
-	};
-};
+import type { IChord, IChordInfo, TIntervalShorthand } from '../types';
+import { determineChord } from './determineChordInfo';
 
 const chordInfoToIntervalMap = ({
 	addType,
@@ -202,11 +77,6 @@ const chordInfoToIntervalMap = ({
 
 	return intervals;
 };
-
-interface IChord {
-	name: string;
-	notes: string[];
-}
 
 export const getChord = (name: string): IChord => {
 	if (name === '') {

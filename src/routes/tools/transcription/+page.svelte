@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { getChord } from '$lib/music-tools/chords/getChord';
-	import { transposeNote } from '$lib/music-tools/notes/transpose';
+	import Piano from '$lib/instruments/Piano.svelte';
 	export let data: PageData;
 
 	let value = 'C';
@@ -14,10 +14,12 @@
 <input class="text-black" bind:value />
 <div class="flex h-96">
 	<div class="text-7xl m-auto">
-		<h1>{getChord(value).name}</h1>
+		<h1 class="font-bold">{getChord(value).name}</h1>
 		<p>{getChord(value).notes.join(' ')}</p>
 	</div>
 </div>
+
+<Piano />
 
 <!-- <div>
 	<h2>C major</h2>

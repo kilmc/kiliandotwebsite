@@ -6,3 +6,5 @@ export const load: PageLoad = () => {
 		content: 'Welcome to our blog. Lorem ipsum dolor sit amet...'
 	};
 };
+
+export const ssr = false;
