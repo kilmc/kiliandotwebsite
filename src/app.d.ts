@@ -2,11 +2,23 @@
 // for information about these interfaces
 // and what to do when importing types
 declare namespace App {
-	interface Locals {
-		userid: string;
+	// interface Error {}
+	// interface Locals {}
+	// interface PageData {}
+	// interface Platform {}
+
+	interface MdsvexFile {
+		default: import('svelte/internal').SvelteComponent;
+		metadata: Record<string, string>;
 	}
 
-	// interface PageData {}
+	type MdsvexResolver = () => Promise<MdsvexFile>;
 
-	// interface Platform {}
+	interface Post {
+		slug: string;
+		title: string;
+		description: string;
+		date: string;
+		published: boolean;
+	}
 }

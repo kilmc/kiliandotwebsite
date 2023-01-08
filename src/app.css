@@ -1,3 +1,7 @@
+.font-kepler {
+	font-family: kepler-std, serif;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
