@@ -1,7 +1,33 @@
+@tailwind base;
+
+html,
+body {
+	height: 100%;
+}
+
+@tailwind components;
+@tailwind utilities;
+
 .font-kepler {
 	font-family: kepler-std, serif;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.font-azo {
+	font-family: azo-sans-web, sans-serif;
+}
+
+.kdw-bg-white {
+	background-color: #fcf8ff;
+}
+
+.kdw-text-white {
+	color: #fcf8ff;
+}
+
+.kdw-bg-blue {
+	background-color: #0019ff;
+}
+
+.kdw-text-blue {
+	color: #0019ff;
+}

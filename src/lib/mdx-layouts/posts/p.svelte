@@ -1,1 +1,1 @@
-<p class="text-base mb-4"><slot /></p>
+<p class="italic"><slot /></p>

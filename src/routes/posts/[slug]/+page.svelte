@@ -4,8 +4,13 @@
 	export let data: PageData;
 </script>
 
-<div>
-	<h1 class="text-blue-500 italic text-4xl font-black">{data.title}</h1>
+<svelte:head>
+	<title>Kilian | Post: {data.title}</title>
+</svelte:head>
 
+<div>
+	<div class="text-center italic">Post</div>
+	<h1 class="kdw-text-blue italic text-4xl font-black mb-8">{data.title}</h1>
+	<div>{data.date}</div>
 	<svelte:component this={data.content} />
 </div>

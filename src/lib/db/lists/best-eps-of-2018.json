@@ -1,0 +1,14 @@
+{
+	"title": "Best EPs of 2018",
+	"category": "music",
+	"subCategory": "eps",
+	"type": "best-of",
+	"year": 2018,
+	"items": [
+		{ "title": "Virtual Self EP", "artist": "Virtual Self" },
+		{ "title": "boygenius EP", "artist": "boygenius" },
+		{ "title": "Remedy", "artist": "Son Lux" },
+		{ "title": "Soon I won't see you at all", "artist": "Hannah Diamond" },
+		{ "title": "Fearless Flyers", "artist": "Fearless Flyers" }
+	]
+}

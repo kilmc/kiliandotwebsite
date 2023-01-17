@@ -1,18 +1,8 @@
 ---
-title: 'Dissonance in Life and Music'
+title: 'Dissonance in life and music'
+date: 2014-03-26
+slug: dissonance-in-life-and-music
 ---
-
-# Heading 1
-
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-
-##### Heading 5
-
-###### Heading 6
 
 I press play on [Unluck](http://ubiq.im/q/5332c5e3cc88a3020052f4a3), track one, side one of James Blake’s self titled album. As the song progresses I begin to feel the tension building in me. The notes and chord progressions are just off, so wrong. As the dissonance washes over the office I feel the need to turn it down so as not to upset my co-workers ears. The interesting thing is that, I’m using them as an excuse to turn it down. The music is making _me_ uncomfortable. It’s such a departure from the clean, syrupy-sweet perfection of modern pop music, or modern music in general. It makes me squirm, like watching people argue in public or hearing a baby screaming its lungs out on the bus. These things break the quiet status quo that I’ve become used to. Habits form quickly, and don’t break easy.
 

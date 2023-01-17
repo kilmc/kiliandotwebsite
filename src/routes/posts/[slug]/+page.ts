@@ -1,19 +1,17 @@
 import type { PageLoad } from './$types';
 import { posts } from '$lib/db/posts';
 
-const pathToSlug = (path: string) => path.replace(/.*\/(.*)\.md/, '$1');
-
 export const load = (({ params }) => {
-	console.log(posts);
-	const entry = Object.entries(posts).find(([filePath]) => pathToSlug(filePath) === params.slug);
+	const file = Object.values(posts).find((file) => file.metadata.slug === params.slug);
 
-	if (entry !== undefined) {
-		const [, file] = entry;
-
-		console.log('INNER');
-		console.log('POST', file.metadata);
+	if (file !== undefined) {
 		return {
-			...file.metadata,
+			title: file.metadata.title,
+			date: new Date(file.metadata.date).toLocaleDateString('en-EN', {
+				year: 'numeric',
+				month: 'long',
+				day: 'numeric'
+			}),
 			content: file.default
 		};
 	}
