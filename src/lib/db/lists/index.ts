@@ -1,10 +1,12 @@
-type ListType = 'best-of';
-type ListCategory = 'music';
-type ListSubCategory = 'songs' | 'eps' | 'albums';
+export type ListType = 'best-of';
+export type ListCategory = 'music';
+export type ListSubCategory = 'songs' | 'eps' | 'albums';
 
-type ListItem = {
+export type ListItem = {
 	title: string;
 	artist?: string;
+	imageUrl?: string;
+	release?: string;
 };
 
 export type List = {

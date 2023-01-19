@@ -6,37 +6,37 @@
 	"year": 2017,
 	"items": [
 		{
-			"title": "What Now",
+			"release": "What Now",
 			"artist": "Sylvan Esso"
 		},
-		{ "title": "Much Love", "artist": "Microwave" },
+		{ "release": "Much Love", "artist": "Microwave" },
 		{
-			"title": "A Black Mile to the Surface",
+			"release": "A Black Mile to the Surface",
 			"artist": "Manchester Orchestra"
 		},
-		{ "title": "After Laughter", "artist": "Paramore" },
-		{ "title": "Silent Earthling", "artist": "Three Trapped Tigers" },
-		{ "title": "Stealing the Covers", "artist": "Teenage Bottlerocket" },
-		{ "title": "Stranger in the Alps", "artist": "Phoebe Bridgers" },
+		{ "release": "After Laughter", "artist": "Paramore" },
+		{ "release": "Silent Earthling", "artist": "Three Trapped Tigers" },
+		{ "release": "Stealing the Covers", "artist": "Teenage Bottlerocket" },
+		{ "release": "Stranger in the Alps", "artist": "Phoebe Bridgers" },
 		{
-			"title": "Polygondwanaland",
+			"release": "Polygondwanaland",
 			"artist": "King Gizzard & The Lizard Wizard"
 		},
-		{ "title": "Heartbreak Hits", "artist": "Theo Katzman" },
-		{ "title": "Ti Amo", "artist": "Phoenix" },
-		{ "title": "Outrage is now", "artist": "Death From Above 1979" },
-		{ "title": "War Moans", "artist": "Mutoid Man" },
-		{ "title": "Pure Comedy", "artist": "Father John Misty" },
-		{ "title": "Organ Freeman", "artist": "Organ Freeman" },
-		{ "title": "Hug of Thunder", "artist": "Broken Social Scene" },
-		{ "title": "MASSEDUCTION", "artist": "St. Vincent" },
-		{ "title": "Science Fiction", "artist": "Brand New" },
-		{ "title": "Blindfaller", "artist": "Mandolin Orange" },
-		{ "title": "Guppy", "artist": "Charly Bliss" },
-		{ "title": "Mr. Finish Line", "artist": "Vulfpeck" },
-		{ "title": "Twin Solitude", "artist": "Leif Vollebekk" },
-		{ "title": "Care", "artist": "David Bazan" },
-		{ "title": "Big Fish Theory", "artist": "Vince Staples" },
-		{ "title": "Heavy", "artist": "Mikhael Paskalev" }
+		{ "release": "Heartbreak Hits", "artist": "Theo Katzman" },
+		{ "release": "Ti Amo", "artist": "Phoenix" },
+		{ "release": "Outrage is now", "artist": "Death From Above 1979" },
+		{ "release": "War Moans", "artist": "Mutoid Man" },
+		{ "release": "Pure Comedy", "artist": "Father John Misty" },
+		{ "release": "Organ Freeman", "artist": "Organ Freeman" },
+		{ "release": "Hug of Thunder", "artist": "Broken Social Scene" },
+		{ "release": "MASSEDUCTION", "artist": "St. Vincent" },
+		{ "release": "Science Fiction", "artist": "Brand New" },
+		{ "release": "Blindfaller", "artist": "Mandolin Orange" },
+		{ "release": "Guppy", "artist": "Charly Bliss" },
+		{ "release": "Mr. Finish Line", "artist": "Vulfpeck" },
+		{ "release": "Twin Solitude", "artist": "Leif Vollebekk" },
+		{ "release": "Care", "artist": "David Bazan" },
+		{ "release": "Big Fish Theory", "artist": "Vince Staples" },
+		{ "release": "Heavy", "artist": "Mikhael Paskalev" }
 	]
 }

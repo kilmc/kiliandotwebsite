@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Button from '$lib/components/Button.svelte';
 	import { debounce } from 'lodash';
 
 	let bpm = 120;
@@ -26,9 +27,4 @@
 	};
 </script>
 
-<button
-	class="text-4xl font-azo m-auto bg-black text-white px-4 py-2 rounded-md"
-	on:click={handleClick}
->
-	{bpm}
-</button>
+<Button on:click={handleClick}>{bpm}</Button>

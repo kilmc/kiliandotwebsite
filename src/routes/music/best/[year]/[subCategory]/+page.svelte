@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import MusicItem from './MusicItem.svelte';
 
 	export let data: PageData;
 </script>
@@ -14,9 +15,13 @@
 	</div>
 {/if}
 
-<ol class="list-decimal">
+<ol class="layout--grid">
 	{#each data.list.items as item}
-		<li>{item.title} - {item.artist}</li>
+		<MusicItem
+			{item}
+			releaseType={data.list.subCategory}
+			showArtwork={data.list.subCategory === 'albums'}
+		/>
 	{/each}
 </ol>
 
@@ -28,5 +33,11 @@
 
 	.active {
 		font-weight: bold;
+	}
+
+	.layout--grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+		gap: 1rem;
 	}
 </style>

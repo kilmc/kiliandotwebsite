@@ -5,10 +5,10 @@
 	"type": "best-of",
 	"year": 2018,
 	"items": [
-		{ "title": "Virtual Self EP", "artist": "Virtual Self" },
-		{ "title": "boygenius EP", "artist": "boygenius" },
-		{ "title": "Remedy", "artist": "Son Lux" },
-		{ "title": "Soon I won't see you at all", "artist": "Hannah Diamond" },
-		{ "title": "Fearless Flyers", "artist": "Fearless Flyers" }
+		{ "release": "Virtual Self EP", "artist": "Virtual Self" },
+		{ "release": "boygenius EP", "artist": "boygenius" },
+		{ "release": "Remedy", "artist": "Son Lux" },
+		{ "release": "Soon I won't see you at all", "artist": "Hannah Diamond" },
+		{ "release": "Fearless Flyers", "artist": "Fearless Flyers" }
 	]
 }

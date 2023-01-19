@@ -1,9 +1,9 @@
 <script>
-	import Header from '$lib/components/header.svelte';
+	import Header from '$lib/components/Header.svelte';
 	import '../app.css';
 </script>
 
-<div class="font-kepler kdw-bg-white layout">
+<div class="font-serif kdw-bg-white layout">
 	<Header />
 	<main class="px-10">
 		<slot />

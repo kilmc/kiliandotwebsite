@@ -22,3 +22,10 @@ declare namespace App {
 		published: boolean;
 	}
 }
+
+declare namespace svelte.JSX {
+	interface HTMLProps<T> {
+		oncopied?: (event: CustomEvent<string>) => void;
+		'oncopied:error'?: (event: CustomEvent<Error>) => void;
+	}
+}

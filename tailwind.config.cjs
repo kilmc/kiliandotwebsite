@@ -2,7 +2,15 @@
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
-		extend: {}
+		fontFamily: {
+			sans: ['Helvetica', 'Arial', 'sans-serif'],
+			serif: ['kepler-std', 'serif'],
+			mono: ['monospace']
+		},
+		extend: {
+			// colors:{
+			// }
+		}
 	},
 	plugins: [require('@tailwindcss/typography')]
 };

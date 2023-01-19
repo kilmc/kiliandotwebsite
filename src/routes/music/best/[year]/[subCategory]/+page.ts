@@ -19,7 +19,7 @@ export const load = (({ params }) => {
 			url: `/music/best/${list.year}/${list.subCategory}`,
 			title: list.year
 		}));
-	console.log(relatedLists);
+
 	return {
 		title: title,
 		list: list,
