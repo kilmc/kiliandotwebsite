@@ -6,7 +6,7 @@
 </script>
 
 <div class={$$restProps.class || ''}>
-	<label for={id} class="block font-sans text-xs uppercase tracking-wider mb-1">{label}</label>
+	<label for={id} class="block font-sans text-xs uppercase tracking-wider mb-2">{label}</label>
 	<input
 		{id}
 		bind:value

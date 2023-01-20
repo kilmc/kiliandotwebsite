@@ -1,17 +1,13 @@
 <script lang="ts">
 	import Button from '$lib/components/Button.svelte';
 	import Input from '$lib/components/Input.svelte';
-	import { hexToHSL, type HSLColor } from './color-utils';
+	import { hexToHSL } from './color-utils';
 	import ColorSquare from './ColorSquare.svelte';
+	import { generateCSSConfig, generateSassConfig, generateTailwindConfig } from './formatters';
+	import type { Color, HSLColor } from './types';
 
-	type Color = {
-		name: string;
-		graduation: number;
-		value: HSLColor;
-	};
-
-	let hex: string = '#000000';
-	let name: string = 'grey';
+	export let hexValue: string;
+	export let name: string;
 
 	function getColorGrads({ h, s, l }: HSLColor, name: string): Color[] {
 		const onesNumber = l % 10;
@@ -22,37 +18,7 @@
 		}));
 	}
 
-	function generateTailwindConfig(name: string, colors: Color[]) {
-		const entries = colors
-			.map((color) => {
-				const { h, s, l } = color.value;
-				return `  ${color.graduation}: 'hsl(${h},${s}%,${l}%)',`;
-			})
-			.join('\n');
-		return `'${name}': { 
-${entries}
-}`;
-	}
-
-	function generateSassConfig(name: string, colors: Color[]) {
-		return colors
-			.map((color) => {
-				const { h, s, l } = color.value;
-				return `$${name}-${color.graduation}: hsl(${h},${s}%,${l}%);`;
-			})
-			.join('\n');
-	}
-
-	function generateCSSConfig(name: string, colors: Color[]) {
-		return colors
-			.map((color) => {
-				const { h, s, l } = color.value;
-				return `--${name}-${color.graduation}: hsl(${h},${s}%,${l}%);`;
-			})
-			.join('\n');
-	}
-
-	$: hslColor = hexToHSL(hex);
+	$: hslColor = hexToHSL(hexValue);
 	$: colors = getColorGrads(hslColor, name);
 	$: twConfig = generateTailwindConfig(name, colors);
 	$: sassConfig = generateSassConfig(name, colors);
@@ -61,8 +27,8 @@ ${entries}
 
 <div class=" bg-white p-4 shadow-md layout gap-4">
 	<div class="flex flex-col justify-between">
-		<Input label="Source color (hex)" id="color-input" bind:value={hex} class="mb-2" />
-		<Input label="Name" id="color-input" bind:value={name} class="mb-4" />
+		<Input label="Source color (hex)" id="color-input" bind:value={hexValue} class="mb-3" />
+		<Input label="Name" id="color-input" bind:value={name} class="mb-3" />
 		<div class="flex justify-between">
 			<Button variant="secondary" clipboard={twConfig}>
 				<div class="tailwind-logo"><span class="sr-only">Tailwind Logo</span></div>

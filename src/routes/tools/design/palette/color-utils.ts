@@ -1,10 +1,6 @@
-export const hexRegExp = /^#([\da-f]{3}){1,2}$/i;
+import type { HSLColor } from './types';
 
-export type HSLColor = {
-	h: number;
-	s: number;
-	l: number;
-};
+export const hexRegExp = /^#([\da-f]{3}){1,2}$/i;
 
 export function hexToHSL(H: string): HSLColor {
 	// Convert hex to RGB first

@@ -18,7 +18,7 @@
 	<h3 class="font-black">Best {list.subCategory}</h3>
 	<ol>
 		{#each list.items as item}
-			<li>{item.title} - {item.artist}</li>
+			<li>{list.subCategory === 'songs' ? item.title : item.release} - {item.artist}</li>
 		{/each}
 	</ol>
 {/each}
