@@ -1,16 +1,11 @@
 <script lang="ts">
-	import { palettes, type Palette } from '$lib/stores/palettes';
+	import { palettes } from '$lib/stores/palettes';
 	import ColorGradations from './ColorGradations.svelte';
-
-	let localPalettes: Palette[] = [];
-	palettes.subscribe((data) => {
-		localPalettes = data;
-	});
 </script>
 
-<div class="w-full">
-	{#if localPalettes.length > 0}
-		{#each localPalettes as { hexValue, name }}
+<div class="w-full flex flex-col gap-4">
+	{#if $palettes.length > 0}
+		{#each $palettes as { hexValue, name }}
 			<ColorGradations {hexValue} {name} />
 		{/each}
 	{/if}

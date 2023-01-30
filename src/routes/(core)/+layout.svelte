@@ -1,11 +1,15 @@
 <script>
 	import Header from '$lib/components/Header.svelte';
-	import '../app.css';
+	import '../../app.css';
 </script>
 
-<div class="font-serif kdw-bg-white layout">
+<svelte:head>
+	<title>K.W</title>
+</svelte:head>
+
+<div class="font-serif layout">
 	<Header />
-	<main class="px-10">
+	<main>
 		<slot />
 	</main>
 

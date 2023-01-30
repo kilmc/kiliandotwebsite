@@ -1,12 +1,19 @@
 <script lang="ts">
 	export let label: string;
 	export let id: string;
-	export let value: string;
+	export let value: string | number;
+	export let hideLabel = false;
 	export let pattern: string | undefined = undefined;
 </script>
 
 <div class={$$restProps.class || ''}>
-	<label for={id} class="block font-sans text-xs uppercase tracking-wider mb-2">{label}</label>
+	<label
+		for={id}
+		class="block font-sans text-xs uppercase tracking-wider mb-2"
+		class:sr-only={hideLabel}
+	>
+		{label}
+	</label>
 	<input
 		{id}
 		bind:value

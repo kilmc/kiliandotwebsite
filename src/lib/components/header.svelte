@@ -1,6 +1,6 @@
 <header>
 	<nav class="px-10">
-		<a href="/" class="logo font-serif font-black italic">
+		<a href="/" class="logo text-blue-700 font-serif font-black italic">
 			<span class="logo__k">K</span>
 			<span class="logo__dot">&middot;</span>
 			<span class="logo__w">W</span>
