@@ -1,6 +1,6 @@
-<div class="layout">
+<div class="layout bg-black text-white h-screen">
 	<div
-		class="logo font-serif font-black italic text-5xl text-blue-600 leading-10 border-blue-600 border-8 aspect-square w-full flex"
+		class="logo font-serif font-black italic text-5xl text-white leading-10 border-blue-600 border-8 aspect-square w-full flex"
 	>
 		<div class="m-auto">
 			<div>Kilian</div>
@@ -9,7 +9,7 @@
 		</div>
 	</div>
 
-	<div class="border-black border-8 p-10 link-layout">
+	<div class="border-white border-8 p-10 link-layout">
 		<div>
 			<h2 class="font-mono font-bold text-xl">Components</h2>
 			<ul class="list-inside text-xl">
