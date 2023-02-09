@@ -1,7 +1,6 @@
 import type { PageLoad } from './$types';
 import { lists } from '$lib/db/lists';
 import { error } from '@sveltejs/kit';
-import { startCase } from 'lodash';
 
 export const load = (({ params }) => {
 	const yearLists = lists.filter((list) => list.year === Number(params.year));
@@ -12,7 +11,7 @@ export const load = (({ params }) => {
 		throw error(404, 'Not Found');
 	}
 
-	const title = startCase(`Best ${list.subCategory} of ${list.year}`);
+	const title = `Best ${list.subCategory} of ${list.year}`;
 	const relatedLists = lists
 		.filter((list) => list.subCategory === params.subCategory)
 		.map((list) => ({
