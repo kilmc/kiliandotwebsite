@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Button from '$lib/components/Button.svelte';
-	import { debounce } from 'lodash';
+	import { debounce } from 'lodash-es';
 
 	let bpm = 120;
 	let clicks: number[] = [];

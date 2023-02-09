@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { ListItem, ListSubCategory } from '$lib/db/lists';
-	import { kebabCase } from 'lodash';
+	import { kebabCase } from 'lodash-es';
 
 	export let item: ListItem;
 	export let releaseType: ListSubCategory;

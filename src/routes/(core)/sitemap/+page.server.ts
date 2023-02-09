@@ -1,6 +1,7 @@
 import type { PageServerLoad } from './$types';
 import type { SvelteComponent } from 'svelte';
-export const files: Record<string, SvelteComponent> = import.meta.glob('../**/*.svelte', {
+
+const files: Record<string, SvelteComponent> = import.meta.glob('../**/*.svelte', {
 	eager: true
 });
 

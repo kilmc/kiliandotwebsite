@@ -1,5 +1,5 @@
 import type { PageServerLoad } from './$types';
-export const projects: Record<string, App.MdsvexFile> = import.meta.glob('./**/*.svelte', {
+const projects: Record<string, App.MdsvexFile> = import.meta.glob('./**/*.svelte', {
 	eager: true
 });
 
