@@ -1,0 +1,24 @@
+{
+	"title": "Best Albums of 2022",
+	"category": "music",
+	"subCategory": "albums",
+	"type": "best-of",
+	"year": 2022,
+	"items": [
+		{ "release": "Expert in a Dying Field", "artist": "The Beths" },
+		{ "release": "MOTOMAMI", "artist": "ROSALÍA" },
+		{ "release": "NOT TiGHT", "artist": "DOMi & JD BECK" },
+		{ "release": "Actual Life 3", "artist": "Fred again.." },
+		{ "release": "Cave World", "artist": "Viagra Boys" },
+		{ "release": "CHAOS NOW*", "artist": "Jean Dawson" },
+		{ "release": "Forever Story", "artist": "JID" },
+		{ "release": "Blue Rev", "artist": "Alvvays" },
+		{ "release": "11:11", "artist": "Pinegrove" },
+		{ "release": "Time On My Hands", "artist": "Ásgeir" },
+		{ "release": "Dawn FM", "artist": "The Weeknd" },
+		{ "release": "Music for Animals", "artist": "Nils Frahm" },
+		{ "release": "A Eulogy fo Those Still Here", "artist": "Counterparts" },
+		{ "release": "No Pressure (LP)", "artist": "No Pressure" },
+		{ "release": "Completions", "artist": "I Needed Help" }
+	]
+}

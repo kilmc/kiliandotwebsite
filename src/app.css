@@ -1,0 +1,25 @@
+@tailwind base;
+
+html,
+body {
+	height: 100%;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+.kdw-bg-white {
+	background-color: #fcf8ff;
+}
+
+.kdw-text-white {
+	color: #fcf8ff;
+}
+
+.kdw-bg-blue {
+	background-color: #0019ff;
+}
+
+.kdw-text-blue {
+	color: #0019ff;
+}

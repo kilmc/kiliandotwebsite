@@ -1,0 +1,37 @@
+{
+	"title": "Best Songs of 2019",
+	"category": "music",
+	"subCategory": "songs",
+	"type": "best-of",
+	"year": 2019,
+	"items": [
+		{ "title": "Milionària", "artist": "ROSALÍA" },
+		{ "title": "First Floor", "artist": "M. T. Hadley" },
+		{ "title": "Warm Crush", "artist": "All Tvvins" },
+		{ "title": "Henna Tattoo", "artist": "Field Medic" },
+		{ "title": "Edge of the Throne", "artist": "Lydia Ainsworth" },
+		{
+			"title": "Eat, Sleep, Wake (Nothing But You)",
+			"artist": "Bombay Bicycle Club"
+		},
+		{ "title": "Juno Lion", "artist": "Chrome Sparks EP" },
+		{ "title": "Born To Bleed", "artist": "Red Hearse" },
+		{ "title": "Ocean of Tears", "artist": "Caroline Polachek" },
+		{ "title": "Can't Believe the Way We Flow", "artist": "James Blake" },
+		{ "title": "money machine", "artist": "100 gecs" },
+		{ "title": "Bmbmbm", "artist": "black midi" },
+		{ "title": "Vossi Bop", "artist": "Stormzy" },
+		{ "title": "Flat Tummy Tea", "artist": "Freddie Gibbs & Madlib" },
+		{ "title": "Sunflower (feat. Steve Lacy)", "artist": "Vampire Weekend" },
+		{ "title": "Thinning", "artist": "Snail Mail" },
+		{ "title": "Never Really Over", "artist": "Katy Perry" },
+		{ "title": "La Vie en Rose", "artist": "Lucy Dacus" },
+		{ "title": "Hey, Ma", "artist": "Bon Iver" },
+		{ "title": "WHAT'S GOOD", "artist": "Tyler, The Creator" },
+		{ "title": "Asshet Akal", "artist": "Mdou Moctar" },
+		{ "title": "Just Thought You Should Know", "artist": "Betty Who" },
+		{ "title": "You Could Be President", "artist": "Theo Katzman" },
+		{ "title": "UFOF", "artist": "Big Thief" },
+		{ "title": "Head Alone", "artist": "Julia Jacklin" }
+	]
+}

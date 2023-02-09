@@ -1,0 +1,35 @@
+{
+	"title": "Best Albums of 2019",
+	"category": "music",
+	"subCategory": "albums",
+	"type": "best-of",
+	"year": 2019,
+	"items": [
+		{ "release": "Be on Fire EP", "artist": "Chrome Sparks" },
+		{ "release": "Empty", "artist": "M. T. Hadley" },
+		{
+			"release": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+			"artist": "Billie Eilish"
+		},
+		{ "release": "Just to Exist", "artist": "All Tvvins" },
+		{ "release": "Schlagenheim", "artist": "black midi" },
+		{ "release": "1000 gecs", "artist": "100 gecs" },
+		{ "release": "ARIZONA BABY", "artist": "Kevin Abstract" },
+		{ "release": "Pang", "artist": "Caroline Polachek" },
+		{ "release": "Phantom Forest", "artist": "Lydia Ainsworth" },
+		{ "release": "This is How You Smile", "artist": "Helado Negro" },
+		{ "release": "Self Titled", "artist": "Red Hearse" },
+		{ "release": "Morbid Stuff", "artist": "PUP" },
+		{ "release": "All Mirrors", "artist": "Angel Olsen" },
+		{ "release": "[USA]", "artist": "Anamanaguchi" },
+		{ "release": "Habit", "artist": "Snail Mail" },
+		{
+			"release": "Infest the Rats' Nest",
+			"artist": "King Gizzard and the Lizard Wizard"
+		},
+		{ "release": "Bandana", "artist": "Freddie Gibbs & Madlib" },
+		{ "release": "Father of the Bride", "artist": "Vampire Weekend" },
+		{ "release": "i,i", "artist": "Bon Iver" },
+		{ "release": "Deceiver", "artist": "DIIV" }
+	]
+}
