@@ -19,7 +19,7 @@
 		''}"
 >
 	{#if type}<div class="index-card__label">{label}</div>{/if}
-	<a {href}><h2 class="index-card__heading">{title}</h2></a>
+	<a {href} class="inline-block hover:underline"><h2 class="index-card__heading">{title}</h2></a>
 	{#if description}<p class="index-card__description mb-2">{description}</p>{/if}
 	<div class="index-card__type absolute top-6 left-0 h-full w-full pointer-events-none" />
 </div>
@@ -47,6 +47,7 @@
 	.index-card {
 		line-height: 20px;
 		padding: 24px 30px 24px;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
 		// Colors
 
