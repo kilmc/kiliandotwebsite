@@ -1,13 +1,9 @@
 import type { PageServerLoad } from './$types';
-const projects: Record<string, App.MdsvexFile> = import.meta.glob('./**/*.svelte', {
-	eager: true
-});
+import { projects } from '$lib/db/projects';
+import { getIndexUrls } from '$lib/helpers/getIndexUrls';
 
-export const load = (async ({ params }) => {
+export const load = (async ({ url }) => {
 	return {
-		projects: Object.keys(projects)
-			.filter((item) => /\.\/[a-zA-Z]/.test(item))
-			.map((item) => item.replace(/\.\/(.*)\/.*/, '$1'))
-			.map((item) => ({ name: item.replace('-', ' '), url: `/projects/${item}` }))
+		items: getIndexUrls(Object.keys(projects), url.pathname)
 	};
 }) satisfies PageServerLoad;

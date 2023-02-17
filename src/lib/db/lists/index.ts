@@ -1,6 +1,8 @@
-export type ListType = 'best-of';
-export type ListCategory = 'music';
-export type ListSubCategory = 'songs' | 'eps' | 'albums';
+import type { LinkItem } from '$lib/types';
+
+export type ListType = 'favourites' | 'yearEnd';
+export type ListGroup = 'music';
+export type ListCategory = 'songs' | 'eps' | 'albums';
 
 export type ListItem = {
 	title: string;
@@ -11,12 +13,30 @@ export type ListItem = {
 
 export type List = {
 	title: string;
+	group: ListGroup;
 	category: ListCategory;
-	subCategory: ListSubCategory;
 	type: ListType;
 	year: number;
 	items: ListItem[];
 };
 
-const files: Record<string, List> = import.meta.glob('./*.json', { eager: true });
-export const lists = Object.values(files);
+const files: Record<string, any> = import.meta.glob('./*.json', { eager: true });
+
+export const lists: List[] = Object.values(files).map((entry) => entry.default);
+export const favourites = lists.filter((list) => list.type === 'favourites');
+export const yearEnd = lists.filter((list) => list.type === 'yearEnd');
+
+export const favouritesLinkItems: LinkItem[] = favourites.map((list) => {
+	return {
+		text: list.title,
+		href: list.category
+	};
+});
+
+export const yearEndLinkItems: LinkItem[] = yearEnd.map((list) => {
+	return {
+		text: list.title,
+		href: `${list.year}/${list.category}`,
+		group: list.year
+	};
+});

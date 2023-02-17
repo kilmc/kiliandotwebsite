@@ -1,29 +1,42 @@
+<script lang="ts">
+	import { startCase } from 'lodash-es';
+
+	export let path: string;
+
+	const generateUrlList = (path: string) => {
+		const homeItem = { title: 'Kilian.website', url: '/' };
+		const fullPath = path.split('/').filter((dir) => dir.length !== 0);
+
+		const pathItems = fullPath.map((dir, i) => {
+			const title = startCase(dir);
+			const url = `/${fullPath.slice(0, i + 1).join('/')}/`;
+
+			return {
+				title,
+				url
+			};
+		});
+
+		return [homeItem].concat(pathItems);
+	};
+	$: linkGroups = generateUrlList(path);
+</script>
+
 <header>
-	<nav class="px-10">
-		<a href="/" class="logo text-blue-700 font-serif font-black italic">
-			<span class="logo__k">K</span>
-			<span class="logo__dot">&middot;</span>
-			<span class="logo__w">W</span>
-		</a>
-		<a href="/sitemap/">Sitemap</a>
-		<a href="/posts/">Posts</a>
-		<a href="/projects/">Projects</a>
+	<nav class="sticky top-20">
+		{#each linkGroups as linkItem, i}
+			<div>
+				<a
+					href={linkItem.url}
+					class="font-mono text-xl uppercase text-black hover:text-gray-500 inline-block"
+					class:font-bold={i === linkGroups.length - 1}
+				>
+					{linkItem.title}
+				</a>
+			</div>
+		{/each}
 	</nav>
 </header>
 
 <style lang="scss">
-	.logo {
-		font-size: 3rem;
-		letter-spacing: -0.3rem;
-		position: relative;
-
-		&__dot {
-			position: relative;
-			top: -0.2rem;
-		}
-
-		&__w {
-			margin-left: -0.1rem;
-		}
-	}
 </style>

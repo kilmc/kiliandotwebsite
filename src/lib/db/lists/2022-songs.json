@@ -1,0 +1,34 @@
+{
+	"title": "Best Songs of 2022",
+	"group": "music",
+	"category": "songs",
+	"type": "yearEnd",
+	"year": 2022,
+	"items": [
+		{ "title": "Rwangaguhunga", "artist": "John Wizards", "release": "Single" },
+		{ "title": "Glimpse of Us", "artist": "Joji", "release": "SMITHEREENS" },
+		{ "title": "American Teenager", "artist": "Ethel Cain", "release": "Preacher's Daughter" },
+		{ "title": "Fly Around", "artist": "Bill Wurtz", "release": "Single" },
+		{ "title": "Strong", "artist": "Romy, Fred Again..", "release": "Single" },
+		{ "title": "Sunset", "artist": "Caroline Polachek", "release": "Single" },
+		{ "title": "Big Bad!", "artist": "Petey", "release": "Single" },
+		{ "title": "BODMIN MOOR", "artist": "SBTRKT", "release": "Single" },
+		{ "title": "That's Just Tips", "artist": "T-Pain", "release": "Single" },
+		{ "title": "Fog Machine", "artist": "White Denimn", "release": "Single" },
+		{ "title": "Unholy", "artist": "Sam Smith, Kim Petras", "release": "Single" },
+		{ "title": "Hospital Tree", "artist": "Jamie Lenman", "release": "The Athiest" },
+		{ "title": "Sauna", "artist": "Vulfpeck", "release": "Single" },
+		{ "title": "New Shapes", "artist": "Charli XCX", "release": "CRASH" },
+		{ "title": "It's Plenty", "artist": "Burna Boy", "release": "Love, Damini" },
+		{ "title": "As It Was", "artist": "Harry Styles", "release": "Harry's House" },
+		{ "title": "The 30th", "artist": "Billie Eilish", "release": "Guitar Songs" },
+		{ "title": "Civic", "artist": "OG Keemo", "release": "Mann Beisst Hund" },
+		{ "title": "Change", "artist": "Djo", "release": "DECIDE" },
+		{
+			"title": "Molotov Cocktail Lounge",
+			"artist": "Steel Beans",
+			"release": "Molotov Cocktail Lounge"
+		},
+		{ "title": "Wake Me Up", "artist": "Foals", "release": "Life Is Yours" }
+	]
+}

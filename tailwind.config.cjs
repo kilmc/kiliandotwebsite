@@ -5,7 +5,7 @@ module.exports = {
 		fontFamily: {
 			sans: ['Helvetica', 'Arial', 'sans-serif'],
 			serif: ['kepler-std', 'serif'],
-			mono: ['monospace']
+			mono: ['anonymous-pro', 'monospace']
 		},
 		extend: {
 			colors: {
@@ -38,7 +38,8 @@ module.exports = {
 			aspectRatio: {
 				'4/3': '4 / 3',
 				'3/4': '3 / 4',
-				'7/5': '7 / 5'
+				'7/5': '7 / 5',
+				'7/10': '7 / 10'
 			}
 		}
 	},

@@ -4,12 +4,11 @@
 	export let data: PageData;
 </script>
 
-<h1>Sitemap</h1>
-
+<h2 class="font-bold">Tools</h2>
 <ul>
-	{#each data.urls as url}
+	{#each data.items as item}
 		<li>
-			<a href={url}>{url}</a>
+			<a href={item.href}>{item.text}</a>
 		</li>
 	{/each}
 </ul>

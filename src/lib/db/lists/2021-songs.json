@@ -1,0 +1,37 @@
+{
+	"title": "Best Songs of 2021",
+	"group": "music",
+	"category": "songs",
+	"type": "yearEnd",
+	"year": 2021,
+	"items": [
+		{ "title": "mememe", "artist": "100 gecs", "release": "Single" },
+		{ "title": "roots", "artist": "Cautious Clay", "release": "Deadpan Love" },
+		{ "title": "Spinning", "artist": "No Rome, Charli XCX, The 1975", "release": "Single" },
+		{
+			"title": "Leave The Door Open",
+			"artist": "Slik Sonic",
+			"release": "An Evening with Slik Sonic"
+		},
+		{ "title": "John L", "artist": "black midi", "release": "Cavelcade" },
+		{
+			"title": "Telepath",
+			"artist": "Manchester Orchestra",
+			"release": "The Million Masks of God"
+		},
+		{ "title": "My Limb", "artist": "Hayley Williams", "release": "FLOWERS for VASES" },
+		{ "title": "Xcxoplex", "artist": "A. G. Cook, Charli XCX", "release": "Single" },
+		{ "title": "The Eternal Tao 2.0", "artist": "The Voidz", "release": "Single" },
+		{ "title": "KGLW", "artist": "King Gizzard & The Lizard Wizard", "release": "L.W." },
+		{ "title": "The Melting of the Sun", "artist": "St. Vincent", "release": "Daddy's Home" },
+		{ "title": "Babalon", "artist": "Andrew W.K.", "release": "Single" },
+		{ "title": "Keep Your Head Up", "artist": "Djo", "release": "Single" },
+		{ "title": "Higher Power", "artist": "Coldplay", "release": "Music Of The Sphere" },
+		{ "title": "Bunny is a Rider", "artist": "Caroline Polachek", "release": "Single" },
+		{ "title": "This Fractured Mind", "artist": "Nation of Language", "release": "A Way Forward" },
+		{ "title": "Don't Touch", "artist": "Lil Mariko", "release": "Self Titled" },
+		{ "title": "45 Smoke", "artist": "slowthai", "release": "TYRON" },
+		{ "title": "Un Monde Nouveau", "artist": "Feu! Chatterton", "release": "Palais d'argile" },
+		{ "title": "Parade", "artist": "Lydia Ainsworth", "release": "Sparkles & Debris" }
+	]
+}

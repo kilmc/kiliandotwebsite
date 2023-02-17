@@ -1,0 +1,24 @@
+{
+	"title": "Best Albums of 2018",
+	"group": "music",
+	"category": "albums",
+	"type": "yearEnd",
+	"year": 2018,
+	"items": [
+		{ "release": "Historian", "artist": "Lucy Dacus" },
+		{ "release": "Singularity", "artist": "Jon Hopkins" },
+		{ "release": "Brighter Wounds", "artist": "Son Lux" },
+		{ "release": "All Ashore", "artist": "Punch Brothers" },
+		{ "release": "The Louder I Call, The Faster It Runs", "artist": "Wye Oak" },
+		{ "release": "Premonitions", "artist": "Miya Folick" },
+		{ "release": "Time", "artist": "Louis Cole" },
+		{ "release": "Groundislava 2", "artist": "Groundislava" },
+		{ "release": "iridescence", "artist": "BROCKHAMPTON" },
+		{ "release": "Be the Cowboy", "artist": "Mitski" },
+		{ "release": "Hundred Acres", "artist": "S. Carey" },
+		{ "release": "Chrome Sparks", "artist": "Chrome Sparks" },
+		{ "release": "Love is Magic", "artist": "John Grant" },
+		{ "release": "Big Red Machine", "artist": "Big Red Machine" },
+		{ "release": "Vessel", "artist": "Frankie Cosmos" }
+	]
+}

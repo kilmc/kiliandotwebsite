@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>K.W</title>
+	<title>Kilian Dot Website</title>
 </svelte:head>
 
 <slot />

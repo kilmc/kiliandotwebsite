@@ -1,13 +1,13 @@
 {
-  "title": "Favourite iOS games",
-  "category": "games",
-  "subcategory": "ios",
-  "list": [
-    "Goragoa",
-    "Tiny Wings",
-    "Threes",
-    "What the Golf?",
-    "The Breakfast Club",
-    "Alto's Adventure"
-  ]
+	"title": "Favourite iOS games",
+	"group": "games",
+	"category": "ios-games",
+	"type": "favourites",
+	"items": [
+		{ "title": "Goragoa" },
+		{ "title": "Tiny Wings" },
+		{ "title": "Threes" },
+		{ "title": "What the Golf?" },
+		{ "title": "Alto's Adventure" }
+	]
 }

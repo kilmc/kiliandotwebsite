@@ -1,10 +1,11 @@
 {
-  "title": "Favourite films",
-  "category": "film",
-  "list": [
-    "Iron Giant",
-    "Brick",
-    "No Country for Old Men",
-    "The Breakfast Club"
-  ]
+	"title": "Favourite films",
+	"category": "films",
+	"type": "favourites",
+	"items": [
+		{ "title": "Iron Giant" },
+		{ "title": "Brick" },
+		{ "title": "No Country for Old Men" },
+		{ "title": "The Breakfast Club" }
+	]
 }

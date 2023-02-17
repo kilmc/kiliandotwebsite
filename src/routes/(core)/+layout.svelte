@@ -1,25 +1,25 @@
 <script>
 	import Header from '$lib/components/Header.svelte';
 	import '../../app.css';
+	import { page } from '$app/stores';
 </script>
 
 <svelte:head>
 	<title>K.W</title>
 </svelte:head>
 
-<div class="font-serif layout">
-	<Header />
+<div class="layout p-20 font-mono">
+	<Header path={$page.url.pathname} />
 	<main>
 		<slot />
 	</main>
-
-	<footer>Some stuff down here</footer>
 </div>
 
 <style lang="scss">
 	.layout {
 		display: grid;
-		grid-template-rows: auto 1fr auto;
+		grid-template-columns: 1fr 3fr;
+		gap: 2rem;
 		min-height: 100%;
 	}
 </style>

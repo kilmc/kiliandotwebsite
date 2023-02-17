@@ -1,0 +1,43 @@
+{
+	"title": "Best Songs of 2017",
+	"group": "music",
+	"category": "songs",
+	"type": "yearEnd",
+	"year": 2017,
+	"items": [
+		{ "title": "Signal", "artist": "Sylvan Esso" },
+		{ "title": "Fake Happy", "artist": "Paramore" },
+		{ "title": "The Way You Used To Be", "artist": "Queens of the Stoneage" },
+		{ "title": "Dream State", "artist": "Son Lux" },
+		{ "title": "Tallahassee", "artist": "Leif Vollebekk" },
+		{ "title": "Total Entertainment Forever", "artist": "Father John Misty" },
+		{ "title": "The Deep", "artist": "clipping." },
+		{
+			"title": "The Alien, The Sunshine, The Grocery",
+			"artist": "Manchester Orchestra"
+		},
+		{ "title": "You Missed My Heart", "artist": "Phoebe Bridgers" },
+		{ "title": "Los Ageless", "artist": "St. Vincent" },
+		{ "title": "Fior Di Latte", "artist": "Phoenix" },
+		{ "title": "Crappy Love Song", "artist": "Theo Katzman" },
+		{ "title": "Break a Guitar", "artist": "Ty Segall" },
+		{ "title": "Feels Like Falling in Love", "artist": "The XCERTS" },
+		{ "title": "Waste", "artist": "Brand New" },
+		{ "title": "Hat Nerd", "artist": "Teenage Bottlerocket" },
+		{ "title": "Shotgun", "artist": "Mikhael Paskalev" },
+		{
+			"title": "Baby I Don't Know Oh Oh",
+			"artist": "Vulfpeck (feat. Charles Jones)"
+		},
+		{ "title": "Slide", "artist": "Calvin Harris, Frank Ocean, Migos" },
+		{ "title": "Iron Lung", "artist": "Black Marble" },
+		{ "title": "Unbound", "artist": "Ásgeir" },
+		{ "title": "DNA", "artist": "Kendrick Lamar" },
+		{ "title": "No Roads", "artist": "The Flatliners" },
+		{
+			"title": "How It Gets In",
+			"artist": "Frightened Rabbit (feat. Julien Baker)"
+		},
+		{ "title": "Little Dark Age", "artist": "MGMT" }
+	]
+}
