@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { SIDEBAR_ID } from '$lib/portals/consts';
 	import { startCase } from 'lodash-es';
 
 	export let path: string;
@@ -35,6 +36,7 @@
 				</a>
 			</div>
 		{/each}
+		<div id={SIDEBAR_ID} />
 	</nav>
 </header>
 

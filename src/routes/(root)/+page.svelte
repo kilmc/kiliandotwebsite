@@ -11,9 +11,10 @@
 		</p>
 	</aside>
 	<main>
-		<a href="/lists/">Lists</a>
-		<a href="/projects/">Projects</a>
-		<a href="/tools/">Tools</a>
+		<div><a href="/lists/">Lists</a></div>
+		<div><a href="/projects/">Projects</a></div>
+		<div><a href="/tools/">Tools</a></div>
+		<div><a href="/components/">Component Playground</a></div>
 	</main>
 </div>
 
@@ -21,10 +22,29 @@
 	.layout {
 		display: grid;
 		grid-template-columns: 1fr 3fr;
+		gap: 10rem;
 	}
 
 	.logo {
 		font-size: 6rem;
 		line-height: 0.8;
+	}
+
+	main {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 5px;
+		border-width: 5px;
+		@apply bg-blue-600;
+		@apply border-blue-600;
+
+		div {
+			background-color: #fff;
+			display: flex;
+
+			a {
+				margin: auto;
+			}
+		}
 	}
 </style>

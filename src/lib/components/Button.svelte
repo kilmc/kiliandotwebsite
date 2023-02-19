@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { clipboard as clipboardAction } from '$lib/actions/clipboard';
-	import { fade } from 'svelte/transition';
 
 	export let clipboard: string | undefined = undefined;
 	export let variant: 'primary' | 'secondary' = 'primary';
@@ -23,13 +22,7 @@
 	on:click
 	class="button button--{variant} inline-flex items-center justify-center text-lg px-3 py-1 rounded-md"
 >
-	{#if showCopiedIndicator}
-		<div out:fade={{ delay: 300, duration: 300 }} in:fade={{ delay: 0, duration: 0 }}>&check;</div>
-	{:else}
-		<div out:fade={{ delay: 0, duration: 0 }} in:fade={{ delay: 300, duration: 300 }}>
-			<slot />
-		</div>
-	{/if}
+	<slot />
 </button>
 
 <style lang="scss">
