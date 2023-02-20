@@ -1,3 +1,7 @@
+<script>
+	import NotebookPage from '$lib/components/NotebookPage.svelte';
+</script>
+
 <div class="layout p-20 font-mono">
 	<aside>
 		<div class="font-bold uppercase flex flex-col text-blue-600 logo mb-8">
@@ -11,7 +15,9 @@
 		</p>
 	</aside>
 	<main>
-		<div><a href="/lists/">Lists</a></div>
+		<div>
+			<a href="/lists/">Lists</a>
+		</div>
 		<div><a href="/projects/">Projects</a></div>
 		<div><a href="/tools/">Tools</a></div>
 		<div><a href="/components/">Component Playground</a></div>

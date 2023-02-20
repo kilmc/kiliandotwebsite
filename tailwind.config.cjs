@@ -5,7 +5,8 @@ module.exports = {
 		fontFamily: {
 			sans: ['Helvetica', 'Arial', 'sans-serif'],
 			serif: ['kepler-std', 'serif'],
-			mono: ['anonymous-pro', 'monospace']
+			mono: ['anonymous-pro', 'monospace'],
+			script: ['handsome-pro', 'script']
 		},
 		extend: {
 			colors: {

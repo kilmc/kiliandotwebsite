@@ -1,0 +1,10 @@
+@use 'sass:math';
+
+@mixin lines($height: 30, $lineColor: #000, $bgColor: transparent) {
+	background-image: repeating-linear-gradient(
+		$bgColor 0px,
+		$bgColor $height + 0px,
+		$lineColor $height + 1px
+	);
+	background-position: 0 0px;
+}

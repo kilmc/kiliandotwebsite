@@ -25,7 +25,7 @@
 </div>
 
 <style lang="scss">
-	@use 'sass:math';
+	@use '$lib/scss/mixins';
 
 	$exa-bg-yellow: #fff9bf;
 	$exa-bg-blue: #c7e1ef;
@@ -34,15 +34,6 @@
 
 	$exa-lines-blue: #5064aa;
 	$exa-lines-grey: #323230;
-
-	@mixin lines($height: 30, $lineColor: #000, $bgColor: transparent) {
-		background: repeating-linear-gradient(
-			$bgColor 0px,
-			$bgColor $height + 0px,
-			$lineColor $height + 1px
-		);
-		background-position: 0 0px;
-	}
 
 	.index-card {
 		line-height: 20px;
@@ -72,7 +63,7 @@
 
 		&--lines {
 			.index-card__type {
-				@include lines(30, rgba($exa-lines-grey, 0.33), transparent);
+				@include mixins.lines(30, rgba($exa-lines-grey, 0.33), transparent);
 			}
 		}
 
