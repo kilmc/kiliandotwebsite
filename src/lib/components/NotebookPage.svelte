@@ -10,6 +10,7 @@
 		text-align: center;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		box-shadow: 0px 2px 4px rgba(black, 0.1);
 
 		&--small {

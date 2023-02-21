@@ -1,8 +1,9 @@
 <script>
+	import ItemStack from '$lib/components/ItemStack.svelte';
 	import NotebookPage from '$lib/components/NotebookPage.svelte';
 </script>
 
-<div class="layout p-20 font-mono">
+<div class="layout p-10 lg:p-20 font-mono">
 	<aside>
 		<div class="font-bold uppercase flex flex-col text-blue-600 logo mb-8">
 			<div>Kilian</div>
@@ -16,10 +17,14 @@
 	</aside>
 	<main>
 		<div>
-			<a href="/lists/">Lists</a>
+			<ItemStack href="/lists">
+				<NotebookPage slot="top">Lists</NotebookPage>
+				<NotebookPage slot="middle" />
+				<NotebookPage slot="bottom" />
+			</ItemStack>
 		</div>
-		<div><a href="/projects/">Projects</a></div>
-		<div><a href="/tools/">Tools</a></div>
+		<div class="col-span-2"><a href="/projects/">Projects</a></div>
+		<div class="col-span-2"><a href="/tools/">Tools</a></div>
 		<div><a href="/components/">Component Playground</a></div>
 	</main>
 </div>
@@ -27,13 +32,22 @@
 <style lang="scss">
 	.layout {
 		display: grid;
-		grid-template-columns: 1fr 3fr;
-		gap: 10rem;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+
+		@media (min-width: 1024px) {
+			grid-template-columns: 1fr 3fr;
+			gap: 10rem;
+		}
 	}
 
 	.logo {
-		font-size: 6rem;
+		font-size: 4rem;
 		line-height: 0.8;
+
+		@media (min-width: 640px) {
+			font-size: 6rem;
+		}
 	}
 
 	main {
@@ -47,8 +61,9 @@
 		div {
 			background-color: #fff;
 			display: flex;
+			padding: 3rem;
 
-			a {
+			:global(a) {
 				margin: auto;
 			}
 		}

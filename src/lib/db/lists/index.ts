@@ -2,7 +2,7 @@ import type { LinkItem } from '$lib/types';
 
 export type ListType = 'favourites' | 'yearEnd';
 export type ListGroup = 'music';
-export type ListCategory = 'songs' | 'eps' | 'albums';
+export type ListCategory = 'songs' | 'eps' | 'albums' | 'films' | 'ios-games';
 
 export type ListItem = {
 	title: string;

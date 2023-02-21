@@ -17,7 +17,7 @@
 	<input
 		{id}
 		bind:value
-		class="border border-gray-400 rounded-sm px-2 py-1 font-sans w-full"
+		class="border border-gray-400 rounded-sm px-2 py-1 font-sans w-full h-10"
 		{pattern}
 	/>
 </div>

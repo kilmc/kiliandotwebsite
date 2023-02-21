@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Button from '$lib/components/Button.svelte';
 	import Input from '$lib/components/Input.svelte';
+	import SubNavPortal from '$lib/portals/SubNavPortal.svelte';
 	import albumArt from 'album-art';
 
 	let artwork: string;
@@ -12,8 +13,8 @@
 	}
 </script>
 
-<div class="layout-artwork">
-	<form>
+<SubNavPortal>
+	<form class="mt-10">
 		<div class="flex flex-col">
 			<Input label="Artist" id="artist" bind:value={artist} class="mb-2" />
 			<Input label="Release" id="release" bind:value={release} class="mb-4" />
@@ -21,18 +22,12 @@
 
 		<Button on:click={handleClick}>Fetch</Button>
 	</form>
-	<div>
-		{#if artwork}
-			<img src={artwork} alt="Artwork" />
-		{:else}
-			<div>Search for Artwork</div>
-		{/if}
-	</div>
-</div>
+</SubNavPortal>
 
-<style lang="scss">
-	.layout-artwork {
-		display: grid;
-		grid-template-columns: 20rem 1fr;
-	}
-</style>
+<div class="max-h-screen w-3/4">
+	{#if artwork}
+		<img src={artwork} alt="Artwork" />
+	{:else}
+		<div>Search for Artwork</div>
+	{/if}
+</div>

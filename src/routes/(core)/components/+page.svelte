@@ -49,17 +49,17 @@
 		<IndexCard label="Hello" title="Index card title" href="/" />
 	</div>
 {:else if selected === 'notebook-page'}
-	<NotebookPage>Best Songs of 2017</NotebookPage>
+	<NotebookPage>List</NotebookPage>
 {:else if selected === 'vinyl'}
 	<Vinyl />
 {:else if selected === 'item-stack'}
 	<div class="flex gap-8">
-		<ItemStack>
+		<ItemStack href="/lists/2018/songs">
 			<NotebookPage slot="top">Best Albums of 2017</NotebookPage>
 			<NotebookPage slot="middle" />
 			<NotebookPage slot="bottom" />
 		</ItemStack>
-		<ItemStack>
+		<ItemStack href="/lists/2018/songs">
 			<Vinyl slot="top" artist="Andy Shauf" release="The Neon Skyline" />
 			<Vinyl slot="middle" artist="Petey" release="Lean Into Life" />
 			<Vinyl slot="bottom" />
