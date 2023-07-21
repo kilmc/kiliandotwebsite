@@ -5,7 +5,6 @@
 	export let item: ListItem;
 	export let primaryKey: keyof ListItem;
 	export let secondaryKey: keyof ListItem;
-	console.log();
 </script>
 
 <div>{index}.</div>

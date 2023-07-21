@@ -1,6 +1,7 @@
 {
 	"title": "Favourite iOS games",
 	"group": "games",
+	"hidden": true,
 	"category": "ios-games",
 	"type": "favourites",
 	"items": [

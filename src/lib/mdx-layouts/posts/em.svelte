@@ -1,1 +1,1 @@
-<em class="font-italic"><slot /></em>
+<em class="font-italic tracking-tighter"><slot /></em>

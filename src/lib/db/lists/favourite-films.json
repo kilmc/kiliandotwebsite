@@ -1,5 +1,6 @@
 {
 	"title": "Favourite films",
+	"hidden": true,
 	"category": "films",
 	"type": "favourites",
 	"items": [

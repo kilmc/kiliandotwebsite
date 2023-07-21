@@ -8,12 +8,17 @@
 	<title>Kilian | Projects</title>
 </svelte:head>
 
-<h2>Projects</h2>
 <ul class="layout">
 	{#each data.items as project}
-		<li class="aspect-3/4 bg-zinc-200 hover:bg-zinc-300">
-			<a href={project.href} class="w-full h-full flex font-bold uppercase">
-				<span class="m-auto">{project.text}</span>
+		<li
+			class="aspect-2/3 bg-zinc-200 hover:bg-zinc-300 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 hover:-translate-x-1"
+		>
+			<a
+				href={project.href}
+				class="w-full h-full flex font-bold uppercase text-center bg-cover"
+				style="background-image: url('{project.poster}');"
+			>
+				<span class="m-auto sr-only">{project.text}</span>
 			</a>
 		</li>
 	{/each}
