@@ -1,12 +1,9 @@
 <script lang="ts">
 	import type { List } from '$lib/db/lists';
-	import { getListTitleKey } from '$lib/helpers/getListTitleKey';
 	import SingleItem from './lists/SingleItem.svelte';
 	import DoubleItem from './lists/DoubleItem.svelte';
 	import TripleItem from './lists/TripleItem.svelte';
-	import type { ComponentType, SvelteComponent } from 'svelte';
-
-	function mapListTypeToLayout() {}
+	import type { ComponentType } from 'svelte';
 
 	type ListEntry = {
 		componentType: 'single' | 'double' | 'triple';

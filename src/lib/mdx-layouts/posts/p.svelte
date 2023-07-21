@@ -1,1 +1,1 @@
-<p class="italic"><slot /></p>
+<p class="tracking-tight"><slot /></p>

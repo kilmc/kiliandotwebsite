@@ -9,8 +9,7 @@
 </svelte:head>
 
 <div>
-	<div class="text-center italic">Post</div>
-	<h1 class="kdw-text-blue italic text-4xl font-black mb-8">{data.title}</h1>
-	<div>{data.date}</div>
+	<h1 class="kdw-text-blue text-4xl font-black mb-2">{data.title}</h1>
+	<div class="mb-8">{data.date}</div>
 	<svelte:component this={data.content} />
 </div>

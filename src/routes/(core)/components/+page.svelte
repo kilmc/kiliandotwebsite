@@ -8,8 +8,9 @@
 	import NotebookPage from '$lib/components/NotebookPage.svelte';
 	import ItemStack from '$lib/components/ItemStack.svelte';
 	import Vinyl from '$lib/components/Vinyl.svelte';
+	import ItemFan from '$lib/components/ItemFan.svelte';
 
-	let items = ['button', 'index-card', 'notebook-page', 'vinyl', 'item-stack'];
+	let items = ['button', 'index-card', 'notebook-page', 'vinyl', 'item-stack', 'poster-fan'];
 
 	const getSelected = () => {
 		const item = $page.url.searchParams.get('item');
@@ -64,5 +65,9 @@
 			<Vinyl slot="middle" artist="Petey" release="Lean Into Life" />
 			<Vinyl slot="bottom" />
 		</ItemStack>
+	</div>
+{:else if selected === 'poster-fan'}
+	<div class="flex h-56">
+		<ItemFan />
 	</div>
 {/if}

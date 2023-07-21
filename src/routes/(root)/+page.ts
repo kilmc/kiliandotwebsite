@@ -1,6 +1,5 @@
 import type { PageLoad } from './$types';
 
-export const load = (({ url }) => {
-	console.log(url.pathname);
+export const load = (() => {
 	return {};
 }) satisfies PageLoad;

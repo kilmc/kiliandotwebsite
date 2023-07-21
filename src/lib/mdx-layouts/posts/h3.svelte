@@ -1,1 +1,1 @@
-<h3><slot /></h3>
+<h3 class="bg-blue-600"><slot /></h3>

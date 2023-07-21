@@ -5,8 +5,11 @@
 	export let path: string;
 
 	const generateUrlList = (path: string) => {
-		const homeItem = { title: 'Kilian.website', url: '/' };
-		const fullPath = path.split('/').filter((dir) => dir.length !== 0);
+		const homeItem = { title: 'kilian.website', url: '/' };
+		const fullPath = path
+			.split('/')
+			.filter((dir) => dir.length !== 0)
+			.slice(0, 1);
 
 		const pathItems = fullPath.map((dir, i) => {
 			const title = startCase(dir);
@@ -39,6 +42,3 @@
 		<div id={SIDEBAR_ID} />
 	</nav>
 </header>
-
-<style lang="scss">
-</style>

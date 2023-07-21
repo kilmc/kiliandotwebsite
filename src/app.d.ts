@@ -23,9 +23,9 @@ declare namespace App {
 	}
 }
 
-declare namespace svelteHTML {
-	interface HTMLAttributes<T> {
-		'on:copied'?: (event: CustomEvent<string>) => void;
-		'on:copied:error'?: (event: CustomEvent<Error>) => void;
+declare namespace svelte.JSX {
+	interface HTMLProps<T> {
+		oncopied?: (event: CustomEvent<string>) => void;
+		'oncopied:error'?: (event: CustomEvent<Error>) => void;
 	}
 }

@@ -4,14 +4,16 @@
 	export let data: PageData;
 </script>
 
-<h2 class="font-bold border-b border-gray-300 mb-2">Favourites</h2>
-<ul class="mb-4">
-	{#each data.favourites as { href, text }}
-		<li class="list-disc list-inside">
-			<a {href}>{text}</a>
-		</li>
-	{/each}
-</ul>
+{#if data.favourites.length > 0}
+	<h2 class="font-bold border-b border-gray-300 mb-2">Favourites</h2>
+	<ul class="mb-4">
+		{#each data.favourites as { href, text }}
+			<li class="list-disc list-inside">
+				<a {href}>{text}</a>
+			</li>
+		{/each}
+	</ul>
+{/if}
 
 <h2 class="font-bold border-b border-gray-300 mb-2">Year-end</h2>
 {#each data.yearEnd as [group, items]}

@@ -15,7 +15,7 @@
 			useful or informative during your stay.
 		</p>
 	</aside>
-	<main>
+	<main class="homepage-main">
 		<div>
 			<ItemStack href="/lists">
 				<NotebookPage slot="top">Lists</NotebookPage>
@@ -50,13 +50,13 @@
 		}
 	}
 
-	main {
+	.homepage-main {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 5px;
 		border-width: 5px;
-		@apply bg-blue-600;
-		@apply border-blue-600;
+		// @apply bg-blue-600;
+		// @apply border-blue-600;
 
 		div {
 			background-color: #fff;
