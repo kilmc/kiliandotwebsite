@@ -6,6 +6,10 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>Lists: {data.title}</title>
+</svelte:head>
+
 <TypewriterPage title={data.title}>
 	<SimpleList list={data.list} />
 </TypewriterPage>

@@ -38,7 +38,7 @@ export const favouritesLinkItems: LinkItem[] = favourites.map((list) => {
 
 export const yearEndLinkItems: LinkItem[] = yearEnd.map((list) => {
 	return {
-		text: list.title,
+		text: list.category,
 		href: `${list.year}/${list.category}`,
 		group: list.year
 	};

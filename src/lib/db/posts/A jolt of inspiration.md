@@ -2,7 +2,7 @@
 title: 'A Jolt of Inspiration'
 date: 2015-01-28
 slug: a-jolt-of-inspiration
-published: true
+published: false
 ---
 
 It’s not often I see something in web design that makes me want to rip up everything I was doing and start again. I felt that urge today though.

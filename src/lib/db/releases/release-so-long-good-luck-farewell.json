@@ -1,0 +1,12 @@
+{
+	"artist": "SLGLFW",
+	"release": "So Long, Good Luck, Farewell",
+	"artistSlug": "slglfw",
+	"releaseSlug": "so-long-good-luck-farewell",
+	"tracks": ["Insula", "George McFly", "Snookerball in a Sock", "Sand"],
+	"links": {
+		"bandcamp": "https://slglfw.bandcamp.com/album/so-long-good-luck-farewell-ep",
+		"spotify": "https://open.spotify.com/album/6PoxBsfqSu4jueaF539Pmb",
+		"apple": "https://music.apple.com/album/so-long-good-luck-farewell-ep/927414254"
+	}
+}

@@ -5,6 +5,12 @@
 </script>
 
 <article>
-	<h1>{data.title}</h1>
-	<svelte:component this={data.content} />
+	<h2 class="font-bold text-2xl uppercase">{data.title}</h2>
+	{#if data.linkURL}
+		<a class="dark:text-gray-400" href={data.linkURL}>{data.linkTitle}</a>
+	{/if}
+
+	<div class="mt-4">
+		<svelte:component this={data.content} />
+	</div>
 </article>

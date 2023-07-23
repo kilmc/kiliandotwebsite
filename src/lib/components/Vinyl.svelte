@@ -3,12 +3,13 @@
 
 	export let artist = 'Alvvays';
 	export let release = 'Blue Rev';
+	export let small = false;
 
 	$: slugArtist = kebabCase(artist);
 	$: slugRelease = kebabCase(release);
 </script>
 
-<div class="item--vinyl small">
+<div class="item--vinyl small" class:small>
 	<img src="/images/media/release-{slugArtist}-{slugRelease}.jpg" alt="Blue Rev Album Cover" />
 	<slot />
 </div>

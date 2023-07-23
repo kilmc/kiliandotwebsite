@@ -1,0 +1,12 @@
+{
+	"artist": "The Best Boys",
+	"release": "Getting Better EP",
+	"artistSlug": "the-best-boys",
+	"releaseSlug": "getting-better-ep",
+	"tracks": ["Bomb Disposal", "Chancer", "Drunk Talk", "Friendly Fire"],
+	"links": {
+		"bandcamp": "https://bbbestboys.bandcamp.com/album/getting-better-ep",
+		"spotify": "https://open.spotify.com/album/6nF6kKmP6f5YU0bZxld4tK",
+		"apple": "https://music.apple.com/album/getting-better-ep/915411422"
+	}
+}

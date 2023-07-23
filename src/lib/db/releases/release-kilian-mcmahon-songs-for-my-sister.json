@@ -1,0 +1,10 @@
+{
+	"artist": "Kilian McMahon",
+	"release": "Songs for My Sister",
+	"artistSlug": "kilian-mcmahon",
+	"releaseSlug": "songs-for-my-sister",
+	"tracks": ["My New York", "Across The Wire"],
+	"links": {
+		"bandcamp": "https://kilianmcmahon.bandcamp.com/album/songs-for-my-sister"
+	}
+}

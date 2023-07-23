@@ -7,9 +7,9 @@ declare namespace App {
 	// interface PageData {}
 	// interface Platform {}
 
-	interface MdsvexFile {
+	interface MdsvexFile<Metadata = Record<string, string>> {
 		default: import('svelte/internal').ConstructorOfATypedSvelteComponent;
-		metadata: Record<string, string>;
+		metadata?: Metadata;
 	}
 
 	type MdsvexResolver = () => Promise<MdsvexFile>;

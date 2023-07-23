@@ -32,7 +32,7 @@
 			<div>
 				<a
 					href={linkItem.url}
-					class="font-mono text-xl uppercase text-black hover:text-gray-500 inline-block"
+					class="font-mono text-xl uppercase dark:text-white text-black hover:text-gray-500 inline-block"
 					class:font-bold={i === linkGroups.length - 1}
 				>
 					{linkItem.title}

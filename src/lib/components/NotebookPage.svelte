@@ -7,6 +7,7 @@
 
 	.notebook-page {
 		background-color: #fff9f1;
+		color: black;
 		text-align: center;
 		display: flex;
 		align-items: center;

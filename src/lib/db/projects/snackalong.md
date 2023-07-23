@@ -1,6 +1,8 @@
 ---
 title: 'Snackalong'
 slug: 'snackalong'
+linkURL: 'https://susu.computer/snackalong/'
+linkTitle: 'susu.computer/snackalong'
 ---
 
 Back in [TKTK] myself and my friend Nathan realised that we both adored the film Ocean's Eleven. At some point in our chatting about it we joked about doing a screening where we served people everything Brad Pitt ate or drank during the film. That joke turned into a full-fledged event with branding and gift bags, drinks and food, a quiz with prizes and a mystery for the small group of friends who we planned to invite.

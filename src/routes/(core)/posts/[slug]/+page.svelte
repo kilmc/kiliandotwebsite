@@ -9,7 +9,7 @@
 </svelte:head>
 
 <div>
-	<h1 class="kdw-text-blue text-4xl font-black mb-2">{data.title}</h1>
+	<h1 class="dark:text-green-300 kdw-text-blue text-4xl font-black mb-2">{data.title}</h1>
 	<div class="mb-8">{data.date}</div>
 	<svelte:component this={data.content} />
 </div>

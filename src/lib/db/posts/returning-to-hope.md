@@ -2,6 +2,7 @@
 title: 'Returning to Hope'
 date: 2023-07-21
 slug: returning-to-hope
+published: true
 ---
 
 I had a really moving realisation in therapy toward the end of last year. It was a normal session; talking about how unhappy I was at work. I've been pulling that thread for years and my therapist knows it well. But unlike previous sessions, at one point I said _I want to be a musician_.

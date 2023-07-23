@@ -4,6 +4,10 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>Kilian | Lists</title>
+</svelte:head>
+
 <h1>Year: {data.year}</h1>
 
 {#if data.relatedLists.length > 0}
