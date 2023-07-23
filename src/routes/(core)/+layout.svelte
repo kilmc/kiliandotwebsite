@@ -4,7 +4,7 @@
 	import { page } from '$app/stores';
 </script>
 
-<div class="dark:bg-black dark:text-white layout p-8 md:p-20 font-mono mx-auto max-w-6xl">
+<div class="dark:bg-black dark:text-white layout p-5 sm:p-10 lg:p-20 font-mono mx-auto max-w-6xl">
 	<Header path={$page.url.pathname} />
 	<main>
 		<slot />
