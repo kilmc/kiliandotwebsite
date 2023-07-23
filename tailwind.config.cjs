@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
@@ -7,6 +9,10 @@ module.exports = {
 			serif: ['kepler-std', 'serif'],
 			mono: ['anonymous-pro', 'monospace'],
 			script: ['handsome-pro', 'script']
+		},
+		screens: {
+			xs: '475px',
+			...defaultTheme.screens
 		},
 		extend: {
 			colors: {

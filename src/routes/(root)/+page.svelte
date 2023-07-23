@@ -7,15 +7,17 @@
 	<title>Kilian Dot Website</title>
 </svelte:head>
 
-<div class="grid grid-cols-2 gap-x-16 p-10 lg:p-20 font-mono max-w-6xl mx-auto">
-	<aside class="col-span-1 flex gap-2">
-		<div class="font-bold uppercase flex flex-col dark:text-green-400 text-blue-600 logo mb-8">
+<div class="grid grid-cols-2 gap-x-16 p-5 sm:p-10 lg:p-20 font-mono max-w-6xl mx-auto">
+	<aside class="col-span-full xs:col-span-1 flex gap-2">
+		<div
+			class="font-bold uppercase flex flex-col dark:text-green-400 text-blue-600 logo mb-2 xs:mb-8"
+		>
 			<div>Kilian</div>
 			<div>Dot</div>
 			<div>Website</div>
 		</div>
 	</aside>
-	<nav class="flex flex-col items-start col-span-1 text-2xl">
+	<nav class="flex flex-col items-start col-span-full xs:col-span-1 text-2xl mb-6 xs:mb-0">
 		<Link href="/projects">Projects</Link>
 		<Link href="/posts">Posts</Link>
 		<Link href="/music">Music</Link>
