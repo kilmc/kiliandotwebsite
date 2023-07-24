@@ -16,8 +16,8 @@ export const load = (() => {
 	return {
 		randomItems: [
 			{ type: 'Post', title: postText, url: postURL },
-			{ type: 'List', title: listText, url: listURL },
-			{ type: 'Project', title: projectText, url: projectURL }
+			{ type: 'List', title: listText, url: `lists/${listURL}` },
+			{ type: 'Project', title: projectText, url: `projects/${projectURL}` }
 		]
 	};
 }) satisfies PageLoad;
