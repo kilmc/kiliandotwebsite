@@ -1,4 +1,4 @@
-import type { PageLoad } from './$types';
+import type { PageServerLoad } from './$types';
 import { postsIndex } from '$lib/db/posts';
 import { listsIndex } from '$lib/db/lists';
 import { projectsIndex } from '$lib/db/projects';
@@ -20,4 +20,4 @@ export const load = (() => {
 			{ type: 'Project', title: projectText, url: `projects/${projectURL}` }
 		]
 	};
-}) satisfies PageLoad;
+}) satisfies PageServerLoad;
