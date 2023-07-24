@@ -10,7 +10,7 @@
 <div class="grid grid-cols-2 gap-x-16 p-5 sm:p-10 lg:p-20 font-mono max-w-6xl mx-auto">
 	<aside class="col-span-full xs:col-span-1 flex gap-2">
 		<div
-			class="font-bold uppercase flex flex-col dark:text-green-400 text-blue-600 text-5xl leading-9 mb-2 xs:mb-8"
+			class="font-bold uppercase flex flex-col dark:text-green-400 text-blue-600 text-6xl leading-[0.8] xs:text-5xl mb-2 xs:mb-8"
 		>
 			<div>Kilian</div>
 			<div>Dot</div>
@@ -32,13 +32,14 @@
 			I recently made the decision to pursue music as a career and leave tech. There's more detail
 			about what lead to the decision in
 			<Link href="/posts/returning-to-hope">this post</Link>. I'm incredibly excited about it; it's
-			been a lifelong dream. That being said, it's going to take a lot for me to start making a
-			living wage from this work.
+			been a lifelong dream.
 		</p>
 		<p>
-			I wrote a second post detailing my current skillset and cataloging some of the things I've
-			worked on. If you're reading this and have any job opportunities, any connections or any
-			advice please reach out via email.
+			That being said, it's going to take a lot for me to start making a living wage from this work.
+			I have a bunch of stuff I've worked on in the
+			<Link href="/music">music</Link> section. If you enjoy anything I make and want to work together
+			on a project or have any folks you think I would be a good fit to collaborate with please send
+			me an <Link href="mailto:mail@kilian.website">email</Link>.
 		</p>
 	</div>
 	<div class="col-span-full md:col-span-1 flex flex-col">

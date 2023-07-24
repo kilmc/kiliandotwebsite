@@ -5,7 +5,7 @@ linkURL: 'https://github.com/kilmc/battery/'
 linkTitle: 'github.com/kilmc/battery'
 ---
 
-At some point back in 2016 or 2017 I got really into Atomic CSS. I was working at Kickstarter at the time and as I read through [TKTK Article from MRMRS] felt like using Atomic CSS would actually address a lot of the problems we had been dealing with. I was still a designer at the time but I tried my best to put together a working version of a utility class library that might be enough for a proof of concept. We discussed it internally and after some feedback and contributions from other members of the team we got the project through.
+At some point back in 2016 or 2017 I got really into Atomic CSS. I was working at Kickstarter at the time and as I read through [CSS and Scalability](https://mrmrs.cc/writing/scalable-css/) by mrmrs felt like using Atomic CSS would actually address a lot of the problems we had been dealing with. I was still a designer at the time but I tried my best to put together a working version of a utility class library that might be enough for a proof of concept. We discussed it internally and after some feedback and contributions from other members of the team we got the project through.
 
 As the years went on with us using Atomic CSS I started to notice some flaws with it as well and wondered if I could build something with Javascript that might be able to sold these problems.
 

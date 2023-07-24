@@ -15,7 +15,7 @@
 
 <style lang="scss">
 	.layout {
-		grid-template-columns: 1fr;
+		grid-template-columns: minmax(0, 1fr);
 		grid-template-rows: min-content 1fr;
 
 		@screen sm {
