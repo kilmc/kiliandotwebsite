@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Kilian | Posts</title>
+	<title>Posts</title>
 </svelte:head>
 
 <ul>

@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Kilian | Post: {data.title}</title>
+	<title>Post: {data.title}</title>
 </svelte:head>
 
 <div>

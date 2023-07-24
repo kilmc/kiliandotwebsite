@@ -1,6 +1,9 @@
 <script lang="ts">
+	import type { PageData } from './$types';
 	import Link from '$lib/components/Link.svelte';
-	import ItemLabel from './ItemLabel.svelte';
+	import RandomLink from './RandomLink.svelte';
+
+	export let data: PageData;
 </script>
 
 <svelte:head>
@@ -19,8 +22,8 @@
 		</a>
 	</aside>
 	<nav class="flex flex-col items-start col-span-full xs:col-span-1 text-2xl mb-6 xs:mb-0">
+		<Link href="/lists">Lists</Link>
 		<Link href="/projects">Projects</Link>
-		<Link href="/posts">Posts</Link>
 		<Link href="/music">Music</Link>
 	</nav>
 	<div class="mb-8 col-span-full md:col-span-1">
@@ -44,18 +47,9 @@
 		</p>
 	</div>
 	<div class="col-span-full md:col-span-1 flex flex-col">
-		<a class="mb-6 flex flex-col items-start" href="/posts/returning-to-hope">
-			<ItemLabel>Post</ItemLabel>
-			<Link class="text-2xl inline-block">Returning to Hope</Link>
-		</a>
-		<a class="mb-6 flex flex-col items-start" href="/projects/battery">
-			<ItemLabel>Project</ItemLabel>
-			<Link class="text-2xl inline-block">Battery</Link>
-		</a>
-		<a class="mb-6 flex flex-col items-start" href="/lists/2022/albums">
-			<ItemLabel>List</ItemLabel>
-			<Link class="text-2xl inline-block">Best Albums of 2022</Link>
-		</a>
+		{#each data.randomItems as item}
+			<RandomLink {...item} />
+		{/each}
 	</div>
 </div>
 

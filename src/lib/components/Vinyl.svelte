@@ -9,7 +9,7 @@
 	$: slugRelease = kebabCase(release);
 </script>
 
-<div class="item--vinyl small" class:small>
+<div class="item--vinyl small {$$restProps.class}" class:small>
 	<img src="/images/media/release-{slugArtist}-{slugRelease}.jpg" alt="Blue Rev Album Cover" />
 	<slot />
 </div>

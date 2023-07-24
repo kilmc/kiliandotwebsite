@@ -9,8 +9,8 @@
 <div class="grid layout grid-cols-3 gap-6">
 	<div class="col-span-full border dark:border-white border-black gap-4">
 		<div class="grid grid-cols-3 gap-8 p-4">
-			<Vinyl artist={data.artist} release={data.release} />
-			<div class="col-span-2">
+			<Vinyl class="col-span-3 xs:col-span-1" artist={data.artist} release={data.release} />
+			<div class="col-span-3 xs:col-span-2">
 				<h2 class="text-xl font-bold">{data.release}</h2>
 				<h3 class="mb-4">{data.artist}</h3>
 				{#if data.tracks}

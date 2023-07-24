@@ -1,4 +1,5 @@
 import type { LinkItem } from '$lib/types';
+import { capitalize } from 'lodash-es';
 
 export type ListType = 'favourites' | 'yearEnd';
 export type ListGroup = 'music';
@@ -32,14 +33,17 @@ export const yearEnd = lists.filter((list) => list.type === 'yearEnd');
 export const favouritesLinkItems: LinkItem[] = favourites.map((list) => {
 	return {
 		text: list.title,
-		href: list.category
+		url: list.category
 	};
 });
 
 export const yearEndLinkItems: LinkItem[] = yearEnd.map((list) => {
 	return {
+		title: `Best ${capitalize(list.category)} of ${list.year}`,
 		text: list.category,
-		href: `${list.year}/${list.category}`,
+		url: `${list.year}/${list.category}`,
 		group: list.year
 	};
 });
+
+export const listsIndex = [...yearEndLinkItems];

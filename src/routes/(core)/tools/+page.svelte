@@ -8,7 +8,7 @@
 <ul>
 	{#each data.items as item}
 		<li>
-			<a href={item.href}>{item.text}</a>
+			<a href={item.url}>{item.text}</a>
 		</li>
 	{/each}
 </ul>

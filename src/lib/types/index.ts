@@ -1,5 +1,6 @@
 export type LinkItem = {
+	title?: string;
 	text: string;
-	href: string;
+	url: string;
 	group?: string | number;
 };

@@ -5,14 +5,14 @@ describe('getIndexUrls', () => {
 	it('handles root pathname', () => {
 		const testPaths = ['./things.md', './cool/+page.svelte'];
 
-		expect(getIndexUrls(testPaths, '/').at(0)?.href).toStrictEqual('/things/');
-		expect(getIndexUrls(testPaths, '/').at(1)?.href).toStrictEqual('/cool/');
+		expect(getIndexUrls(testPaths, '/').at(0)?.url).toStrictEqual('/things/');
+		expect(getIndexUrls(testPaths, '/').at(1)?.url).toStrictEqual('/cool/');
 	});
 
 	it('handles setting base URL', () => {
 		const testPaths = ['./things.md'];
 
-		expect(getIndexUrls(testPaths, '/projects').at(0)?.href).toStrictEqual('/projects/things/');
+		expect(getIndexUrls(testPaths, '/projects').at(0)?.url).toStrictEqual('/projects/things/');
 	});
 
 	describe('filtering', () => {

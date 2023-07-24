@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Kilian | Lists</title>
+	<title>Lists</title>
 </svelte:head>
 
 <h1>Year: {data.year}</h1>
