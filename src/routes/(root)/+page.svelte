@@ -10,7 +10,7 @@
 <div class="grid grid-cols-2 gap-x-16 p-5 sm:p-10 lg:p-20 font-mono max-w-6xl mx-auto">
 	<aside class="col-span-full xs:col-span-1 flex gap-2">
 		<div
-			class="font-bold uppercase flex flex-col dark:text-green-400 text-blue-600 logo mb-2 xs:mb-8"
+			class="font-bold uppercase flex flex-col dark:text-green-400 text-blue-600 text-5xl leading-9 mb-2 xs:mb-8"
 		>
 			<div>Kilian</div>
 			<div>Dot</div>
@@ -58,12 +58,4 @@
 </div>
 
 <style lang="scss">
-	.logo {
-		font-size: 4rem;
-		line-height: 0.8;
-
-		@media (min-width: 640px) {
-			font-size: 3rem;
-		}
-	}
 </style>

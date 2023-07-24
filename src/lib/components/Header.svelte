@@ -26,8 +26,8 @@
 	$: linkGroups = generateUrlList(path);
 </script>
 
-<header>
-	<nav class="sticky top-20">
+<header class={$$restProps.class}>
+	<nav class="sticky top-5 sm:top-10 lg:top-20">
 		{#each linkGroups as linkItem, i}
 			<div>
 				<a
