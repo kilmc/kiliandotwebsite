@@ -6,7 +6,7 @@
 	<h2 class="font-bold uppercase text-2xl">Releases</h2>
 </div>
 
-<div class="grid grid-cols-3 gap-5">
+<div class="grid grid-cols-2 xs:grid-cols-3 gap-5">
 	<a href="/music/releases/the-best-boys/getting-better-ep">
 		<Vinyl artist="The Best Boys" release="Getting Better EP" />
 	</a>
