@@ -14,7 +14,7 @@
 	<aside class="col-span-full xs:col-span-1 flex gap-2">
 		<a
 			href="/"
-			class="font-bold uppercase flex flex-col dark:text-green-400 text-blue-600 text-6xl leading-[0.8] xs:text-5xl mb-2 xs:mb-8"
+			class="font-bold uppercase flex flex-col dark:text-yellow-300 text-blue-600 text-6xl leading-[0.8] xs:text-5xl mb-2 xs:mb-8"
 		>
 			<div>Kilian</div>
 			<div>Dot</div>

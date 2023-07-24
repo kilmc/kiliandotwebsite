@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Lists: {data.title}</title>
+	<title>List: {data.title}</title>
 </svelte:head>
 
 <TypewriterPage title={data.title}>
