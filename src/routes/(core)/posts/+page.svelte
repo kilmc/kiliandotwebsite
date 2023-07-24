@@ -13,7 +13,7 @@
 		<li>
 			<a
 				href={post.url}
-				class="text-4xl font-black italic dark:text-green-300 kdw-text-blue uppercase hover:not-italic"
+				class="text-4xl font-black italic dark:text-yellow-300 kdw-text-blue uppercase hover:not-italic"
 			>
 				{post.title}
 			</a>
