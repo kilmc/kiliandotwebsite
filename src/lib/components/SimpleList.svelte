@@ -61,7 +61,11 @@
 	$: ({ componentType, component, props } = determineListItemType(list));
 </script>
 
-<ol class="layout layout--{componentType}">
+<ol
+	class="grid layout layout--{componentType} gap-x-1 xs:gap-x-3"
+	class:xs:gap-y-4={componentType === 'triple'}
+	class:xs:gap-y-1={componentType === 'double'}
+>
 	{#each list.items as item, index}
 		<li class="contents">
 			<svelte:component this={component} index={index + 1} {item} {...props} />
@@ -71,9 +75,6 @@
 
 <style lang="scss">
 	.layout {
-		display: grid;
-		column-gap: 1rem;
-
 		&--single {
 			grid-template-columns: min-content 1fr;
 		}

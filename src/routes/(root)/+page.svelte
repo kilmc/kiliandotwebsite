@@ -9,13 +9,14 @@
 
 <div class="grid grid-cols-2 gap-x-16 p-5 sm:p-10 lg:p-20 font-mono max-w-6xl mx-auto">
 	<aside class="col-span-full xs:col-span-1 flex gap-2">
-		<div
+		<a
+			href="/"
 			class="font-bold uppercase flex flex-col dark:text-green-400 text-blue-600 text-6xl leading-[0.8] xs:text-5xl mb-2 xs:mb-8"
 		>
 			<div>Kilian</div>
 			<div>Dot</div>
 			<div>Website</div>
-		</div>
+		</a>
 	</aside>
 	<nav class="flex flex-col items-start col-span-full xs:col-span-1 text-2xl mb-6 xs:mb-0">
 		<Link href="/projects">Projects</Link>

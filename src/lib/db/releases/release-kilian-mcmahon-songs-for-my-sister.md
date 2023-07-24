@@ -1,1 +1,1 @@
-As a Christmas present for my older sister I write and recorded 2 songs and put them on a casette tape for her.
+As a Christmas present for my older sister I wrote and recorded 2 songs and put them on a casette tape for her. We had been living in seprate hemispheres for several years and it was hard to feel connected to one another so I wrote songs about us as siblings. I was pretty happy about how it turned out. That artwork is a real photo of the two of us. I don't think it could have been a more perfect picture for this little project.
