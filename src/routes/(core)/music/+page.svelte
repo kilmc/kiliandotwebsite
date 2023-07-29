@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+	import Link from '$lib/components/Link.svelte';
 	import Vinyl from '$lib/components/Vinyl.svelte';
 </script>
 
@@ -6,7 +7,7 @@
 	<h2 class="font-bold uppercase text-2xl">Releases</h2>
 </div>
 
-<div class="grid grid-cols-2 xs:grid-cols-3 gap-5">
+<div class="grid grid-cols-2 xs:grid-cols-3 gap-5 mb-12">
 	<a href="/music/releases/the-best-boys/getting-better-ep">
 		<Vinyl artist="The Best Boys" release="Getting Better EP" />
 	</a>
@@ -17,3 +18,5 @@
 		<Vinyl artist="Kilian McMahon" release="Songs for My Sister" />
 	</a>
 </div>
+
+<h2 class="text-2xl"><Link href="/music/sketchbook/">Sketchbook</Link></h2>

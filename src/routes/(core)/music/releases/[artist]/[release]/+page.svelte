@@ -16,7 +16,7 @@
 				{#if data.tracks}
 					<ul>
 						{#each data.tracks as track}
-							<ol class="list-inside list-decimal list-item">{track}</ol>
+							<li class="list-inside list-decimal list-item">{track}</li>
 						{/each}
 					</ul>
 				{/if}

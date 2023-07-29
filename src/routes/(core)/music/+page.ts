@@ -1,6 +1,8 @@
 import type { PageLoad } from './$types';
-import { releases } from '$lib/db/releases';
+import { loosies } from '$lib/db/loosies';
 
 export const load = (({ params }) => {
-	console.log(releases);
+	return {
+		loosies
+	};
 }) satisfies PageLoad;

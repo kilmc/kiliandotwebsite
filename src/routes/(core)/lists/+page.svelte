@@ -11,9 +11,9 @@
 {#if data.favourites.length > 0}
 	<h2 class="font-bold mb-2">Favourites</h2>
 	<ul class="mb-4">
-		{#each data.favourites as { href, text }}
+		{#each data.favourites as { url, text }}
 			<li class="list-disc list-inside">
-				<a {href}>{text}</a>
+				<a href={url}>{text}</a>
 			</li>
 		{/each}
 	</ul>
@@ -24,9 +24,9 @@
 	{#each data.yearEnd as [group, items]}
 		<h3 class="">{group}</h3>
 		<ul class="mb-4 flex gap-4">
-			{#each items as { href, text }}
+			{#each items as { url, text }}
 				<li class="text-xl underline dark:hover:bg-gray-800 inline-block mb-2 capitalize">
-					<a {href}>{text}</a>
+					<a href={url}>{text}</a>
 				</li>
 			{/each}
 		</ul>

@@ -29,3 +29,11 @@ declare namespace svelte.JSX {
 		'oncopied:error'?: (event: CustomEvent<Error>) => void;
 	}
 }
+
+type SvelteKeyboardEvent = KeyboardEvent & {
+	currentTarget: EventTarget & HTMLDivElement;
+};
+
+type SvelteMouseEvent = MouseEvent & {
+	currentTarget: EventTarget & HTMLDivElement;
+};
