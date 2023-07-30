@@ -32,6 +32,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Music: Sketchbook</title>
+</svelte:head>
+
 <div class="mb-10">
 	<h2 class="font-bold uppercase text-2xl mb-3">Sketchbook</h2>
 	<p>

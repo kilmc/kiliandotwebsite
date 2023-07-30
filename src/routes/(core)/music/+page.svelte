@@ -1,7 +1,10 @@
 <script lang="ts">
-	import Link from '$lib/components/Link.svelte';
 	import Vinyl from '$lib/components/Vinyl.svelte';
 </script>
+
+<svelte:head>
+	<title>Music</title>
+</svelte:head>
 
 <div class="mb-6">
 	<h2 class="font-bold uppercase text-2xl">Releases</h2>
