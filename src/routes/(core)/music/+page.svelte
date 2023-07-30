@@ -19,4 +19,4 @@
 	</a>
 </div>
 
-<h2 class="text-2xl"><Link href="/music/sketchbook/">Sketchbook</Link></h2>
+<h2 class="text-2xl"><a href="/music/sketchbook/" class="link">Sketchbook</a></h2>

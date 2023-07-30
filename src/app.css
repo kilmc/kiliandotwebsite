@@ -10,6 +10,14 @@ body {
 input {
 	-webkit-appearance: none;
 	appearance: none;
+	border-radius: 0;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+div[role='slider']:focus-visible {
+	@apply outline outline-black outline-2 outline-offset-2;
 }
 
 .kdw-text-blue {
@@ -20,4 +28,8 @@ input {
 	.link {
 		@apply font-bold underline hover:bg-gray-200 dark:hover:bg-gray-700 group-hover:bg-gray-200 group-hover:dark:bg-gray-700;
 	}
+
+	/* .link:focus-visible {
+		@apply outline outline-black outline-2 outline-offset-2;
+	} */
 }

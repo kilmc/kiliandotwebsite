@@ -181,7 +181,7 @@
 		<span class="ml-auto">{trackCurrentTimeDisplay} / {trackDurationDisplay}</span>
 	</div>
 	<div class="grid grid-cols-[1rem_1fr] gap-4 items-center">
-		<button class="flex-none" on:click={handlePlayPause}>{isPlaying ? '⏸︎' : '⏵︎'}</button>
+		<button class="flex-none text-2xl" on:click={handlePlayPause}>{isPlaying ? '⏸︎' : '⏵︎'}</button>
 		<div
 			role="slider"
 			tabIndex="0"

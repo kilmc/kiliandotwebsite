@@ -46,7 +46,7 @@
 
 <input
 	type="search"
-	class="border-black border-b px-3 w-full text-xl mb-3"
+	class="border-black border p-3 w-full text-xl mb-4"
 	placeholder="Filter tracks"
 	bind:value={filterValue}
 />
@@ -55,25 +55,24 @@
 	{#each filteredResults as loosey}
 		<li class="border-bottom border-black/20 mb-3">
 			<div>
-				<div class="flex gap-2">
-					<button class="group" on:click={() => handleTrackOnClick(loosey)}>
-						<span class="group-hover:text-black text-gray-300">{false ? '⏸︎' : '⏵︎'}</span>
-						<span class="link">{loosey.title}</span>
+				<div class="flex gap-6">
+					<button class="link" on:click={() => handleTrackOnClick(loosey)}>
+						{loosey.title}
 					</button>
-					<span class="ml-auto">
+					{#if loosey.tags}
+						<div class="flex gap-2 ml-auto">
+							{#each loosey.tags as tag}
+								<span class="bg-gray-200  px-2">{tag}</span>
+							{/each}
+						</div>
+					{/if}
+					<span>
 						{secondsToTimeString(loosey.trackLength)}
 					</span>
 				</div>
 				<div class="items-start gap-6 hidden">
 					{#if loosey.description}
 						<div>{loosey.description}</div>
-					{/if}
-					{#if loosey.tags}
-						<div class="flex gap-2 ml-auto">
-							{#each loosey.tags as tag}
-								<span class="bg-black text-white px-2">{tag}</span>
-							{/each}
-						</div>
 					{/if}
 				</div>
 			</div>
