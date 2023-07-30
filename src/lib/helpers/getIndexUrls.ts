@@ -17,7 +17,7 @@ export const getIndexUrls = (
 			const pathnamePrefix = strippedPathname.length === 0 ? '/' : `/${strippedPathname}/`;
 			return {
 				text: startCase(path),
-				href: `${pathnamePrefix}${path}/`.toLowerCase()
+				url: `${pathnamePrefix}${path}/`.toLowerCase()
 			};
 		});
 };
