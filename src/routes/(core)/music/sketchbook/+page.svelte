@@ -46,36 +46,31 @@
 
 <input
 	type="search"
-	class="border-black border p-3 w-full text-xl mb-4"
+	class="border-black border p-3 w-full text-xl mb-4 bg-white"
 	placeholder="Filter tracks"
 	bind:value={filterValue}
 />
 
 <ul>
 	{#each filteredResults as loosey}
-		<li class="border-bottom border-black/20 mb-3">
-			<div>
-				<div class="flex gap-6">
-					<button class="link" on:click={() => handleTrackOnClick(loosey)}>
-						{loosey.title}
-					</button>
-					{#if loosey.tags}
-						<div class="flex gap-2 ml-auto">
-							{#each loosey.tags as tag}
-								<span class="bg-gray-200  px-2">{tag}</span>
-							{/each}
-						</div>
-					{/if}
-					<span>
-						{secondsToTimeString(loosey.trackLength)}
-					</span>
-				</div>
-				<div class="items-start gap-6 hidden">
-					{#if loosey.description}
-						<div>{loosey.description}</div>
-					{/if}
-				</div>
+		<li
+			class="border-bottom border-black/20 mb-6 md:mb-4 items-start gap-y-1 gap-x-4 grid grid-cols-[1fr_max-content] md:grid-cols-[1fr_max-content_max-content]"
+		>
+			<div class="col-span-1">
+				<button class="link text-lg" on:click={() => handleTrackOnClick(loosey)}>
+					{loosey.title}
+				</button>
 			</div>
+			<span class="col-span-1 md:order-1">
+				{secondsToTimeString(loosey.trackLength)}
+			</span>
+			{#if loosey.tags}
+				<div class="flex justify-end gap-2 col-span-2 md:col-span-1">
+					{#each loosey.tags as tag}
+						<span class="bg-gray-200 px-2">{tag}</span>
+					{/each}
+				</div>
+			{/if}
 		</li>
 	{/each}
 </ul>

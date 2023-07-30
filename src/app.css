@@ -13,11 +13,18 @@ input {
 	border-radius: 0;
 }
 
+input[type='search'] {
+	-webkit-appearance: none;
+}
+
 button:focus-visible,
 a:focus-visible,
-input:focus-visible,
 div[role='slider']:focus-visible {
 	@apply outline outline-black outline-2 outline-offset-2;
+}
+
+input:focus-visible {
+	@apply outline outline-black outline-2;
 }
 
 .kdw-text-blue {
