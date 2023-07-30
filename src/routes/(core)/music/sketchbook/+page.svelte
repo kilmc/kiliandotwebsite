@@ -1,14 +1,14 @@
 <script lang="ts">
 	import type { Loosey } from '$lib/db/loosies';
 	import { secondsToTimeString } from '$lib/helpers/secondsToTimeString';
-	import AudioPlayer from '../AudioPlayer.svelte';
 	import type { PageData } from './$types';
+	import { autoPlay, currentTrack, showPlayer } from '$lib/stores/player';
+	import { onDestroy } from 'svelte';
 	export let data: PageData;
 
-	let currentTrack = data.loosies.at(0);
-
 	function handleTrackOnClick(track: Loosey) {
-		currentTrack = track;
+		$autoPlay = true;
+		currentTrack.update(() => ({ fileName: track.fileName, title: track.title }));
 	}
 
 	let filterValue = '';
@@ -24,6 +24,12 @@
 
 		return matchTitle || matchTag;
 	});
+	$: $showPlayer = true;
+
+	onDestroy(() => {
+		$showPlayer = false;
+		$autoPlay = false;
+	});
 </script>
 
 <div class="mb-10">
@@ -38,18 +44,6 @@
 	</p>
 </div>
 
-{#if currentTrack}
-	<div class="mb-6">
-		{#key currentTrack.fileName}
-			<AudioPlayer
-				fileName={currentTrack.fileName}
-				title={currentTrack.title}
-				description={currentTrack.description}
-			/>
-		{/key}
-	</div>
-{/if}
-
 <input
 	type="search"
 	class="border-black border-b px-3 w-full text-xl mb-3"
@@ -59,17 +53,18 @@
 
 <ul>
 	{#each filteredResults as loosey}
-		<li class="border-bottom border-black/20 mb-3 odd:bg-black/5 py-4 px-4">
+		<li class="border-bottom border-black/20 mb-3">
 			<div>
-				<div class="flex">
-					<button class="link" on:dblclick={() => handleTrackOnClick(loosey)}>
-						{loosey.title}
+				<div class="flex gap-2">
+					<button class="group" on:click={() => handleTrackOnClick(loosey)}>
+						<span class="group-hover:text-black text-gray-300">{false ? '⏸︎' : '⏵︎'}</span>
+						<span class="link">{loosey.title}</span>
 					</button>
 					<span class="ml-auto">
 						{secondsToTimeString(loosey.trackLength)}
 					</span>
 				</div>
-				<div class="flex items-start gap-6">
+				<div class="items-start gap-6 hidden">
 					{#if loosey.description}
 						<div>{loosey.description}</div>
 					{/if}

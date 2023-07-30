@@ -4,12 +4,13 @@
 
 <script lang="ts">
 	import { secondsToTimeString } from '$lib/helpers/secondsToTimeString';
+	import { onDestroy, onMount } from 'svelte';
+	import { autoPlay } from '$lib/stores/player';
 
 	// Props
 	// ----------------------------------------------------------
 	export let fileName: string;
 	export let title: string;
-	export let description: string | undefined;
 
 	let src = `/audio/loosies/${fileName}.mp3`;
 	let audioFile = new Audio(src);
@@ -75,6 +76,7 @@
 	function stop() {
 		clearInterval(trackTimer);
 		isPlaying = false;
+		audioFile.pause();
 		trackCurrentTimeDisplay = '0:00';
 		trackCurrentTime = 0;
 	}
@@ -159,16 +161,25 @@
 	audioFile.onended = () => {
 		stop();
 	};
+
+	onMount(() => {
+		if ($autoPlay) {
+			play();
+		}
+	});
+
+	onDestroy(() => {
+		stop();
+	});
 </script>
 
-<div class="border-black border p-4 mb-2 rounded-sm">
-	<details class="grid w-full grid-cols-2">
-		<summary class="flex">
-			<h2>{title}</h2>
-			<span class="ml-auto">{trackCurrentTimeDisplay} / {trackDurationDisplay}</span>
-		</summary>
-		{description}
-	</details>
+<div
+	class="border dark:border-white dark:text-white dark:bg-black bg-white border-black text-black p-4 mb-2 rounded-sm"
+>
+	<div class="flex">
+		<h2>{title}</h2>
+		<span class="ml-auto">{trackCurrentTimeDisplay} / {trackDurationDisplay}</span>
+	</div>
 	<div class="grid grid-cols-[1rem_1fr] gap-4 items-center">
 		<button class="flex-none" on:click={handlePlayPause}>{isPlaying ? '⏸︎' : '⏵︎'}</button>
 		<div
@@ -197,16 +208,3 @@
 		</div>
 	</div>
 </div>
-
-<style lang="scss">
-	summary::-webkit-details-marker {
-		display: none;
-	}
-
-	// details[open] {
-	// 	span {
-	// 		transform: rotate(90deg);
-	// 		display: inline-block;
-	// 	}
-	// }
-</style>

@@ -7,12 +7,17 @@ body {
 	height: 100%;
 }
 
+input {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
 .kdw-text-blue {
 	color: #0019ff;
 }
 
 @layer components {
 	.link {
-		@apply font-bold underline hover:bg-gray-200 dark:hover:bg-gray-700;
+		@apply font-bold underline hover:bg-gray-200 dark:hover:bg-gray-700 group-hover:bg-gray-200 group-hover:dark:bg-gray-700;
 	}
 }
