@@ -189,7 +189,7 @@
 			aria-valuemax={trackDuration}
 			aria-valuemin={0}
 			aria-valuenow={trackCurrentTime}
-			class="bg-black/10 w-full h-2 relative"
+			class="dark:bg-white/10 bg-black/10 w-full h-2 relative"
 			on:keypress={handleKeypress}
 			on:mousedown={handleMouseDown}
 			on:click={handleClick}
@@ -198,12 +198,12 @@
 		>
 			<div
 				bind:this={seekPreview}
-				class="bg-black/10 h-full w-0 absolute top-0 left-0 pointer-events-none"
+				class="dark:bg-white/10 bg-black/10 h-full w-0 absolute top-0 left-0 pointer-events-none"
 			/>
 			<div
 				bind:this={progressBar}
 				style="width: {(trackCurrentTime / trackDuration) * 100}%"
-				class="bg-black h-full absolute top-0 left-0 pointer-events-none"
+				class="dark:bg-white bg-black h-full absolute top-0 left-0 pointer-events-none"
 			/>
 		</div>
 	</div>

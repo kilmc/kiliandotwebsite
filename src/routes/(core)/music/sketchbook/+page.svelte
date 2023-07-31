@@ -50,7 +50,7 @@
 
 <input
 	type="search"
-	class="border-black border p-3 w-full text-xl mb-4 bg-white"
+	class="border-black border p-3 w-full text-xl mb-4 bg-white dark:bg-black dark:border-white dark:text-white"
 	placeholder="Filter tracks"
 	bind:value={filterValue}
 />
@@ -71,7 +71,7 @@
 			{#if loosey.tags}
 				<div class="flex justify-end gap-2 col-span-2 md:col-span-1">
 					{#each loosey.tags as tag}
-						<span class="bg-gray-200 px-2">{tag}</span>
+						<span class="dark:bg-gray-800 dark:text-white bg-gray-200 text-black px-2">{tag}</span>
 					{/each}
 				</div>
 			{/if}

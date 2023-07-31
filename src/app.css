@@ -24,7 +24,7 @@ div[role='slider']:focus-visible {
 }
 
 input:focus-visible {
-	@apply outline outline-black outline-2;
+	@apply outline outline-black outline-2 dark:outline-white;
 }
 
 .kdw-text-blue {
