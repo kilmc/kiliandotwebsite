@@ -7,5 +7,3 @@ export const load = (({ params }) => {
 	};
 }) satisfies PageLoad;
 
-export const ssr = false;
-export const prerender = false;

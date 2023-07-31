@@ -143,6 +143,7 @@
 	function handleKeypress(e: SvelteKeyboardEvent) {
 		switch (e.code) {
 			case 'Space':
+				e.preventDefault();
 				handlePlayPause();
 				break;
 			default:
@@ -183,8 +184,8 @@
 	<div class="grid grid-cols-[1rem_1fr] gap-4 items-center">
 		<button class="flex-none text-2xl" on:click={handlePlayPause}>{isPlaying ? '⏸︎' : '⏵︎'}</button>
 		<div
+			tabIndex={0}
 			role="slider"
-			tabIndex="0"
 			aria-valuetext="seek audio bar"
 			aria-valuemax={trackDuration}
 			aria-valuemin={0}
