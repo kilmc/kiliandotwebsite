@@ -182,9 +182,10 @@
 		<span class="ml-auto">{trackCurrentTimeDisplay} / {trackDurationDisplay}</span>
 	</div>
 	<div class="grid grid-cols-[1rem_1fr] gap-4 items-center">
-		<button class="flex-none text-2xl" on:click={handlePlayPause}>{isPlaying ? '⏸︎' : '⏵︎'}</button>
+		<button class="flex-none text-2xl" on:click={handlePlayPause}>{isPlaying ? '⏸︎' : '⏵︎'}</button
+		>
 		<div
-			tabIndex={0}
+			tabindex={0}
 			role="slider"
 			aria-valuetext="seek audio bar"
 			aria-valuemax={trackDuration}

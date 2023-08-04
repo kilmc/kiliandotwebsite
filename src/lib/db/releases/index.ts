@@ -1,6 +1,7 @@
-type Metadata = {
+export type ReleaseMetadata = {
 	artist: string;
 	artistSlug: string;
+	releaseDate: string;
 	release: string;
 	releaseSlug: string;
 	tracks: string[];
@@ -13,13 +14,13 @@ type Metadata = {
 
 type Releases = {
 	[k: string]: {
-		metadata: Metadata;
+		metadata: ReleaseMetadata;
 		mdx?: App.MdsvexFile;
 	};
 };
 
-export const releasesJSON: Record<string, Metadata> = import.meta.glob('./*.json', { eager: true });
-export const releasesMDX: Record<string, App.MdsvexFile> = import.meta.glob('./*.md', {
+const releasesJSON: Record<string, ReleaseMetadata> = import.meta.glob('./*.json', { eager: true });
+const releasesMDX: Record<string, App.MdsvexFile> = import.meta.glob('./*.md', {
 	eager: true
 });
 

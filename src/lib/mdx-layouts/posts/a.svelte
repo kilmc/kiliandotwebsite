@@ -2,6 +2,6 @@
 	export let href = '';
 </script>
 
-<a class="hover:not-italic" {href}>
+<a class="link" {href}>
 	<slot />
 </a>

@@ -1,5 +1,9 @@
 <script lang="ts">
 	import Vinyl from '$lib/components/Vinyl.svelte';
+
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 </script>
 
 <svelte:head>
@@ -11,15 +15,11 @@
 </div>
 
 <div class="grid grid-cols-2 xs:grid-cols-3 gap-5 mb-12">
-	<a href="/music/releases/the-best-boys/getting-better-ep">
-		<Vinyl artist="The Best Boys" release="Getting Better EP" />
-	</a>
-	<a href="/music/releases/slglfw/so-long-good-luck-farewell">
-		<Vinyl artist="SLGLFW" release="So Long, Good Luck, Farewell" />
-	</a>
-	<a href="/music/releases/kilian-mcmahon/songs-for-my-sister">
-		<Vinyl artist="Kilian McMahon" release="Songs for My Sister" />
-	</a>
+	{#each data.releaseItems as item}
+		<a href={item.url}>
+			<Vinyl class="shadow-md" artist={item.artist} release={item.release} />
+		</a>
+	{/each}
 </div>
 
 <h2 class="text-2xl"><a href="/music/sketchbook/" class="link">Sketchbook</a></h2>

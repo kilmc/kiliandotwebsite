@@ -26,8 +26,9 @@
 		"eslint-plugin-svelte3": "^4.0.0",
 		"mdsvex": "^0.11.0",
 		"postcss": "^8.4.27",
-		"prettier": "^3.0.0",
+		"prettier": "^3.0.1",
 		"prettier-plugin-svelte": "^3.0.3",
+		"prettier-plugin-tailwindcss": "^0.4.1",
 		"sass": "^1.64.1",
 		"svelte": "^4.1.1",
 		"svelte-check": "^3.4.6",
@@ -40,6 +41,7 @@
 	"type": "module",
 	"dependencies": {
 		"@kilmc/music-fns": "^0.2.0",
+		"@tailwindcss/container-queries": "^0.1.1",
 		"@types/lodash-es": "^4.17.8",
 		"@types/uuid": "^9.0.2",
 		"album-art": "^3.1.1",

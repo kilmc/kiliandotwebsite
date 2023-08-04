@@ -1,0 +1,13 @@
+{
+	"artist": "Civilian Stone",
+	"release": "RGB EP",
+	"releaseDate": "2023-08-01",
+	"artistSlug": "civilian-stone",
+	"releaseSlug": "rgb-ep",
+	"tracks": ["Red", "Green", "Blue"],
+	"links": {
+		"bandcamp": "https://civilianstone.bandcamp.com/album/rgb-ep",
+		"spotify": "https://open.spotify.com/album/5BSU1icdSKwVguo3w3lgQu",
+		"apple": "https://music.apple.com/album/rgb-ep/1700592638"
+	}
+}
