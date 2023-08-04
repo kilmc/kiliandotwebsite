@@ -22,6 +22,3 @@
 		<svelte:component this={data.content} />
 	</div>
 </div>
-
-<style lang="scss">
-</style>

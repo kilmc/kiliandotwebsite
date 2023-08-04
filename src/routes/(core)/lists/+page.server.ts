@@ -4,7 +4,6 @@ import { addPathname } from '$lib/helpers/addPathname';
 import { groupBy } from '$lib/helpers/array';
 
 export const load = (async ({ url }) => {
-	console.log(url.pathname);
 	return {
 		favourites: addPathname(favouritesLinkItems, `${url.pathname}/favourites/`),
 		yearEnd: Object.entries(

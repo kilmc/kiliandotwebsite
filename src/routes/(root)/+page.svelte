@@ -2,6 +2,7 @@
 	import type { PageData } from './$types';
 	import Link from '$lib/components/Link.svelte';
 	import RandomLink from './RandomLink.svelte';
+	import Update from '$lib/components/Update.svelte';
 
 	export let data: PageData;
 </script>
@@ -27,24 +28,7 @@
 		<Link href="/music">Music</Link>
 	</nav>
 	<div class="mb-8 col-span-full md:col-span-1">
-		<h2
-			class="font-bold text-md mb-3 dark:bg-white dark:text-black bg-black text-white px-2 inline-block"
-		>
-			UPDATE: 2023-07-23
-		</h2>
-		<p class="mb-4">
-			I recently made the decision to pursue music as a career and leave tech. There's more detail
-			about what lead to the decision in
-			<Link href="/posts/returning-to-hope">this post</Link>. I'm incredibly excited about it; it's
-			been a lifelong dream.
-		</p>
-		<p>
-			That being said, it's going to take a lot for me to start making a living wage from this work.
-			I have a bunch of stuff I've worked on in the
-			<Link href="/music">music</Link> section. If you enjoy anything I make and want to work together
-			on a project or have any folks you think I would be a good fit to collaborate with please send
-			me an <Link href="mailto:mail@kilian.website">email</Link>.
-		</p>
+		<Update date={data.lastUpdate.metadata?.date || ''} content={data.lastUpdate.default} />
 	</div>
 	<div class="col-span-full md:col-span-1 flex flex-col">
 		{#each data.randomItems as item}

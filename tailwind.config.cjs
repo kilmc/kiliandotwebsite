@@ -6,9 +6,9 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			sans: ['Helvetica', 'Arial', 'sans-serif'],
-			serif: ['kepler-std', 'serif'],
+			serif: ['serif'],
 			mono: ['anonymous-pro', 'monospace'],
-			script: ['handsome-pro', 'script']
+			script: ['script']
 		},
 		screens: {
 			xs: '475px',

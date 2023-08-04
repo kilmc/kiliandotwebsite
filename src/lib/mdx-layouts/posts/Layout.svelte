@@ -22,6 +22,8 @@
 	export { p, em, strong, a, h1, h2, h3, h4, h5, h6, blockquote, ul, ol, hr };
 </script>
 
-<div class="prose prose-lg dark:prose-invert md:prose-xl">
-	<slot />
+<div class="@container">
+	<div class="prose prose-lg dark:prose-invert @lg:prose-xl">
+		<slot />
+	</div>
 </div>
