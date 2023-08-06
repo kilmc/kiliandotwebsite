@@ -19,4 +19,4 @@ _Live_. _I want to live_.
 
 As I write this I'm in the last days of my notice at work, just a week or so to go. I've had this image in my head trying to visualise what's next. I'm on the edge of a forest. It's been a landmark off in the distance for my whole life but now I'm walking toward it. I definitely feel fear as I get closer because I don't know what lives in there, but I haven't broken my stride since I started walking toward it. I'm excited for the first time in a long time and this sense of conviction is so deeply comforting that it quiets my fear.
 
-It feels good to hope again. Now it's time to do something with it.
+It feels good to have hope again. Now it's time to do something with it.

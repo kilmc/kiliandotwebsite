@@ -5,7 +5,7 @@
 	export let data: PageData;
 </script>
 
-<div class="flex flex-col gap-10 items-start">
+<div class="flex flex-col gap-10">
 	{#each data.updates as [_, update]}
 		<Update date={update.metadata?.date || ''} content={update.default} />
 	{/each}

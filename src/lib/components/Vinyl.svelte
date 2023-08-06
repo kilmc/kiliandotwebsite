@@ -14,9 +14,3 @@
 		alt="Album artwork for {release} by {artist}"
 	/>
 </div>
-
-<style lang="scss">
-	.item--vinyl {
-		box-shadow: 0px 2px 4px rgba(black, 0.1);
-	}
-</style>

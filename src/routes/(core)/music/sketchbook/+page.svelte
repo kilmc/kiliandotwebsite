@@ -61,7 +61,7 @@
 			class="border-bottom border-black/20 mb-6 md:mb-4 items-start gap-y-1 gap-x-4 grid grid-cols-[1fr_max-content] md:grid-cols-[1fr_max-content_max-content]"
 		>
 			<div class="col-span-1">
-				<button class="link text-lg" on:click={() => handleTrackOnClick(loosey)}>
+				<button class="link text-lg text-left" on:click={() => handleTrackOnClick(loosey)}>
 					{loosey.title}
 				</button>
 			</div>
@@ -78,15 +78,3 @@
 		</li>
 	{/each}
 </ul>
-
-<div class="mt-20">
-	<h3 class="font-bold">Copyright Notice:</h3>
-
-	<p>
-		All rights reserved for the content on this page. You may not use any of this audio without the
-		express permission of the author, Kilian McMahon.
-	</p>
-</div>
-
-<style lang="scss">
-</style>
