@@ -6,10 +6,7 @@ export const load = (({ url }) => {
 		.map(({ metadata }) => metadata)
 		.map((release) => {
 			return {
-				url: `${url.pathname}/releases/${release.artistSlug}/${release.releaseSlug}`.replace(
-					'//',
-					'/'
-				),
+				url: `${url.pathname}/${release.artistSlug}/${release.releaseSlug}`.replace('//', '/'),
 				artist: release.artist,
 				release: release.release,
 				releaseDate: new Date(release.releaseDate)
