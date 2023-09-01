@@ -40,7 +40,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@kilmc/music-fns": "^0.2.0",
+		"@kilmc/music-fns": "^0.5.0",
 		"@tailwindcss/container-queries": "^0.1.1",
 		"@types/lodash-es": "^4.17.8",
 		"@types/uuid": "^9.0.2",

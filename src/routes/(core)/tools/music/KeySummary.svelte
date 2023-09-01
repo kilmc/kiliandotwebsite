@@ -19,6 +19,6 @@
 	$: [_, notes] = getAccidentals(scale);
 </script>
 
-<div class="text-2xl">{majorKey} major</div>
-<div class="text-2xl">{minorKey} minor</div>
-<div class="text-2xl">{notes.length}: {notes.join(' ')}</div>
+<div class="text-lg">{majorKey} major</div>
+<div class="text-lg">{minorKey} minor</div>
+<div class="text-lg">{notes.length}: {notes.join(' ')}</div>

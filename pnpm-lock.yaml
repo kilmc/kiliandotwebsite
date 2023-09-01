@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@kilmc/music-fns':
-    specifier: ^0.2.0
-    version: 0.2.0
+    specifier: ^0.5.0
+    version: 0.5.0
   '@tailwindcss/container-queries':
     specifier: ^0.1.1
     version: 0.1.1(tailwindcss@3.3.3)
@@ -416,8 +416,8 @@ packages:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
 
-  /@kilmc/music-fns@0.2.0:
-    resolution: {integrity: sha512-pEsR4/etgOo4/sLbzLoWz11s6Ojb8TWjdT6vEB8GmDau+Xl5UxAAhrp0VsBSCeaayidXTuSQWr1VRXEe1SLfYw==}
+  /@kilmc/music-fns@0.5.0:
+    resolution: {integrity: sha512-Z59l6kt1HCDfzR9ZJ07iObgiJUXwL9pulAn/iIeOtfZFoT9nH2FopOAzMDEu9+Tq1waOrs4IL7JI/vgWr2EWvA==}
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:
@@ -1003,7 +1003,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
 
   /code-red@1.0.3:
     resolution: {integrity: sha512-kVwJELqiILQyG5aeuyKFbdsI1fmQy1Cmf7dQ8eGmVuJoaRVdwey7WaMknr2ZFeVSYSKT0rExsa8EGw0aoI/1QQ==}
@@ -1374,8 +1374,8 @@ packages:
   /fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
 
-  /fsevents@2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+  /fsevents@2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
@@ -2245,7 +2245,7 @@ packages:
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /run-parallel@1.2.0:
@@ -2781,7 +2781,7 @@ packages:
       rollup: 3.27.0
       sass: 1.64.1
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /vitefu@0.2.4(vite@4.4.7):
