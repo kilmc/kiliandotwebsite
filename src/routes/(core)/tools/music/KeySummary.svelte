@@ -1,24 +1,17 @@
 <script lang="ts">
 	export let scale: string[];
 	let majorKey = scale.at(0);
-	let minorKey = scale.at(5);
 
-	function getAccidentals(scale: string[]): ['flat' | 'sharp' | 'none', string[]] {
-		const flats = scale.filter((note) => /b/.test(note));
-		const sharps = scale.filter((note) => /#/.test(note));
-
-		if (flats.length > 0) {
-			return ['flat', flats];
-		} else if (sharps.length > 0) {
-			return ['sharp', sharps];
-		}
-
-		return ['none', []];
-	}
-
-	$: [_, notes] = getAccidentals(scale);
+	const hasAccidental = (note: string) => /b|#/.test(note);
 </script>
 
-<div class="text-lg">{majorKey} major</div>
-<div class="text-lg">{minorKey} minor</div>
-<div class="text-lg">{notes.length}: {notes.join(' ')}</div>
+<div class="grid grid-cols-2 items-center odd:bg-slate-100 p-2">
+	<div class="text-lg">{majorKey} major</div>
+	<div class="grid grid-cols-7 gap-2">
+		{#each scale as note}
+			<div class="px-2 rounded-md" class:bg-slate-300={hasAccidental(note)}>
+				{note}
+			</div>
+		{/each}
+	</div>
+</div>

@@ -13,6 +13,8 @@
 	const sharpScales = Object.entries(majorScales).filter(([_, scale]) =>
 		scale.some((note) => /#/.test(note))
 	);
+
+	console.log(sharpScales);
 	const flatScales = Object.entries(majorScales).filter(([_, scale]) =>
 		scale.some((note) => /b/.test(note))
 	);
@@ -71,11 +73,8 @@
 	{/if}
 </div>
 
-<h3 class="font-bold text-lg">List of Keys</h3>
-<div class="layout">
-	<div>Major</div>
-	<div>Minor</div>
-	<div>Number of #/b</div>
+<h3 class="font-bold text-lg mb-4">List of Keys</h3>
+<div class="flex flex-col">
 	{#each sharpScales as [_, scale]}
 		<KeySummary {scale} />
 	{/each}
@@ -85,11 +84,6 @@
 </div>
 
 <style lang="scss">
-	.layout {
-		display: grid;
-		grid-template-columns: max-content max-content 1fr;
-		column-gap: 4rem;
-	}
 	.layout-piano {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
