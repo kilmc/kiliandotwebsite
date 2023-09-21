@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Input from '$lib/components/Input.svelte';
-	import { getChord, guessScale, majorScales } from '@kilmc/music-fns';
+	import { getChord, guessMajorScale, major } from '@kilmc/music-fns';
 	import KeySummary from './KeySummary.svelte';
 	import Synth from './Synth.svelte';
 
@@ -10,18 +10,26 @@
 	let inScale: string[] = [];
 	let outScale: string[] = [];
 
-	const sharpScales = Object.entries(majorScales).filter(([_, scale]) =>
-		scale.some((note) => /#/.test(note))
+	const cMajorScale = Object.entries(major).filter(([_, scale]) =>
+		scale.notes.some((note) => !/[#b]/.test(note))
 	);
 
-	console.log(sharpScales);
-	const flatScales = Object.entries(majorScales).filter(([_, scale]) =>
-		scale.some((note) => /b/.test(note))
+	const sharpScales = Object.entries(major).filter(([_, scale]) =>
+		scale.notes.some((note) => /#/.test(note))
+	);
+
+	const flatScales = Object.entries(major).filter(([_, scale]) =>
+		scale.notes.some((note) => /b/.test(note))
 	);
 
 	const isSharp = (note: string) => /#/.test(note);
 
-	$: guessedScales = guessScale(inScale, outScale);
+	$: guessedScales = guessMajorScale(inScale, outScale);
+	$: filteredScales = cMajorScale.concat(sharpScales, flatScales).filter(([note]) => {
+		const guesses = guessedScales.map((guess) => guess[0].replace(' major', ''));
+		console.log(guesses, note);
+		return guesses.includes(note);
+	});
 </script>
 
 <h2 class="text-2xl font-bold uppercase mb-4">Music Tools</h2>
@@ -62,24 +70,12 @@
 			</label>
 		{/each}
 	</div>
-
-	<h2>Guessed scale</h2>
-	{#if guessedScales.length <= 4}
-		<div>
-			{guessedScales.map((guess) => guess.name).join(', ')}
-		</div>
-	{:else}
-		<div>Unknown</div>
-	{/if}
 </div>
 
 <h3 class="font-bold text-lg mb-4">List of Keys</h3>
 <div class="flex flex-col">
-	{#each sharpScales as [_, scale]}
-		<KeySummary {scale} />
-	{/each}
-	{#each flatScales as [_, scale]}
-		<KeySummary {scale} />
+	{#each filteredScales as [_, { notes }]}
+		<KeySummary scale={notes} />
 	{/each}
 </div>
 
