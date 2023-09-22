@@ -11,7 +11,7 @@
 	let outScale: string[] = [];
 
 	const cMajorScale = Object.entries(major).filter(([_, scale]) =>
-		scale.notes.some((note) => !/[#b]/.test(note))
+		scale.notes.every((note) => !/[#b]/.test(note))
 	);
 
 	const sharpScales = Object.entries(major).filter(([_, scale]) =>
@@ -27,7 +27,6 @@
 	$: guessedScales = guessMajorScale(inScale, outScale);
 	$: filteredScales = cMajorScale.concat(sharpScales, flatScales).filter(([note]) => {
 		const guesses = guessedScales.map((guess) => guess[0].replace(' major', ''));
-		console.log(guesses, note);
 		return guesses.includes(note);
 	});
 </script>
@@ -74,7 +73,7 @@
 
 <h3 class="font-bold text-lg mb-4">List of Keys</h3>
 <div class="flex flex-col">
-	{#each filteredScales as [_, { notes }]}
+	{#each filteredScales as [_, { notes }] (notes)}
 		<KeySummary scale={notes} />
 	{/each}
 </div>
