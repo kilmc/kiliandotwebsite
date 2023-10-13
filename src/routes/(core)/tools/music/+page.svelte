@@ -2,13 +2,14 @@
 	import Input from '$lib/components/Input.svelte';
 	import { getChord, guessMajorScale, major } from '@kilmc/music-fns';
 	import KeySummary from './KeySummary.svelte';
-	import Synth from './Synth.svelte';
+	import Piano from './piano/ScaleGuesserPiano.svelte';
+	import { pianoKeyModes, type PianoKeyMode } from './piano/types';
+	import { inScale, outScale } from './store';
 
 	let chordName = 'C';
 	$: chord = getChord(chordName);
-	const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
-	let inScale: string[] = [];
-	let outScale: string[] = [];
+
+	let selectedMode: PianoKeyMode = 'filter';
 
 	const cMajorScale = Object.entries(major).filter(([_, scale]) =>
 		scale.notes.every((note) => !/[#b]/.test(note))
@@ -22,9 +23,7 @@
 		scale.notes.some((note) => /b/.test(note))
 	);
 
-	const isSharp = (note: string) => /#/.test(note);
-
-	$: guessedScales = guessMajorScale(inScale, outScale);
+	$: guessedScales = guessMajorScale($inScale, $outScale);
 	$: filteredScales = cMajorScale.concat(sharpScales, flatScales).filter(([note]) => {
 		const guesses = guessedScales.map((guess) => guess[0].replace(' major', ''));
 		return guesses.includes(note);
@@ -39,36 +38,34 @@
 </div>
 
 <div class="mb-10">
-	<h3 class="font-bold text-lg">Scale Guesser</h3>
-	<div class="layout-piano">
-		{#each notes as note}
-			<label>
-				<input type="checkbox" bind:group={inScale} name="flavours" value={note} />
-				{note}
-			</label>
-		{/each}
-	</div>
-	<div class="layout-piano h-32 border border-black">
-		{#each notes as note, i}
-			<Synth
-				note="{note}3"
-				class="p-4  border-r border-black {isSharp(note)
-					? 'bg-black text-white'
-					: 'bg-white text-black'}
-				{i !== notes.length ? 'border-r' : ''}
-			"
-			/>
-		{/each}
+	<div class="flex mb-2">
+		<h3 class="font-bold text-lg">Major Scale Guesser</h3>
+		<div class="ml-auto flex gap-2 items-center">
+			{#each pianoKeyModes as mode}
+				<label
+					class="hover:bg-black/30 dark:hover:bg-white/30 text-center px-2"
+					class:selected={selectedMode === mode}
+				>
+					<input type="radio" name="mode" value={mode} bind:group={selectedMode} class="hidden" />
+					{mode}
+				</label>
+			{/each}
+		</div>
 	</div>
 
-	<div class="layout-piano">
-		{#each notes as note}
-			<label>
-				<input type="checkbox" bind:group={outScale} name="flavours" value={note} />
-				{note}
-			</label>
-		{/each}
-	</div>
+	<Piano mode={selectedMode} />
+	<!-- <div class="flex">
+		{#if $inScale.length > 0 || $outScale.length > 0}
+			<button
+				on:click={() => {
+					inScale.set([]);
+					outScale.set([]);
+				}}
+			>
+				Reset filter
+			</button>
+		{/if}
+	</div> -->
 </div>
 
 <h3 class="font-bold text-lg mb-4">List of Keys</h3>
@@ -79,8 +76,7 @@
 </div>
 
 <style lang="scss">
-	.layout-piano {
-		display: grid;
-		grid-template-columns: repeat(12, 1fr);
+	.selected {
+		@apply bg-black text-white dark:bg-white dark:text-black dark:hover:bg-white/80;
 	}
 </style>

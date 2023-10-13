@@ -1,5 +1,5 @@
+import type { PageServerLoad } from './$types';
 import { wordToAccidental } from '../../piano/helpers';
-import type { PageLoad } from './$types';
 
 export const load = (({ params }) => {
 	const regex =
@@ -19,4 +19,4 @@ export const load = (({ params }) => {
 			keyName: undefined
 		};
 	}
-}) satisfies PageLoad;
+}) satisfies PageServerLoad;

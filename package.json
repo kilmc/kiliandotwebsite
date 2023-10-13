@@ -40,11 +40,12 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@kilmc/music-fns": "^0.6.1",
+		"@kilmc/music-fns": "^0.7.0",
 		"@tailwindcss/container-queries": "^0.1.1",
 		"@types/lodash-es": "^4.17.9",
 		"@types/uuid": "^9.0.4",
 		"album-art": "^3.1.1",
+		"convert": "^4.13.2",
 		"lodash-es": "^4.17.21",
 		"svelte-portal": "^2.2.0",
 		"tone": "^14.7.77",

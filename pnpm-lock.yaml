@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@kilmc/music-fns':
-    specifier: ^0.6.1
-    version: 0.6.1
+    specifier: ^0.7.0
+    version: 0.7.0
   '@tailwindcss/container-queries':
     specifier: ^0.1.1
     version: 0.1.1(tailwindcss@3.3.3)
@@ -20,6 +20,9 @@ dependencies:
   album-art:
     specifier: ^3.1.1
     version: 3.1.1
+  convert:
+    specifier: ^4.13.2
+    version: 4.13.2
   lodash-es:
     specifier: ^4.17.21
     version: 4.17.21
@@ -413,8 +416,8 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  /@kilmc/music-fns@0.6.1:
-    resolution: {integrity: sha512-skX1DzjJgQn4BAlSZtgDUGRYXif4Rx6qlbrP3V4axAE3snbrNIGUKIJaR5iBqP8fpXnZ7RtqIq6Q4QjtAsXBkw==}
+  /@kilmc/music-fns@0.7.0:
+    resolution: {integrity: sha512-oGpz32HdeI3Xbzhn7/kfU6eKYLVd2DqJ00sFINxQLQT7qsvoZYlj9N5XFyTj4yp6U5EK7f7BeSCL79+Cg4S1zw==}
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:
@@ -1027,6 +1030,10 @@ packages:
 
   /concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
+
+  /convert@4.13.2:
+    resolution: {integrity: sha512-KLkCaBqef9QiPJ5bSxF66h8x5MnnqI3mUs8uwF70X6CmqeXgGsvCfHO6D/KmvhQan0HrjoRC/NGJWeRSuVWgqg==}
+    dev: false
 
   /cookie@0.5.0:
     resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}

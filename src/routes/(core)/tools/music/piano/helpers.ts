@@ -1,3 +1,4 @@
+import { pianoKeys } from './consts';
 import type { Key } from './types';
 
 export const groupKeys = (arr: Key[]) =>
@@ -37,3 +38,18 @@ export const accidentalToWord = (accidental: string | undefined) => {
 			break;
 	}
 };
+
+export const getSynthNote = (key: Key, startingOctave: number = 3) => {
+	const octave = key.midiNumber < 12 ? startingOctave : startingOctave + 1;
+	return `${key.notes[0]}${octave}`;
+};
+
+export const getPianoKeys = (octaves: number) =>
+	groupKeys(
+		Array<Key | Key[]>(octaves)
+			.fill(pianoKeys)
+			.flatMap((key) => {
+				return key;
+			})
+			.map((key, i) => ({ ...key, midiNumber: i }) as Key)
+	);

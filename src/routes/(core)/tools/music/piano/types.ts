@@ -1,9 +1,7 @@
-import type { Range } from '$lib/types/utils';
-
 export type Key = {
 	type: 'white' | 'black';
 	notes: string[];
-	midiNumber: MIDINumber;
+	midiNumber: number;
 };
 
 type PitchClass = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G';
@@ -22,12 +20,14 @@ export type ScaleDegree =
 
 export type HighlightedNote = {
 	noteName: Note;
-	midiNumber: MIDINumber;
+	midiNumber: number;
 };
-
-export type MIDINumber = Range<0, 127>;
 
 export type NoteDisplay = {
 	note: string;
 	midiNumber: number;
 };
+
+export const pianoKeyModes = ['synth', 'filter'] as const;
+
+export type PianoKeyMode = (typeof pianoKeyModes)[number];
