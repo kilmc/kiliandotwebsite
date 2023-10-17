@@ -18,7 +18,7 @@
 
 <div class="min-w-[25rem]">
 	<div
-		class="grid grid-cols h-32 relative border-t-2 border-r-2 border-black"
+		class="grid grid-cols h-40 relative border-t-2 border-r-2 border-black"
 		style="grid-template-columns: repeat({octaves * 7}, minmax(0,1fr))"
 	>
 		{#each processedKeys as [white, black]}

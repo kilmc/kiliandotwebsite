@@ -1,5 +1,8 @@
 <script lang="ts">
+	import SubNavPortal from '$lib/portals/SubNavPortal.svelte';
+	import { onMount } from 'svelte';
 	import { convertKeyToURL } from '../../helpers';
+	import HighlightPiano from '../../piano/HighlightPiano.svelte';
 	import type { PageData } from './$types';
 	import { getKey } from '@kilmc/music-fns';
 	export let data: PageData;
@@ -15,27 +18,51 @@
 		'bg-indigo-300 dark:bg-indigo-600',
 		'bg-violet-300 dark:bg-violet-600'
 	];
+
+	let highlightedNotes: string[];
+	let isChordHighlighted = false;
+
+	function setNotes(notes: string[]) {
+		highlightedNotes = notes;
+		isChordHighlighted = true;
+	}
+
+	function resetNotes() {
+		highlightedNotes = keyInfo?.notes.names || [];
+		isChordHighlighted = false;
+	}
+
+	onMount(() => {
+		resetNotes();
+	});
 </script>
 
+<SubNavPortal>
+	<a
+		href="/tools/music/key/"
+		class="font-mono font-bold text-xl uppercase dark:text-white text-black hover:text-gray-500 inline-block"
+	>
+		Scales
+	</a>
+</SubNavPortal>
+
 {#if keyInfo !== undefined}
-	<div>
+	<div class="mb-10">
 		<h3 class="font-bold text-2xl">{key}</h3>
-		<div class="flex gap-4 text-2xl mb-10">
+		<div class="flex gap-4 text-2xl">
 			{#each keyInfo.notes.names as note}
 				<div>{note}</div>
 			{/each}
 		</div>
 
-		{#if !/minor/.test(keyInfo.name)}
+		{#if /(major|ionian)/.test(keyInfo.name)}
 			<a href={convertKeyToURL(keyInfo.minor.name)} data-sveltekit-reload>
 				Relative: {keyInfo.minor.name}
 			</a>
 		{/if}
 	</div>
 
-	<h3 class="mb-2">Chords</h3>
-
-	<div class="border-2 border-black dark:border-white mb-4">
+	<div class="border-2 border-black dark:border-white mb-14">
 		{#if keyInfo}
 			<div class="dark:bg-white bg-black grid grid-cols-7 text-xl gap-x-[2px]">
 				{#each [2, 1, 0] as num}
@@ -45,11 +72,13 @@
 						</div>
 					{/each}
 				{/each}
-				{#each keyInfo.chords as { name }}
+				{#each keyInfo.chords as { name, notes }}
 					<div
 						class="font-bold dark:bg-black dark:text-white dark:border-white bg-white text-center py-2 border-y-2 border-black"
 					>
-						{name}
+						<button on:click={() => setNotes(notes)}>
+							{name}
+						</button>
 					</div>
 				{/each}
 				{#each keyInfo.chords as { romanNumeral }, index}
@@ -58,6 +87,17 @@
 			</div>
 		{/if}
 	</div>
+
+	{#key highlightedNotes}
+		<div>
+			<HighlightPiano notes={highlightedNotes} />
+			{#if isChordHighlighted}
+				<div>
+					<button on:click={() => resetNotes()}>Reset</button>
+				</div>
+			{/if}
+		</div>
+	{/key}
 {:else}
 	Could note find {key}
 {/if}
