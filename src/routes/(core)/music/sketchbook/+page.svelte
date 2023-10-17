@@ -11,19 +11,28 @@
 		currentTrack.update(() => ({ fileName: track.fileName, title: track.title }));
 	}
 
+	function getDate(date: string) {
+		return new Date(Date.parse(date)).toLocaleDateString('en-EN', {
+			year: 'numeric',
+			month: 'long'
+		});
+	}
+
 	let filterValue = '';
 	$: filterTerms = filterValue.split(',').map((x) => x.trim());
 
-	$: filteredResults = data.loosies.filter((loosey) => {
-		const matchTitle = filterTerms.some((term) =>
-			loosey.title.toLowerCase().match(term.toLowerCase())
-		);
-		const matchTag = filterTerms.some((term) =>
-			loosey.tags?.some((str) => str.toLowerCase().match(term.toLowerCase()))
-		);
+	$: filteredResults = data.loosies
+		.filter((loosey) => {
+			const matchTitle = filterTerms.some((term) =>
+				loosey.title.toLowerCase().match(term.toLowerCase())
+			);
+			const matchTag = filterTerms.some((term) =>
+				loosey.tags?.some((str) => str.toLowerCase().match(term.toLowerCase()))
+			);
 
-		return matchTitle || matchTag;
-	});
+			return matchTitle || matchTag;
+		})
+		.sort((a, b) => Date.parse(b.date || '') - Date.parse(a.date || ''));
 	$: $showPlayer = true;
 
 	onDestroy(() => {
@@ -66,12 +75,13 @@
 				</button>
 			</div>
 			<span class="col-span-1 md:order-1">
+				{getDate(loosey.date || '')} /
 				{secondsToTimeString(loosey.trackLength)}
 			</span>
 			{#if loosey.tags}
 				<div class="flex justify-end gap-2 col-span-2 md:col-span-1">
 					{#each loosey.tags as tag}
-						<span class="dark:bg-gray-800 dark:text-white bg-gray-200 text-black px-2">{tag}</span>
+						<span class="dark:bg-gray-800 dark:text-white bxg-gray-200 text-black px-2">{tag}</span>
 					{/each}
 				</div>
 			{/if}
