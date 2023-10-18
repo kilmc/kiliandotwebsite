@@ -23,9 +23,15 @@ dependencies:
   convert:
     specifier: ^4.13.2
     version: 4.13.2
+  json-midi-encoder:
+    specifier: ^5.1.29
+    version: 5.1.29
   lodash-es:
     specifier: ^4.17.21
     version: 4.17.21
+  midi-json-parser-worker:
+    specifier: ^8.1.29
+    version: 8.1.29
   svelte-portal:
     specifier: ^2.2.0
     version: 2.2.0
@@ -1018,6 +1024,16 @@ packages:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
     engines: {node: '>= 6'}
 
+  /compilerr@11.0.10:
+    resolution: {integrity: sha512-rxZDghSMWwjy+tfs9LZlxjTI4ntPsBoeunopDnPdmkloV0LIHhHKynydbhkI9nzR+IanUR3Dmt/HPB05A9rJ6w==}
+    engines: {node: '>=16.1.0'}
+    dependencies:
+      '@babel/runtime': 7.23.2
+      dashify: 2.0.0
+      indefinite-article: 0.0.2
+      tslib: 2.6.2
+    dev: false
+
   /concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
@@ -1056,6 +1072,11 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       array-find-index: 1.0.2
+    dev: false
+
+  /dashify@2.0.0:
+    resolution: {integrity: sha512-hpA5C/YrPjucXypHPPc0oJ1l9Hf6wWbiOL7Ik42cxnsUOhWiCB/fylKbKqqJalW9FgkNQCw16YO8uW9Hs0Iy1A==}
+    engines: {node: '>=4'}
     dev: false
 
   /debug@4.3.4:
@@ -1320,6 +1341,14 @@ packages:
   /fast-levenshtein@2.0.6:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
 
+  /fast-unique-numbers@8.0.9:
+    resolution: {integrity: sha512-kviaqDPFBYntmhBHWPlncPx7nwyptuU8gipU0c4RlSbbpUp7RLmHPxmPGjFM+Ez3bd0LzXR1vhKjeQU3N/jkqQ==}
+    engines: {node: '>=16.1.0'}
+    dependencies:
+      '@babel/runtime': 7.23.2
+      tslib: 2.6.2
+    dev: false
+
   /fastq@1.15.0:
     resolution: {integrity: sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==}
     dependencies:
@@ -1475,6 +1504,10 @@ packages:
     resolution: {integrity: sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA==}
     engines: {node: '>=0.8.19'}
 
+  /indefinite-article@0.0.2:
+    resolution: {integrity: sha512-Au/2XzRkvxq2J6w5uvSSbBKPZ5kzINx5F2wb0SF8xpRL8BP9Lav81TnRbfPp6p+SYjYxwaaLn4EUwI3/MmYKSw==}
+    dev: false
+
   /indent-string@3.2.0:
     resolution: {integrity: sha512-BYqTHXTGUIvg7t1r4sJNKcbDZkL92nkXA8YtRpbjFHRHGDL/NtUeiBJMeE60kIFN/Mg8ESaWQvftaYMGJzQZCQ==}
     engines: {node: '>=4'}
@@ -1557,6 +1590,42 @@ packages:
 
   /json-buffer@3.0.1:
     resolution: {integrity: sha512-4bV5BfR2mqfQTJm+V5tPPdf+ZpuhiIvTuAB5g8kcrXOZpTT/QwwVRWBywX1ozr6lEuPdbHxwaJlm9G6mI2sfSQ==}
+
+  /json-midi-encoder-broker@4.0.92:
+    resolution: {integrity: sha512-0NRpBIW2GJxYZdRqZLPLycmWEjREXdZAQeBFaA7PxN5kkBm6RSgA4pdliIADhPBR5CUPzK9kj//vaM5n1L8+Vg==}
+    dependencies:
+      '@babel/runtime': 7.23.2
+      fast-unique-numbers: 8.0.9
+      json-midi-encoder-worker: 6.1.28
+      midi-json-parser-worker: 8.1.29
+      tslib: 2.6.2
+    dev: false
+
+  /json-midi-encoder-worker@6.1.28:
+    resolution: {integrity: sha512-uiYtCLRbirVTFVGMD/Uv7CNi0jTwn3oFnSzTfM89CaxD9Ts31QZMQpM44VAN9gNmsXvvUDLToZ3ZYjKveE4u+w==}
+    dependencies:
+      '@babel/runtime': 7.23.2
+      json-midi-message-encoder: 4.1.28
+      midi-json-parser-worker: 8.1.29
+      tslib: 2.6.2
+    dev: false
+
+  /json-midi-encoder@5.1.29:
+    resolution: {integrity: sha512-Aj9KmBhlvsSFiG7TQFQiAmD9Axlygbb/Mf+h5dkP4c05fUEv3qqKJZunBmTgcyg8mt8RM2z7yj77y5GPOUdvJA==}
+    dependencies:
+      '@babel/runtime': 7.23.2
+      json-midi-encoder-broker: 4.0.92
+      json-midi-encoder-worker: 6.1.28
+      tslib: 2.6.2
+    dev: false
+
+  /json-midi-message-encoder@4.1.28:
+    resolution: {integrity: sha512-dKsEiVz9CCvs6rXMdExaQTP4EVV8DcLW7iogVWj9lF8TV+++aAsdaHxO4HelRUeJxh5VU2g8w73/TazejXK4mg==}
+    dependencies:
+      '@babel/runtime': 7.23.2
+      midi-json-parser-worker: 8.1.29
+      tslib: 2.6.2
+    dev: false
 
   /json-parse-better-errors@1.0.2:
     resolution: {integrity: sha512-mrqyZKfX5EhL7hvqcV6WG1yYjnjeuYDzDhhcAAUrq8Po85NBQBJP+ZDUT75qZQ98IkUoBqdkExkukOU7Ts2wrw==}
@@ -1730,6 +1799,14 @@ packages:
     dependencies:
       braces: 3.0.2
       picomatch: 2.3.1
+
+  /midi-json-parser-worker@8.1.29:
+    resolution: {integrity: sha512-YQ7JZ99K2A9a5QEd/KmQ5JO/fnPZz54W88YZcdGLX/m6//1IB0oZ4tnBOoUabYJu9Fjg8FgFZCHedUH+F/JZdw==}
+    dependencies:
+      '@babel/runtime': 7.23.2
+      tslib: 2.6.2
+      worker-factory: 7.0.12
+    dev: false
 
   /mime@3.0.0:
     resolution: {integrity: sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==}
@@ -2894,6 +2971,15 @@ packages:
       siginfo: 2.0.0
       stackback: 0.0.2
     dev: true
+
+  /worker-factory@7.0.12:
+    resolution: {integrity: sha512-1MKEmzrkl5vrLNYwipD3s9OTQHBUE9wpamEuycIy3yKaZmBdf3vkTBEKemn4B8vLv2P8yTJOLVJ5mxpFjeToZg==}
+    dependencies:
+      '@babel/runtime': 7.23.2
+      compilerr: 11.0.10
+      fast-unique-numbers: 8.0.9
+      tslib: 2.6.2
+    dev: false
 
   /wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
