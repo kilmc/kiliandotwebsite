@@ -96,7 +96,7 @@ devDependencies:
     version: 0.4.1(prettier-plugin-svelte@3.0.3)(prettier@3.0.3)
   sass:
     specifier: ^1.62.1
-    version: 1.68.0
+    version: 1.69.4
   svelte:
     specifier: ^4.2.1
     version: 4.2.1
