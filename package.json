@@ -15,7 +15,7 @@
 		"test": "vitest --watch"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-netlify": "2.0.8",
+		"@sveltejs/adapter-netlify": "2.0.7",
 		"@sveltejs/kit": "^1.25.2",
 		"@tailwindcss/typography": "^0.5.10",
 		"@total-typescript/ts-reset": "^0.5.1",
