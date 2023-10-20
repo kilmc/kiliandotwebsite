@@ -1,14 +1,18 @@
-<script lang="ts">
-	import type { PageData } from './$types';
-
-	export let data: PageData;
-</script>
-
 <h2 class="font-bold">Tools</h2>
 <ul>
-	{#each data.items as item}
-		<li>
-			<a href={item.url}>{item.text}</a>
-		</li>
-	{/each}
+	<li>
+		<a href="/tools/album-artwork">Album Artwork</a>
+	</li>
+	<li>
+		<a href="/tools/aspect-ratios">Aspect Ratios</a>
+	</li>
+	<li>
+		<a href="/tools/music">Music</a>
+	</li>
+	<li>
+		<a href="/tools/music/midi">Midi</a>
+	</li>
+	<li>
+		<a href="/tools/music/key">Keys</a>
+	</li>
 </ul>

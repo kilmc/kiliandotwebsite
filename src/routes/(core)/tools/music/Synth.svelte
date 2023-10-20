@@ -3,9 +3,9 @@
 	export let synthNote: string;
 	export let displayNote: string;
 	export let tabindex: number | undefined = undefined;
-	const synth = new Tone.Synth().toDestination();
 
 	function playNote(): void {
+		const synth = new Tone.Synth().toDestination();
 		Tone.start().then(() => {
 			synth.triggerAttackRelease(synthNote, '0.25s');
 		});
