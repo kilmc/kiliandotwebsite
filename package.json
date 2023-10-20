@@ -49,9 +49,7 @@
 		"album-art": "^3.1.1",
 		"client-zip": "^2.4.4",
 		"convert": "^4.13.2",
-		"json-midi-encoder": "^5.1.29",
 		"lodash-es": "^4.17.21",
-		"midi-json-parser-worker": "^8.1.29",
 		"svelte-portal": "^2.2.0",
 		"tone": "^14.7.77",
 		"uuid": "^9.0.1"
