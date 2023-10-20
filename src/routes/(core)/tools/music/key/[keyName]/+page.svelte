@@ -5,10 +5,11 @@
 	import HighlightPiano from '../../piano/HighlightPiano.svelte';
 	import type { PageData } from './$types';
 	import { getKey } from '@kilmc/music-fns';
+	import DownloadKeyChordMidi from '$lib/components/music/DownloadKeyChordMidi.svelte';
 	export let data: PageData;
 
-	const key = data.keyName || 'C major';
-	const keyInfo = getKey(key);
+	let key = data.keyName || 'C major';
+	let keyInfo = getKey(key);
 	const romanNumeralClasses = [
 		'bg-red-300 dark:bg-red-600',
 		'bg-orange-300 dark:bg-orange-600',
@@ -36,6 +37,10 @@
 		resetNotes();
 	});
 </script>
+
+<svelte:head>
+	<title>{key}</title>
+</svelte:head>
 
 <SubNavPortal>
 	<a
@@ -74,9 +79,12 @@
 				{/each}
 				{#each keyInfo.chords as { name, notes }}
 					<div
-						class="font-bold dark:bg-black dark:text-white dark:border-white bg-white text-center py-2 border-y-2 border-black"
+						class="font-bold dark:bg-black dark:text-white dark:border-white bg-white text-center px-2 py-2 border-y-2 border-black"
 					>
-						<button on:click={() => setNotes(notes)}>
+						<button
+							class="dark:hover:bg-white/20 hover:bg-black/20 w-full h-full rounded-sm"
+							on:click={() => setNotes(notes)}
+						>
 							{name}
 						</button>
 					</div>
@@ -98,6 +106,10 @@
 			{/if}
 		</div>
 	{/key}
+
+	<div class="mt-10">
+		<DownloadKeyChordMidi keyName={key} />
+	</div>
 {:else}
 	Could note find {key}
 {/if}
