@@ -79,9 +79,12 @@
 				{/each}
 				{#each keyInfo.chords as { name, notes }}
 					<div
-						class="font-bold dark:bg-black dark:text-white dark:border-white bg-white text-center py-2 border-y-2 border-black"
+						class="font-bold dark:bg-black dark:text-white dark:border-white bg-white text-center px-2 py-2 border-y-2 border-black"
 					>
-						<button on:click={() => setNotes(notes)}>
+						<button
+							class="dark:hover:bg-white/20 hover:bg-black/20 w-full h-full rounded-sm"
+							on:click={() => setNotes(notes)}
+						>
 							{name}
 						</button>
 					</div>
