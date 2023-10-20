@@ -1,6 +1,7 @@
 import { getKey, scaleToSequentialKeys } from '@kilmc/music-fns';
-import { Midi } from '@tonejs/midi';
 import { downloadZip } from 'client-zip';
+import pkg from '@tonejs/midi';
+const { Midi } = pkg;
 
 export const generateChordMidi = (notes: string[]) => {
 	const sequentialNotes = scaleToSequentialKeys(notes, 4);
