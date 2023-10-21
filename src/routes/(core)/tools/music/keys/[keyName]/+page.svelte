@@ -62,7 +62,7 @@
 		<h3 class="font-bold text-2xl">{key}</h3>
 		<div class="flex gap-4 text-2xl">
 			{#each keyInfo.notes.names as note, index}
-				<a href={convertKeyToURL(`${note} ${offsetModes[index + 1]}`)} data-sveltekit-reload>
+				<a href={convertKeyToURL(`${note} ${offsetModes[index]}`)} data-sveltekit-reload>
 					{note}
 				</a>
 			{/each}
