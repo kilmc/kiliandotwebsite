@@ -13,6 +13,6 @@
 		<a href="/tools/music/midi">Midi</a>
 	</li>
 	<li>
-		<a href="/tools/music/key">Keys</a>
+		<a href="/tools/music/keys">Keys</a>
 	</li>
 </ul>

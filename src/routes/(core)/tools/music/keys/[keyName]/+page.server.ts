@@ -1,5 +1,5 @@
 import type { PageServerLoad } from './$types';
-import { wordToAccidental } from '../../piano/helpers';
+import { wordToAccidental } from '$lib/components/music/piano/helpers';
 
 export const load = (({ params }) => {
 	const regex =

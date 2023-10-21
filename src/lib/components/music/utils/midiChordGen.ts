@@ -1,6 +1,6 @@
 import { getKey, scaleToSequentialKeys } from '@kilmc/music-fns';
 import { downloadZip } from 'client-zip';
-import pkg from '@tonejs/midi';
+import * as pkg from '@tonejs/midi';
 const { Midi } = pkg;
 
 export const generateChordMidi = (notes: string[]) => {
@@ -32,7 +32,7 @@ export const generateChordMidiFile = (fileName: string, notes: string[]) => {
 	};
 };
 
-export const generateScaleChordsMidiZip = async (keyName: string) => {
+export const generateScaleChordsMidiZip = (keyName: string) => {
 	const key = getKey(keyName);
 	const chords = key?.chords.map((chord, i) => {
 		const fileName = `0${i + 1} - ${chord.romanNumeral} - ${chord.name}`;
@@ -41,7 +41,7 @@ export const generateScaleChordsMidiZip = async (keyName: string) => {
 
 	if (chords) {
 		const chordFiles = chords.map((chord) => chord.file);
-		const result = await downloadZip(chordFiles).blob();
+		const result = downloadZip(chordFiles).blob();
 		return result;
 	}
 };

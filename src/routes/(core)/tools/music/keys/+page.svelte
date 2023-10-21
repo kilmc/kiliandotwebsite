@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { scales } from '@kilmc/music-fns';
-	import { convertKeyToURL } from '../helpers';
+	import { convertKeyToURL } from '$lib/components/music/helpers';
 
 	const scaleGroups = Object.entries(scales).map<[string, string[]]>(([scaleType, scaleInfo]) => {
 		return [scaleType, Object.keys(scaleInfo)];
@@ -19,7 +19,7 @@
 
 {#each scaleGroups as [name, scaleNames], index}
 	<div class="mb-10">
-		<h2 class="font-bold text-xl border-b-2 border-white/50 mb-2">{name.toUpperCase()}</h2>
+		<h2 class="font-bold text-xl mb-2">{name.toUpperCase()}</h2>
 		<div class="flex flex-wrap gap-x-2 gap-y-1">
 			{#each scaleNames as note}
 				<a
