@@ -11,7 +11,7 @@
 
 	let key = data.keyName || 'C major';
 	let keyInfo = getKey(key);
-	let modeName = extractScaleName(key)?.at(1) || '';
+	let [pitchClass, modeName] = extractScaleName(key) || ['C', 'major'];
 
 	const romanNumeralClasses = [
 		'bg-red-300 dark:bg-red-600',
@@ -101,7 +101,7 @@
 	</div>
 
 	{#key highlightedNotes}
-		<div class="overflow-scroll">
+		<div class="overflow-scroll mb-10">
 			<HighlightPiano notes={highlightedNotes} />
 			{#if isChordHighlighted}
 				<div>
@@ -111,8 +111,18 @@
 		</div>
 	{/key}
 
-	<div class="mt-10">
+	<div class="mb-10">
 		<DownloadKeyChordMidi keyName={key} />
+	</div>
+
+	<div class="flex flex-col gap-1 items-start">
+		<h2>Parallel modes:</h2>
+		{#each modes as mode}
+			<a class="link" href={convertKeyToURL(`${pitchClass} ${mode}`)} data-sveltekit-reload>
+				{pitchClass}
+				{mode}
+			</a>
+		{/each}
 	</div>
 {:else}
 	Could note find {key}
