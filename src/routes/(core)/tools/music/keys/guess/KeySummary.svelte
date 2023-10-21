@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { convertKeyToURL } from './helpers';
+	import { convertKeyToURL } from '$lib/components/music/helpers';
 
 	export let scale: string[];
 	let majorKey = `${scale.at(0)} major`;

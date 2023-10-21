@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { Writable } from 'svelte/store';
-	import CyclicPicker from '../../CyclicPicker.svelte';
-	import Synth from '../Synth.svelte';
+	import CyclicPicker from './CyclicPicker.svelte';
+	import Synth from './Synth.svelte';
 	import { getSynthNote } from './helpers';
 	import type { Key } from './types';
-	import { inScale, outScale } from '../store';
+	import { inScale, outScale } from '$lib/stores/store';
 
 	export let key: Key;
 	export let mode: 'synth' | 'filter';
