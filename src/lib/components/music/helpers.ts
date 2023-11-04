@@ -1,15 +1,16 @@
-import { extractScaleName } from '@kilmc/music-fns';
+import { readScale } from '@kilmc/music-fns';
 import { accidentalToWord } from './piano/helpers';
 
 export const convertKeyToURL = (scaleName: string | undefined) => {
-	const defaultURL = '/tools/music/keys/c-major';
+	const baseURL = '/tools/music/keys/';
+	const defaultURL = `${baseURL}c-major`;
 	if (scaleName === undefined) return defaultURL;
 
-	const [extractPitch, scaleType] = extractScaleName(scaleName) || [];
+	const { noteName, type } = readScale(scaleName);
 
-	if (extractPitch === undefined) return;
+	if (noteName === undefined) return;
 
-	const match = extractPitch.match(/([A-G])([#b])?/)?.slice(1, 3);
+	const match = noteName.match(/([A-G])([#b])?/)?.slice(1, 3);
 
 	if (match === undefined) return;
 
@@ -17,7 +18,7 @@ export const convertKeyToURL = (scaleName: string | undefined) => {
 	const accidental = accidentalToWord(match[1]);
 
 	if (match) {
-		return `/tools/music/keys/${pitch}${accidental ? '-' + accidental : ''}-${scaleType}`;
+		return `${baseURL}${pitch}${accidental ? '-' + accidental : ''}-${type?.replace(' ', '-')}`;
 	} else {
 		return defaultURL;
 	}

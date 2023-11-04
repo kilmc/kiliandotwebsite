@@ -1,17 +1,12 @@
 <script lang="ts">
 	import SubNavPortal from '$lib/portals/SubNavPortal.svelte';
 	import { onMount } from 'svelte';
-	import { convertKeyToURL } from '$lib/components/music/helpers';
 	import HighlightPiano from '$lib/components/music/piano/HighlightPiano.svelte';
 	import type { PageData } from './$types';
-	import { extractScaleName, getKey } from '@kilmc/music-fns';
+	import type { Note } from '@kilmc/music-fns';
 	import DownloadKeyChordMidi from '$lib/components/music/DownloadKeyChordMidi.svelte';
-	import { offsetArr } from '$lib/helpers/array';
-	export let data: PageData;
 
-	let key = data.keyName || 'C major';
-	let keyInfo = getKey(key);
-	let [pitchClass, modeName] = extractScaleName(key) || ['C', 'major'];
+	export let data: PageData;
 
 	const romanNumeralClasses = [
 		'bg-red-300 dark:bg-red-600',
@@ -23,19 +18,16 @@
 		'bg-violet-300 dark:bg-violet-600'
 	];
 
-	export const modes = ['major', 'dorian', 'phrygian', 'lydian', 'mixolydian', 'minor', 'locrian'];
+	$: highlightedNotes = data.notes;
+	$: isChordHighlighted = false;
 
-	let highlightedNotes: string[];
-	let isChordHighlighted = false;
-	let offsetModes = offsetArr(modes, modes.indexOf(modeName));
-
-	function setNotes(notes: string[]) {
+	function setNotes(notes: Note[]) {
 		highlightedNotes = notes;
 		isChordHighlighted = true;
 	}
 
 	function resetNotes() {
-		highlightedNotes = keyInfo?.notes.names || [];
+		highlightedNotes = data?.notes || [];
 		isChordHighlighted = false;
 	}
 
@@ -45,7 +37,7 @@
 </script>
 
 <svelte:head>
-	<title>{key}</title>
+	<title>{data.name}</title>
 </svelte:head>
 
 <SubNavPortal>
@@ -57,30 +49,34 @@
 	</a>
 </SubNavPortal>
 
-{#if keyInfo !== undefined}
+{#if data.name !== undefined}
 	<div class="mb-10">
-		<h3 class="font-bold text-2xl">{key}</h3>
+		<h3 class="font-bold text-2xl">{data.name}</h3>
 		<div class="flex gap-4 text-2xl">
-			{#each keyInfo.notes.names as note, index}
-				<a href={convertKeyToURL(`${note} ${offsetModes[index]}`)} data-sveltekit-reload>
-					{note}
-				</a>
-			{/each}
+			{#if data.relativeModes}
+				{#each data.relativeModes as mode}
+					<a href={mode.href}>
+						{mode.name}
+					</a>
+				{/each}
+			{/if}
 		</div>
 	</div>
 
 	<div class="overflow-scroll">
 		<div class="border-2 border-black dark:border-white mb-14 min-w-[28rem]">
-			{#if keyInfo}
+			{#if data}
 				<div class="dark:bg-white bg-black grid grid-cols-7 text-xl gap-x-[2px]">
 					{#each [2, 1, 0] as num}
-						{#each keyInfo.chords as chord}
+						{#each data.chords as chord}
 							<div class="dark:bg-black dark:text-white bg-white text-center py-2">
-								{chord.notes[num]}
+								{#if chord.notes[num]}
+									{chord.notes[num].name}
+								{/if}
 							</div>
 						{/each}
 					{/each}
-					{#each keyInfo.chords as { name, notes }}
+					{#each data.chords as { name, notes }}
 						<div
 							class="font-bold dark:bg-black dark:text-white dark:border-white bg-white text-center px-2 py-2 border-y-2 border-black"
 						>
@@ -92,7 +88,7 @@
 							</button>
 						</div>
 					{/each}
-					{#each keyInfo.chords as { romanNumeral }, index}
+					{#each data.chords as { romanNumeral }, index}
 						<div class="{romanNumeralClasses[index]} text-center py-2">{romanNumeral}</div>
 					{/each}
 				</div>
@@ -112,18 +108,17 @@
 	{/key}
 
 	<div class="mb-10">
-		<DownloadKeyChordMidi keyName={key} />
+		<DownloadKeyChordMidi keyName={data.name} />
 	</div>
 
 	<div class="flex flex-col gap-1 items-start">
 		<h2>Parallel modes:</h2>
-		{#each modes as mode}
-			<a class="link" href={convertKeyToURL(`${pitchClass} ${mode}`)} data-sveltekit-reload>
-				{pitchClass}
-				{mode}
-			</a>
-		{/each}
+		{#if data.parallelModes}
+			{#each data.parallelModes as item}
+				<a class="link" href={item.href}>
+					{item.name}
+				</a>
+			{/each}
+		{/if}
 	</div>
-{:else}
-	Could note find {key}
 {/if}

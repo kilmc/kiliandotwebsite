@@ -1,18 +1,24 @@
 <script lang="ts">
-	import { scaleToPianoKeys } from '@kilmc/music-fns';
 	import { getPianoKeys } from './helpers';
-	import type { Key, NoteDisplay } from './types';
+	import type { PianoKeyType } from './types';
 	import PianoKey from './PianoKey.svelte';
 	import HighlightPianoKey from './HighlightPianoKey.svelte';
+	import type { Note } from '@kilmc/music-fns';
 
 	export let octaves = 2;
-	export let notes: string[] = [];
+	export let notes: Note[] = [];
 
-	const highlightedNotes: NoteDisplay[] = scaleToPianoKeys(notes);
 	const processedKeys = getPianoKeys(octaves);
 
-	const isHightlighted = (key: Key) => {
-		return highlightedNotes.some((note) => note.midiNumber === key.midiNumber);
+	const getHighLightedNote = (key: PianoKeyType) => {
+		const highlightedIndex = notes.findIndex((note) => key.midiNumber === note.midiNumber);
+
+		console.log(notes, key.midiNumber);
+		if (highlightedIndex >= 0) {
+			return notes[highlightedIndex];
+		} else {
+			return undefined;
+		}
 	};
 </script>
 
@@ -24,12 +30,12 @@
 		{#each processedKeys as [white, black]}
 			<div class="relative">
 				<PianoKey type="white">
-					<HighlightPianoKey isHightlighted={isHightlighted(white)} key={white} {notes} />
+					<HighlightPianoKey key={white} highLightedNote={getHighLightedNote(white)} />
 				</PianoKey>
 
 				{#if black !== undefined}
 					<PianoKey type="black">
-						<HighlightPianoKey isHightlighted={isHightlighted(black)} key={black} {notes} />
+						<HighlightPianoKey key={black} highLightedNote={getHighLightedNote(black)} />
 					</PianoKey>
 				{/if}
 			</div>

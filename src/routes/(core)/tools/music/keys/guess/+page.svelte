@@ -1,40 +1,25 @@
 <script lang="ts">
-	import Input from '$lib/components/Input.svelte';
-	import { getChord, guessMajorScale, major } from '@kilmc/music-fns';
+	import { getKey, guessKey } from '@kilmc/music-fns';
 	import KeySummary from './KeySummary.svelte';
 	import Piano from '$lib/components/music/piano/ScaleGuesserPiano.svelte';
 	import { pianoKeyModes, type PianoKeyMode } from '$lib/components/music/piano/types';
 	import { inScale, outScale } from '$lib/stores/store';
 
-	let chordName = 'C';
-	$: chord = getChord(chordName);
-
 	let selectedMode: PianoKeyMode = 'filter';
 
-	const cMajorScale = Object.entries(major).filter(([_, scale]) =>
-		scale.notes.every((note) => !/[#b]/.test(note))
-	);
-
-	const sharpScales = Object.entries(major).filter(([_, scale]) =>
-		scale.notes.some((note) => /#/.test(note))
-	);
-
-	const flatScales = Object.entries(major).filter(([_, scale]) =>
-		scale.notes.some((note) => /b/.test(note))
-	);
-
-	$: guessedScales = guessMajorScale($inScale, $outScale);
-	$: filteredScales = cMajorScale.concat(sharpScales, flatScales).filter(([note]) => {
-		const guesses = guessedScales.map((guess) => guess[0].replace(' major', ''));
-		return guesses.includes(note);
-	});
+	$: guessedScales = guessKey($inScale, $outScale);
+	$: singleResult =
+		guessedScales.length === 1
+			? getKey(guessedScales[0])
+					?.relativeModes?.map((mode) => getKey(mode))
+					.filter(Boolean)
+			: undefined;
 </script>
 
 <h2 class="text-2xl font-bold uppercase mb-4">Key Guesser</h2>
 
 <div class="mb-10">
 	<div class="flex mb-2">
-		<h3 class="font-bold text-lg">Major Scales</h3>
 		<div class="ml-auto flex gap-2 items-center">
 			{#each pianoKeyModes as mode}
 				<label
@@ -51,12 +36,28 @@
 	<Piano mode={selectedMode} />
 </div>
 
-<h3 class="font-bold text-lg mb-4">List of Keys</h3>
-<div class="flex flex-col">
-	{#each filteredScales as [_, { notes }] (notes)}
-		<KeySummary scale={notes} />
+{#if guessedScales.length === 1 && singleResult !== undefined}
+	<h3 class="font-bold text-lg mb-4">Modes of {singleResult.at(0)?.name}</h3>
+
+	{#each singleResult as key}
+		<KeySummary {key} />
 	{/each}
-</div>
+{:else if guessedScales.length > 0 && guessedScales.length < 10}
+	<h3 class="font-bold text-lg mb-4">Possible Root Keys</h3>
+	<div class="flex flex-col">
+		{#each guessedScales.map((scaleName) => getKey(scaleName)) as key (key?.name)}
+			{#if key?.notes}
+				<KeySummary {key} />
+			{/if}
+		{/each}
+	</div>
+{:else if $inScale.length === 0 && $outScale.length === 0}
+	<div>Press some keys on the piano to start guessing</div>
+{:else if guessedScales.length > 10}
+	<div>Need more info</div>
+{:else}
+	None of the above {guessedScales.length}
+{/if}
 
 <style lang="scss">
 	.selected {
