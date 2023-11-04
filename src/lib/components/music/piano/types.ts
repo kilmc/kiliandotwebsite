@@ -1,4 +1,4 @@
-export type Key = {
+export type PianoKeyType = {
 	type: 'white' | 'black';
 	notes: string[];
 	midiNumber: number;

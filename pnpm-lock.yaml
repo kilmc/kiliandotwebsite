@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@kilmc/music-fns':
-    specifier: ^0.7.0
-    version: 0.7.0
+    specifier: ^1.3.0
+    version: 1.3.0
   '@tailwindcss/container-queries':
     specifier: ^0.1.1
     version: 0.1.1(tailwindcss@3.3.3)
@@ -625,8 +625,8 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  /@kilmc/music-fns@0.7.0:
-    resolution: {integrity: sha512-oGpz32HdeI3Xbzhn7/kfU6eKYLVd2DqJ00sFINxQLQT7qsvoZYlj9N5XFyTj4yp6U5EK7f7BeSCL79+Cg4S1zw==}
+  /@kilmc/music-fns@1.3.0:
+    resolution: {integrity: sha512-g86b1L/e4u4JJSZbCrqE7WvhDouEM4Hyc4lVVcQ4zv1kzD3QvzZCk+oAyDxv+cwPum7iqPxvKgRKYOUE9n/W8g==}
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:

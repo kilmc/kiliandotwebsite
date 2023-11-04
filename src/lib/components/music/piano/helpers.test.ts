@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import { groupKeys } from './helpers';
-import type { Key } from './types';
+import type { PianoKeyType } from './types';
 
-const flatKeys: Key[] = [
+const flatKeys: PianoKeyType[] = [
 	{ type: 'white', notes: ['C', 'B#'], midiNumber: 0 },
 	{ type: 'black', notes: ['C#', 'Db'], midiNumber: 1 },
 	{ type: 'white', notes: ['D'], midiNumber: 2 },

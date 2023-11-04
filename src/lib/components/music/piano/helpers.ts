@@ -1,8 +1,8 @@
 import { pianoKeys } from './consts';
-import type { Key } from './types';
+import type { PianoKeyType } from './types';
 
-export const groupKeys = (arr: Key[]) =>
-	arr.reduce<Key[][]>((result, value, index, arr) => {
+export const groupKeys = (arr: PianoKeyType[]) =>
+	arr.reduce<PianoKeyType[][]>((result, value, index, arr) => {
 		const isGroupable = arr[index - 1]?.type === 'white' && value.type === 'black';
 		isGroupable ? result[result.length - 1].push(value) : result.push([value]);
 
@@ -39,17 +39,17 @@ export const accidentalToWord = (accidental: string | undefined) => {
 	}
 };
 
-export const getSynthNote = (key: Key, startingOctave: number = 3) => {
+export const getSynthNote = (key: PianoKeyType, startingOctave: number = 3) => {
 	const octave = key.midiNumber < 12 ? startingOctave : startingOctave + 1;
 	return `${key.notes[0]}${octave}`;
 };
 
 export const getPianoKeys = (octaves: number) =>
 	groupKeys(
-		Array<Key | Key[]>(octaves)
+		Array<PianoKeyType | PianoKeyType[]>(octaves)
 			.fill(pianoKeys)
 			.flatMap((key) => {
 				return key;
 			})
-			.map((key, i) => ({ ...key, midiNumber: i }) as Key)
+			.map((key, i) => ({ ...key, midiNumber: i + 60 }) as PianoKeyType)
 	);

@@ -3,10 +3,10 @@
 	import CyclicPicker from './CyclicPicker.svelte';
 	import Synth from './Synth.svelte';
 	import { getSynthNote } from './helpers';
-	import type { Key } from './types';
+	import type { PianoKeyType } from './types';
 	import { inScale, outScale } from '$lib/stores/store';
 
-	export let key: Key;
+	export let key: PianoKeyType;
 	export let mode: 'synth' | 'filter';
 
 	const removeFromStore = (store: Writable<string[]>, item: string) =>

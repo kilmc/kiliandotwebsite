@@ -1,22 +1,41 @@
 import type { PageServerLoad } from './$types';
-import { wordToAccidental } from '$lib/components/music/piano/helpers';
+import { getKey, readScale } from '@kilmc/music-fns';
+import { parseKeyName } from './parseKeyName';
+import { convertKeyToURL } from '$lib/components/music/helpers';
+import { offsetArr } from '$lib/helpers/array';
 
 export const load = (({ params }) => {
-	const regex =
-		/(([a-g])(?:-(flat|sharp))?(?:-)(major|minor|dorian|phrygian|lydian|mixolydian|locrian))/;
+	const keyName = parseKeyName(params.keyName);
+	const key = getKey(keyName);
 
-	const matches = params.keyName.match(regex)?.slice(2, 5);
-	if (matches) {
-		const [pitchClass, accidental, scaleType] = matches;
-
-		const keyName = `${pitchClass.toUpperCase()}${wordToAccidental(accidental)} ${scaleType}`;
+	if (key !== undefined) {
+		let relativeModeItems;
+		if (key.relativeModes) {
+			const currentModeIndex = key.relativeModes.findIndex((mode) => mode.includes(key.root));
+			relativeModeItems = offsetArr(key?.relativeModes, currentModeIndex)
+				.map((mode) => {
+					return {
+						name: readScale(mode).noteName,
+						href: convertKeyToURL(mode)
+					};
+				})
+				.filter(Boolean);
+		}
 
 		return {
-			keyName
+			name: key.name,
+			notes: key.notes,
+			chords: key.chords,
+			parallelModes: key.parallelModes
+				?.map((mode) => {
+					return { href: convertKeyToURL(mode) || '', name: mode };
+				})
+				.filter(Boolean),
+			relativeModes: relativeModeItems
 		};
 	} else {
 		return {
-			keyName: undefined
+			name: undefined
 		};
 	}
 }) satisfies PageServerLoad;
