@@ -4,7 +4,7 @@
 	export let data: PageData;
 </script>
 
-{#each data.majorScaleGroups as [name, scaleInfo], index}
+{#each data.majorScaleGroups as [name, scaleInfo]}
 	<div class="mb-10">
 		<h2 class="font-bold text-xl mb-2">{name.toUpperCase()}</h2>
 		<div class="flex flex-wrap gap-x-2 gap-y-1">

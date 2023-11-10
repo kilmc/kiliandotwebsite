@@ -1,9 +1,4 @@
 <script lang="ts">
-	import ReleaseDisplay from '$lib/components/ReleaseDisplay.svelte';
-	import type { PageData } from './$types';
-
-	export let data: PageData;
-
 	const containerSizes = {
 		xs: '20rem',
 		sm: '24rem',
@@ -17,34 +12,14 @@
 		'6xl': '72rem',
 		'7xl': '80rem'
 	};
-
-	let selectedRelease = data.files[0].release;
-
-	$: file = data.files.find((file) => file.release === selectedRelease) || data.files[0];
 </script>
 
-<header class="p-4">
-	<select class="dark:bg-black border dark:border-white p-2 relative" bind:value={selectedRelease}>
-		{#each data.files as file}
-			<option>{file.release}</option>
-		{/each}
-	</select>
-</header>
+<header class="p-4"></header>
 <div class="flex gap-10 mx-4">
 	{#each Object.entries(containerSizes) as [name, value]}
 		<div class="relative flex-none bg-white/10 h-screen" style="width: {value}">
 			<div class="">{name}</div>
-			<div>
-				<ReleaseDisplay
-					artist={file.artist}
-					release={file.release}
-					tracks={file.tracks}
-					links={file.links}
-					releaseDate={file.releaseDate}
-				/>
-			</div>
+			<div class="@container">Component Goes Here</div>
 		</div>
 	{/each}
 </div>
-
-<div></div>

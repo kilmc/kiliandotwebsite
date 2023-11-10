@@ -41,7 +41,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@kilmc/music-fns": "^1.3.0",
+		"@kilmc/music-fns": "^1.4.2",
 		"@tailwindcss/container-queries": "^0.1.1",
 		"@tonejs/midi": "^2.0.28",
 		"@types/lodash-es": "^4.17.9",

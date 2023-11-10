@@ -20,7 +20,7 @@ input[type='search'] {
 button:focus-visible,
 a:focus-visible,
 div[role='slider']:focus-visible {
-	@apply outline outline-2 outline-offset-2 outline-black;
+	@apply outline outline-2 outline-offset-2 outline-black dark:outline-white;
 }
 
 input:focus-visible {

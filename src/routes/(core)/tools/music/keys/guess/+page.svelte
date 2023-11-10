@@ -16,6 +16,10 @@
 			: undefined;
 </script>
 
+<svelte:head>
+	<title>Tools | Key Guesser</title>
+</svelte:head>
+
 <h2 class="text-2xl font-bold uppercase mb-4">Key Guesser</h2>
 
 <div class="mb-10">
