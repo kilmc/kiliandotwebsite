@@ -4,6 +4,7 @@
 	import type { PageData } from './$types';
 	import { autoPlay, currentTrack, showPlayer } from '$lib/stores/player';
 	import { onDestroy } from 'svelte';
+	import PageTitle from '$lib/components/PageTitle.svelte';
 	export let data: PageData;
 
 	function handleTrackOnClick(track: Loosey) {
@@ -42,11 +43,11 @@
 </script>
 
 <svelte:head>
-	<title>Music: Sketchbook</title>
+	<title>Music | Sketchbook</title>
 </svelte:head>
 
 <div class="mb-10">
-	<h2 class="font-bold uppercase text-2xl mb-3">Sketchbook</h2>
+	<PageTitle>Sketchbook</PageTitle>
 	<p>
 		I have a lot of little bits and pieces of ideas that I've made of the years. Some of them might
 		become full tracks, others will likely just stay as these snippets. I saw an Edward Hopper

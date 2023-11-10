@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Music: Releases</title>
+	<title>Music | Releases</title>
 </svelte:head>
 
 <div class="grid grid-cols-2 xs:grid-cols-3 gap-5 mb-12">
