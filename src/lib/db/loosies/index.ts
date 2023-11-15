@@ -167,5 +167,12 @@ export const loosies: Loosey[] = [
 		title: 'Window',
 		tags: ['electronic', 'beat', 'chip'],
 		date: '2019-12-31'
+	},
+	{
+		fileName: 'house-of-fall',
+		trackLength: 107,
+		title: 'House Of Fall',
+		tags: ['spooky'],
+		date: '2022-04-23'
 	}
 ];

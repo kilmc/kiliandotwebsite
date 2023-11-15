@@ -10,7 +10,7 @@
 	<div class="flex flex-wrap gap-2 my-1">
 		{#each names as name}
 			<button
-				class="dark:bg-zinc-900 dark:hover:bg-zinc-700 bg-zinc-100 hover:bg-zinc-300 text-black px-2 py-1 rounded"
+				class="dark:bg-zinc-900 dark:hover:bg-zinc-700 bg-zinc-100 hover:bg-zinc-300 text-black dark:text-white px-2 py-1 rounded"
 				on:click={() => onUpdate(name)}
 				class:active={currentName === name}
 			>
