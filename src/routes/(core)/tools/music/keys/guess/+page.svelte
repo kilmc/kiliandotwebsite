@@ -37,7 +37,11 @@
 		</div>
 	</div>
 
-	<Piano mode={selectedMode} />
+	<div class="overflow-scroll">
+		<div class="min-w-[30rem]">
+			<Piano mode={selectedMode} />
+		</div>
+	</div>
 </div>
 
 {#if guessedScales.length === 1 && singleResult !== undefined}
