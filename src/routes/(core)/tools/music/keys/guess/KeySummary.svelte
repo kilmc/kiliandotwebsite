@@ -5,10 +5,12 @@
 	export let key: Key;
 
 	const hasAccidental = (note: string) => /b|#/.test(note);
-	const accidentalClasses = 'bg-slate-300 dark:bg-slate-800';
+	const accidentalClasses = 'bg-zinc-300 dark:bg-zinc-800';
 </script>
 
-<div class="grid grid-cols-2 items-center dark:odd:bg-slate-900 odd:bg-slate-100 p-2">
+<div
+	class="grid grid-col-1 md:grid-cols-2 gap-y-4 items-center dark:md:odd:bg-slate-900 md:odd:bg-slate-100 md:p-2 mb-5 md:mb-0"
+>
 	<div>
 		<a href={convertKeyToURL(key.name)} class="text-lg link">
 			{key.name}
@@ -16,7 +18,11 @@
 	</div>
 	<div class="grid grid-cols-7 gap-2">
 		{#each key.notes as note}
-			<div class="px-2 rounded-md {hasAccidental(note.name) ? accidentalClasses : undefined}">
+			<div
+				class="px-2 rounded-md text-center {hasAccidental(note.name)
+					? accidentalClasses
+					: 'dark:bg-zinc-900 bg-zinc-200'}"
+			>
 				{note.name}
 			</div>
 		{/each}
