@@ -4,6 +4,10 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>Tools | Musical Keys</title>
+</svelte:head>
+
 {#each data.majorScaleGroups as [name, scaleInfo]}
 	<div class="mb-10">
 		<h2 class="font-bold text-xl mb-2">{name.toUpperCase()}</h2>
