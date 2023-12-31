@@ -1,0 +1,42 @@
+{
+	"title": "Best Songs of 2023",
+	"group": "music",
+	"category": "songs",
+	"type": "yearEnd",
+	"year": 2023,
+	"items": [
+		{ "title": "LLYLM", "artist": "ROSALÍA", "release": "Single" },
+		{ "title": "Kill Bill", "artist": "SZA", "release": "SOS" },
+		{ "title": "Fog Machine", "artist": "White Reaper", "release": "Asking For A Ride" },
+		{ "title": "ten", "artist": "Fred Again..", "release": "Single" },
+		{ "title": "Satanist", "artist": "Boygenius", "release": "the record" },
+		{ "title": "All a Bit Too Loud", "artist": "Tom Rosenthal", "release": "Single" },
+		{ "title": "Deep in the Night", "artist": "Future Islands", "release": "Single" },
+		{ "title": "Nadja", "artist": "Unknown Mortal Orchestra", "release": "V" },
+		{ "title": "Shit Talk", "artist": "Sufjan Stevens", "release": "Javelin" },
+		{ "title": "Big Hammer", "artist": "James Blake", "release": "Playing Robots Into Heaven" },
+		{ "title": "Leave Me Like This", "artist": "Skrillex", "release": "Quest for Fire" },
+		{ "title": "Gorilla", "artist": "Little Simz", "release": "NO THANK YOU" },
+		{ "title": "Blue", "artist": "Vulfmon, Jacob Jeffries", "release": "Vulfnik" },
+		{ "title": "Paul McCarthy", "artist": "Mike Viola", "release": "Paul McCarthy" },
+		{ "title": "Oh God", "artist": "Miya Folick", "release": "ROACH" },
+		{ "title": "Unholy", "artist": "Sam Smith, Kim Petras", "release": "Gloria" },
+		{
+			"title": "I Want To Be Your Only Pet",
+			"artist": "Bombay Bicycle Club",
+			"release": "My Big Day"
+		},
+		{ "title": "Odyssey", "artist": "Beck, Phoenix", "release": "Single" },
+		{ "title": "DAGAGA", "artist": "BULGOGIDISCO", "release": "DAGAGA" },
+		{ "title": "Mouth of God", "artist": "All Tvvins", "release": "Your Country" },
+		{ "title": "That's Physics, Baby", "artist": "Pool Kids", "release": "Self Titled" },
+		{ "title": "Gabriel", "artist": "Daryl Jones", "release": "Single" },
+		{ "title": "Smoke Screen", "artist": "PUP", "release": "Single" },
+		{ "title": "This", "artist": "OKGO", "release": "Single" },
+		{
+			"title": "Bogus Operandi",
+			"artist": "The Hives",
+			"release": "The Death of Randy Fitzsimmons"
+		}
+	]
+}
