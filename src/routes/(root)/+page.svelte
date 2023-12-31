@@ -2,6 +2,7 @@
 	import type { PageData } from './$types';
 	import Update from '$lib/components/Update.svelte';
 	import Footer from '$lib/layout/Footer.svelte';
+	import HeavyRotation from '$lib/components/HeavyRotation.svelte';
 
 	export let data: PageData;
 </script>
@@ -30,12 +31,18 @@
 		<Update date={data.lastUpdate.metadata?.date || ''} content={data.lastUpdate.default} />
 	</div>
 	<div class="col-span-full md:col-span-1 flex flex-col">
-		{#each data.randomItems as item}
-			<a class="mb-6 last-of-type:mb-0 flex flex-col items-start" href={item.url}>
-				<span class="uppercase text-sm font-bold mb-0 inline-block">{item.type}</span>
-				<span class="link text-2xl inline-block">{item.title}</span>
-			</a>
-		{/each}
+		<div class="mb-10">
+			{#each data.randomItems as item}
+				<a class="mb-6 last-of-type:mb-0 flex flex-col items-start" href={item.url}>
+					<span class="uppercase text-sm font-bold mb-0 inline-block">{item.type}</span>
+					<span class="link text-2xl inline-block">{item.title}</span>
+				</a>
+			{/each}
+		</div>
+
+		{#if data.heavyRotation}
+			<HeavyRotation {...data.heavyRotation} />
+		{/if}
 	</div>
 </div>
 <Footer />

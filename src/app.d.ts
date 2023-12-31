@@ -24,7 +24,7 @@ declare namespace App {
 }
 
 declare namespace svelte.JSX {
-	interface HTMLProps<T> {
+	interface HTMLProps {
 		oncopied?: (event: CustomEvent<string>) => void;
 		'oncopied:error'?: (event: CustomEvent<Error>) => void;
 	}
@@ -37,3 +37,5 @@ type SvelteKeyboardEvent = KeyboardEvent & {
 type SvelteMouseEvent = MouseEvent & {
 	currentTarget: EventTarget & HTMLDivElement;
 };
+
+type SvelteInputEvent = Event & { currentTarget: EventTarget & HTMLInputElement };

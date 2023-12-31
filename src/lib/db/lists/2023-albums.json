@@ -1,0 +1,19 @@
+{
+	"title": "Best Albums of 2023",
+	"group": "music",
+	"category": "albums",
+	"type": "yearEnd",
+	"year": 2023,
+	"items": [
+		{ "release": "GUTS", "artist": "Olivia Rodrigo" },
+		{ "release": "II: Revisited", "artist": "Bad Books" },
+		{ "release": "USA", "artist": "Petey" },
+		{ "release": "Norm", "artist": "Andy Shauf" },
+		{ "release": "the record", "artist": "Boygenius" },
+		{ "release": "Eye of Night", "artist": "No Spill Blood" },
+		{ "release": "10,000 gecs", "artist": "100 gecs" },
+		{ "release": "Quest for Fire", "artist": "Skrillex" },
+		{ "release": "V", "artist": "Unknown Mortal Orchestra" },
+		{ "release": "Secret Life", "artist": "Brian Eno, Fred.. Again" }
+	]
+}
