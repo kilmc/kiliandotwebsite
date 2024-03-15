@@ -20,3 +20,7 @@ export const groupBy = <T extends Record<PropertyKey, any>, K extends keyof T>(
 export const offsetArr = <Type>(arr: Type[], amount: number) => {
 	return [...arr.slice(amount), ...arr.slice(0, amount)];
 };
+
+export const getRandomItem = <Type>(items: Type[]) => {
+	return items[Math.floor(Math.random() * items.length)];
+};
