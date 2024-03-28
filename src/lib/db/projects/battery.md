@@ -3,6 +3,9 @@ title: 'Battery'
 slug: 'battery'
 linkURL: 'https://github.com/kilmc/battery/'
 linkTitle: 'github.com/kilmc/battery'
+skills:
+  - software architecture
+  - library design
 ---
 
 At some point back in 2016 or 2017 I got really into Atomic CSS. I was working at Kickstarter at the time and as I read through [CSS and Scalability](https://mrmrs.cc/writing/scalable-css/) by mrmrs felt like using Atomic CSS would actually address a lot of the problems we had been dealing with. I was still a designer at the time but I tried my best to put together a working version of a utility class library that might be enough for a proof of concept. We discussed it internally and after some feedback and contributions from other members of the team we got the project through.

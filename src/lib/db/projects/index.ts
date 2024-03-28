@@ -1,8 +1,9 @@
 type Metadata = {
 	title: string;
 	slug: string;
-	linkURL: string;
-	linkTitle: string;
+	linkURL?: string;
+	linkTitle?: string;
+	skills?: string[];
 };
 
 export const projects: Record<string, App.MdsvexFile<Metadata>> = import.meta.glob('./*.md', {
@@ -10,9 +11,11 @@ export const projects: Record<string, App.MdsvexFile<Metadata>> = import.meta.gl
 });
 
 export const projectsIndex = Object.values(projects).map((item) => {
+	const posterSlug = item.metadata?.slug ?? 'default';
 	return {
 		url: item.metadata?.slug,
 		text: item.metadata?.title,
-		poster: `/images/posters/project-${item.metadata?.slug}.png`
+		poster: `/images/posters/project-${posterSlug}.png`,
+		skills: item.metadata?.skills ?? []
 	};
 });

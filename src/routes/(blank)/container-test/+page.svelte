@@ -14,6 +14,10 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Container Testing</title>
+</svelte:head>
+
 <header class="p-4"></header>
 <div class="flex gap-10 mx-4">
 	{#each Object.entries(containerSizes) as [name, value]}
