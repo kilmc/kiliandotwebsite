@@ -1,6 +1,14 @@
 ---
 title: 'Úll'
 slug: 'ull'
+type: event
+skills:
+  - art direction
+  - frontend
+  - merch
+  - print design
+  - production design
+  - web design
 ---
 
 One of my first real design jobs, or real jobs of any kind, was designing the branding and marketing website for a burgeoning conference in Ireland called Úll. It was an Apple-inspired conference. I was introduced to Paul by a dear friend and after some brief chatting about what the ethos of the event I was tasked with coming up with an icon design and then the initial marketing site to have folks start to register for the conference.
