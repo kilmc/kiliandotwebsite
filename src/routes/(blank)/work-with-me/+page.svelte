@@ -1,6 +1,9 @@
 <script lang="ts">
+	import { includes } from 'lodash-es';
 	import type { PageData } from './$types';
 	import Card from './Card.svelte';
+	import SkillButton from './SkillButton.svelte';
+	import Footer from '$lib/layout/Footer.svelte';
 
 	let hoveredSkill: string | undefined;
 	let clickedSkill: string | undefined;
@@ -78,9 +81,15 @@
 </svelte:head>
 
 <main class="">
-	<div class="">
-		<div class="grid grid-cols-3 gap-10 mb-20 p-20">
-			<div class="col-span-2 max-w-xl">
+	<a
+		href="/"
+		class="inline-block font-bold uppercase text-blue-600 hover:bg-slate-200 text-lg m-10 md:m-20 mb-0"
+	>
+		Kilian Dot Website
+	</a>
+	<div>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-10 p-10 md:mb-20 md:p-20">
+			<div class="col-span-1 md:col-span-2 max-w-xl">
 				<div class="text-4xl font-bold">Kilian McMahon</div>
 				<div class="text-4xl mb-8">Freelance Generalist</div>
 
@@ -101,29 +110,25 @@
 					</a>.
 				</p>
 			</div>
-			<div class="relative">
+			<div class="col-span-1 h-60 md:h-auto relative">
 				<div class="bg-gradient-to-b from-red-200 h-full w-full absolute"></div>
 				<div class="bg-gradient-to-l from-teal-200 h-full w-full"></div>
 			</div>
 		</div>
 
-		<div class="mb-20 p-20">
+		<div class="p-10 mb-20 md:p-20">
 			<h2 class="text-4xl mb-8">Projects</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 				<div>
 					<div class="flex flex-wrap gap-x-3 gap-y-3">
 						{#each data.skills as skill}
-							<button
-								class="py-2 px-3 text-2xl rounded-md hover:bg-zinc-500 hover:text-white dark:hover:bg-zinc-600 {skill ===
-								clickedSkill
-									? 'bg-black text-white dark:bg-white dark:text-black'
-									: 'bg-zinc-200 dark:bg-zinc-500 dark:text-text'}"
+							<SkillButton
+								active={projectSkills?.includes(skill ?? '') || skill === clickedSkill}
+								{skill}
 								on:click={() => handleSkillClick(skill)}
 								on:mouseenter={() => handleSkillHover(skill)}
 								on:mouseleave={() => handleSkillHover(undefined)}
-							>
-								{skill}
-							</button>
+							/>
 						{/each}
 					</div>
 				</div>
@@ -138,6 +143,12 @@
 								href={project.url}
 								class="w-full h-full flex font-bold uppercase text-center bg-cover"
 								style="background-image: url('{project.poster}');"
+								on:mouseenter={() => {
+									projectSkills = project.skills;
+								}}
+								on:mouseleave={() => {
+									projectSkills = undefined;
+								}}
 							>
 								<span class="m-auto sr-only">{project.text}</span>
 							</a>
@@ -147,9 +158,11 @@
 			</div>
 		</div>
 
-		<div class="bg-gradient-to-l to-rose-300 from-indigo-300 text-black p-20">
+		<div
+			class="bg-gradient-to-t lg:bg-gradient-to-l to-rose-300 from-indigo-300 text-black p-10 pt-10 lg:p-20"
+		>
 			<h2 class="text-4xl mb-5">Specifics</h2>
-			<div class="grid grid-cols-2">
+			<div class="grid grid-cols-1 lg:grid-cols-2">
 				<p class="mb-16">
 					I've worked across disciplines for a long time and have gathered skills, experience and a
 					proficiency with myriad tools along the way. I'm very comfortable adapting to new
@@ -158,7 +171,7 @@
 				</p>
 			</div>
 
-			<div class="grid grid-cols-3 gap-10">
+			<div class="grid grid-col-1 lg:grid-cols-3 gap-10">
 				<div>
 					<h2 class="text-2xl font-bold mb-3">Enigneering</h2>
 					<div class="grid grid-cols-2 gap-4 mb-10">
@@ -300,8 +313,8 @@
 			</div>
 		</div>
 
-		<div class="max-w-xl p-20">
-			<h3 class="text-3xl mb-3">Labour Unions❤️</h3>
+		<div class="max-w-2xl p-10 md:p-20 pb-0">
+			<h3 class="text-3xl mb-3">Labour Unions ❤️</h3>
 			<p class="text-xl">
 				I never want to undermine a Union's power. I have first-hand experience organising and being
 				part of a union—shout out to <a class="link" href="https://kickstarterunited.org"
@@ -313,5 +326,8 @@
 				me and I will do what I can to end my contract as soon as possible. Solidarity forever.
 			</p>
 		</div>
+	</div>
+	<div class="p-10 md:p-20">
+		<Footer />
 	</div>
 </main>
