@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { includes } from 'lodash-es';
 	import type { PageData } from './$types';
 	import Card from './Card.svelte';
 	import SkillButton from './SkillButton.svelte';
@@ -83,7 +82,7 @@
 <main class="">
 	<a
 		href="/"
-		class="inline-block font-bold uppercase text-blue-600 hover:bg-slate-200 text-lg m-10 md:m-20 mb-0"
+		class="inline-block font-bold uppercase dark:text-emerald-500 text-blue-600 hover:bg-slate-200 text-lg m-10 md:m-20 mb-0"
 	>
 		Kilian Dot Website
 	</a>
@@ -104,7 +103,7 @@
 					Read on to get more detail about the jobs I've done and my skillset, but if I already seem
 					like a good fit for a project of yours, feel free to&nbsp;<a
 						href="mailto:mail@kilian.website"
-						class="bg-black text-white py-0.5 px-2 inline-block rounded-md hover:bg-zinc-300 hover:text-black"
+						class="bg-black text-white dark:bg-emerald-950 py-0.5 px-2 inline-block rounded-md hover:bg-zinc-300 hover:text-black"
 					>
 						reach out
 					</a>.
@@ -116,7 +115,9 @@
 			</div>
 		</div>
 
-		<div class="p-10 mb-20 md:p-20">
+		<div
+			class="p-10 md:p-20 md:pb-36 bg-gradient-to-tr to-white from-emerald-50 dark:to-black dark:from-green-950"
+		>
 			<h2 class="text-4xl mb-8">Projects</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 				<div>
@@ -133,7 +134,7 @@
 					</div>
 				</div>
 
-				<ul class="grid grid-cols-4 gap-4">
+				<ul class="grid gap-4 projects">
 					{#each data.items as project}
 						<li
 							class="aspect-2/3 bg-zinc-200 hover:bg-zinc-300 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 hover:-translate-x-1"
@@ -315,7 +316,7 @@
 
 		<div class="max-w-2xl p-10 md:p-20 pb-0">
 			<h3 class="text-3xl mb-3">Labour Unions ❤️</h3>
-			<p class="text-xl">
+			<p class="text-xl leading-8">
 				I never want to undermine a Union's power. I have first-hand experience organising and being
 				part of a union—shout out to <a class="link" href="https://kickstarterunited.org"
 					>Kickstarter United</a
@@ -331,3 +332,9 @@
 		<Footer />
 	</div>
 </main>
+
+<style lang="scss">
+	.projects {
+		grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+	}
+</style>
