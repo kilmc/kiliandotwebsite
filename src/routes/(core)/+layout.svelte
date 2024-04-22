@@ -10,7 +10,7 @@
 </script>
 
 <div
-	class="font-mono min-h-full grid grid-rows-[1fr_auto] grid-cols-[100%] max-w-4xl mx-auto p-5 sm:p-10 lg:py-20 lg:px-0 dark:bg-black dark:text-white"
+	class="font-mono min-h-full grid grid-rows-[1fr_auto] grid-cols-[100%] max-w-4xl mx-auto p-5 sm:p-10 lg:py-20 lg:px-0"
 >
 	<div
 		class="grid grid-cols-1 grid-rows-[min-content_1fr_auto] md:grid-cols-4 md:grid-rows-[1fr_auto] gap-8 md:gap-x-8 md:gap-y-32"
@@ -31,3 +31,8 @@
 		</div>
 	</div>
 </div>
+
+<style lang="scss">
+	:global(body) {
+	}
+</style>
