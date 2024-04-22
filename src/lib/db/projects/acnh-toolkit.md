@@ -6,9 +6,11 @@ linkTitle: 'acnh.kilian.website'
 skills:
   - frontend
   - product design
+description: 'A fun little tool to help with catching all the critters in New Horizons.'
+published: true
 ---
 
-I built a little tool to help with catching all of the critters in Animal Crossing New Horizons. I built it mostly because I was finding it a little annoying to hop in and out of Critterpedia in the game and it was nice to have all of the info in one place. I really enjoyed this project and trying to pull inspiration for the colour palettes and iconography from the game but make them customised a little bit. I was particularly proud of the hemisphere selection.
+I built a little tool to help with catching all of the critters in Animal Crossing New Horizons. I built it mostly because I was finding it a little annoying to hop in and out of Critterpedia in the game and it was nice to have all of the info in one place. I really enjoyed working on this project, especially pulling inspiration for the colour palettes and iconography from the game. I was particularly proud of the hemisphere selection.
 
 I don't actively maintain the project anymore but I am still proud of it and for a little while I think folks found it useful which made me happy.
 

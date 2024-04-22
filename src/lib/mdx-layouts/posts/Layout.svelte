@@ -14,12 +14,13 @@
 
 	import ul from './ul.svelte';
 	import ol from './ul.svelte';
+	import li from './li.svelte';
 
 	import hr from './hr.svelte';
 
 	import blockquote from './blockquote.svelte';
 
-	export { p, em, strong, a, h1, h2, h3, h4, h5, h6, blockquote, ul, ol, hr };
+	export { p, em, strong, a, h1, h2, h3, h4, h5, h6, blockquote, ul, ol, li, hr };
 </script>
 
 <div class="@container">
